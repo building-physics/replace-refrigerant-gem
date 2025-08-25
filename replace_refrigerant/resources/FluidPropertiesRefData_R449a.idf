@@ -1,0 +1,1120 @@
+!-Generator IDFEditor 1.53
+!-Option SortedOrder
+!-NOTE: All comments with '!-' are ignored by the IDFEditor and are generated automatically.
+!-      Use '!' comments if they need to be retained when using the IDFEditor.
+!-   ===========  ALL OBJECTS IN CLASS: FLUIDPROPERTIES:NAME ===========
+!===============================================================================
+! FluidPropertiesRefData_R449a.idf
+!
+! ***************************************************
+! FLUID PROPERTIES DATA - REFRIGERANTS
+! ***************************************************
+!
+! Refrigerant properties in this data set are:
+! Refrigerant:
+! R449a
+! The objects and syntax in this dataset comply with EnergyPlus, Version 8.4.0 and above, unless otherwise noted.
+
+@  Version,24.2;
+
+! =============================================================================
+!
+!                Property Data for Refrigerant R449a
+!
+! =============================================================================
+
+  FluidProperties:Name,
+    R449a,                   !- Fluid Name
+    Refrigerant;             !- Fluid Type
+
+!-   ===========  ALL OBJECTS IN CLASS: FLUIDPROPERTIES:TEMPERATURES ===========
+
+  FluidProperties:Temperatures,
+    R449aSaturatedTemperatures,  !- Name
+    -68,-66,-64,-62,-60,-58,-56,
+    -54,-52,-50,-48,-46,-44,-42,
+    -40,-38,-36,-34,-32,-30,-28,
+    -26,-24,-22,-20,-18,-16,-14,
+    -12,-10,-8,-6,-4,-2,0,
+    2,4,6,8,10,12,14,
+    16,18,20,22,24,26,28,
+    30,32,34,36,38,40,42,
+    44,46,48,50,52,54,56,
+    58,60,62,64,66,68,70,
+    72,74,76,78,80,82;
+
+  FluidProperties:Temperatures,
+    R449aSuperHeatTemperatures,  !- Name
+    -68,-64,-60,-56,-52,-48,-44,
+    -40,-36,-32,-28,-24,-20,-16,
+    -12,-8,-4,0,4,8,12,
+    16,20,24,28,32,36,40,
+    44,48,52,56,60,64,68,
+    72,76,80,82;
+
+!-   ===========  ALL OBJECTS IN CLASS: FLUIDPROPERTIES:SATURATED ===========
+! =============================================================================
+!
+!                Saturated Property Data for Refrigerant R449a
+!
+!                Critical Pressure: 4499.7 kPa
+!                Critical Temperature: 82.073 degC
+! =============================================================================
+
+  FluidProperties:Saturated,
+    R449a,                   !- Fluid Name
+    Pressure,                !- Fluid Property Type
+    FluidGas,                !- Fluid Phase
+    R449aSaturatedTemperatures,  !- Temperature Values Name
+    20551,23438,26649,30210,34149,38495,43279,
+    48531,54285,60574,67434,74901,83012,91807,
+    101320,111610,122700,134630,147470,161240,175990,
+    191780,208650,226650,245840,266250,287950,310990,
+    335430,361310,388690,417640,448210,480450,514440,
+    550220,587870,627450,669010,712640,758390,806320,
+    856520,909060,963990,1021400,1081400,1144000,1209300,
+    1277400,1348400,1422300,1499300,1579400,1662800,1749500,
+    1839700,1933400,2030700,2131900,2236900,2346000,2459300,
+    2577000,2699100,2826000,2957900,3094900,3237400,3385700,
+    3540400,3702000,3871500,4050300,4242000,4468000;
+
+  FluidProperties:Saturated,
+    R449a,                   !- Fluid Name
+    Density,                 !- Fluid Property Type
+    Fluid,                   !- Fluid Phase
+    R449aSaturatedTemperatures,  !- Temperature Values Name
+    1413.9,1408.1,1402.4,1396.6,1390.8,1385,1379.2,
+    1373.3,1367.4,1361.4,1355.4,1349.4,1343.3,1337.3,
+    1331.1,1324.9,1318.7,1312.5,1306.2,1299.8,1293.4,
+    1287,1280.5,1273.9,1267.3,1260.7,1253.9,1247.1,
+    1240.3,1233.4,1226.4,1219.3,1212.1,1204.9,1197.6,
+    1190.2,1182.7,1175.1,1167.4,1159.6,1151.7,1143.6,
+    1135.5,1127.2,1118.8,1110.2,1101.5,1092.6,1083.5,
+    1074.3,1064.9,1055.3,1045.4,1035.3,1025,1014.4,
+    1003.5,992.26,980.68,968.7,956.29,943.4,929.96,
+    915.9,901.14,885.56,869.03,851.35,832.28,811.47,
+    788.4,762.26,731.63,693.6,639.88,500.4;
+
+  FluidProperties:Saturated,
+    R449a,                   !- Fluid Name
+    Density,                 !- Fluid Property Type
+    FluidGas,                !- Fluid Phase
+    R449aSaturatedTemperatures,  !- Temperature Values Name
+    1.0659,1.2056,1.3596,1.5291,1.7151,1.9187,2.1413,
+    2.3839,2.6479,2.9347,3.2455,3.5819,3.9452,4.337,
+    4.759,5.2127,5.6998,6.222,6.7813,7.3794,8.0184,
+    8.7001,9.4268,10.201,11.024,11.899,12.828,13.813,
+    14.859,15.966,17.138,18.379,19.691,21.078,22.543,
+    24.09,25.723,27.447,29.265,31.183,33.206,35.339,
+    37.588,39.959,42.46,45.096,47.877,50.811,53.907,
+    57.175,60.627,64.275,68.133,72.215,76.539,81.124,
+    85.992,91.167,96.676,102.55,108.84,115.57,122.8,
+    130.6,139.04,148.22,158.27,169.33,181.62,195.45,
+    211.23,229.63,251.81,280.04,320.33,418.79;
+
+  FluidProperties:Saturated,
+    R449a,                   !- Fluid Name
+    Enthalpy,                !- Fluid Property Type
+    Fluid,                   !- Fluid Phase
+    R449aSaturatedTemperatures,  !- Temperature Values Name
+    109740,112280,114820,117360,119910,122470,125030,
+    127590,130160,132730,135320,137900,140500,143100,
+    145710,148330,150960,153590,156230,158890,161550,
+    164220,166900,169590,172300,175010,177740,180470,
+    183220,185990,188760,191550,194350,197170,200000,
+    202850,205710,208590,211490,214400,217330,220280,
+    223250,226250,229260,232290,235350,238440,241540,
+    244680,247840,251030,254260,257510,260800,264130,
+    267500,270910,274370,277880,281450,285080,288770,
+    292540,296390,300340,304400,308600,312960,317510,
+    322320,327480,333140,339640,347940,367020;
+
+  FluidProperties:Saturated,
+    R449a,                   !- Fluid Name
+    Enthalpy,                !- Fluid Property Type
+    FluidGas,                !- Fluid Phase
+    R449aSaturatedTemperatures,  !- Temperature Values Name
+    360060,361280,362510,363730,364940,366160,367370,
+    368580,369790,370990,372190,373380,374570,375750,
+    376930,378100,379270,380430,381580,382720,383860,
+    384990,386110,387220,388320,389410,390490,391560,
+    392620,393660,394700,395720,396720,397710,398690,
+    399650,400600,401520,402430,403320,404190,405030,
+    405860,406660,407430,408180,408900,409590,410240,
+    410870,411450,412000,412510,412980,413400,413770,
+    414080,414340,414530,414660,414710,414670,414550,
+    414320,413970,413480,412850,412030,410990,409680,
+    408030,405920,403180,399420,393670,378840;
+
+  FluidProperties:Saturated,
+    R449a,                   !- Fluid Name
+    SpecificHeat,            !- Fluid Property Type
+    Fluid,                   !- Fluid Phase
+    R449aSaturatedTemperatures,  !- Temperature Values Name
+    622.86,635.15,647.35,659.44,671.44,683.34,695.16,
+    706.89,718.54,730.1,741.59,753.01,764.35,775.62,
+    786.83,797.97,809.04,820.06,831.02,841.92,852.77,
+    863.56,874.3,885,895.65,906.26,916.82,927.34,
+    937.82,948.27,958.68,969.05,979.4,989.71,1000,
+    1010.3,1020.5,1030.7,1040.9,1051.1,1061.3,1071.4,
+    1081.6,1091.7,1101.8,1112,1122.1,1132.2,1142.4,
+    1152.5,1162.7,1172.9,1183.1,1193.3,1203.6,1213.9,
+    1224.3,1234.7,1245.2,1255.7,1266.4,1277.1,1288,
+    1299,1310.2,1321.6,1333.3,1345.2,1357.5,1370.3,
+    1383.8,1398.1,1413.8,1431.7,1454.6,1507.8;
+
+  FluidProperties:Saturated,
+    R449a,                   !- Fluid Name
+    SpecificHeat,            !- Fluid Property Type
+    FluidGas,                !- Fluid Phase
+    R449aSaturatedTemperatures,  !- Temperature Values Name
+    1863.1,1856.7,1850.5,1844.6,1838.9,1833.4,1828.1,
+    1823,1818.1,1813.3,1808.8,1804.4,1800.1,1796,
+    1792.1,1788.3,1784.6,1781,1777.6,1774.3,1771.1,
+    1768,1765,1762.1,1759.3,1756.6,1753.9,1751.4,
+    1748.9,1746.5,1744.1,1741.8,1739.6,1737.4,1735.3,
+    1733.2,1731.1,1729.1,1727.1,1725.1,1723.2,1721.2,
+    1719.3,1717.4,1715.5,1713.6,1711.6,1709.7,1707.7,
+    1705.7,1703.7,1701.6,1699.5,1697.3,1695.1,1692.7,
+    1690.3,1687.8,1685.2,1682.4,1679.5,1676.4,1673.1,
+    1669.6,1665.8,1661.7,1657.3,1652.4,1646.9,1640.8,
+    1633.8,1625.6,1615.7,1603,1584.9,1541.3;
+
+!-   ===========  ALL OBJECTS IN CLASS: FLUIDPROPERTIES:SUPERHEATED ===========
+
+  FluidProperties:Superheated,
+    R449a,                   !- Fluid Name
+    Density,                 !- Fluid Property Type
+    R449aSuperHeatTemperatures,  !- Temperature Values Name
+    20551,                   !- Pressure {Pa}
+    1.0659,1.0443,1.0236,1.0038,0.98482,0.9666,0.94909,
+    0.93224,0.91601,0.90037,0.88527,0.87069,0.85661,0.84299,
+    0.82981,0.81705,0.80468,0.7927,0.78107,0.76979,0.75884,
+    0.7482,0.73786,0.7278,0.71803,0.70851,0.69925,0.69023,
+    0.68144,0.67288,0.66453,0.65639,0.64844,0.64069,0.63313,
+    0.62574,0.61852,0.61147,0.60801;
+
+  FluidProperties:Superheated,
+    R449a,                   !- Fluid Name
+    Enthalpy,                !- Fluid Property Type
+    R449aSuperHeatTemperatures,  !- Temperature Values Name
+    20551,                   !- Pressure {Pa}
+    360060,362850,365660,368490,371340,374210,377100,
+    380010,382960,385920,388910,391930,394970,398030,
+    401130,404250,407390,410560,413760,416980,420230,
+    423510,426810,430140,433500,436880,440290,443730,
+    447190,450680,454190,457730,461300,464890,468510,
+    472160,475830,479520,481380;
+
+  FluidProperties:Superheated,
+    R449a,                   !- Fluid Name
+    Density,                 !- Fluid Property Type
+    R449aSuperHeatTemperatures,  !- Temperature Values Name
+    26649,                   !- Pressure {Pa}
+    0,1.3596,1.3322,1.3061,1.281,1.257,1.234,
+    1.2119,1.1906,1.1701,1.1503,1.1312,1.1128,1.095,
+    1.0777,1.0611,1.0449,1.0293,1.0141,0.99939,0.98511,
+    0.97125,0.95777,0.94468,0.93194,0.91955,0.90749,0.89575,
+    0.88432,0.87317,0.86231,0.85172,0.84139,0.83131,0.82147,
+    0.81187,0.80249,0.79332,0.78882;
+
+  FluidProperties:Superheated,
+    R449a,                   !- Fluid Name
+    Enthalpy,                !- Fluid Property Type
+    R449aSuperHeatTemperatures,  !- Temperature Values Name
+    26649,                   !- Pressure {Pa}
+    0,362510,365340,368190,371060,373950,376860,
+    379790,382750,385720,388730,391750,394800,397880,
+    400980,404100,407260,410430,413640,416870,420120,
+    423400,426710,430040,433400,436790,440200,443640,
+    447110,450600,454120,457660,461230,464820,468440,
+    472090,475760,479460,481320;
+
+  FluidProperties:Superheated,
+    R449a,                   !- Fluid Name
+    Density,                 !- Fluid Property Type
+    R449aSuperHeatTemperatures,  !- Temperature Values Name
+    34149,                   !- Pressure {Pa}
+    0,0,1.7151,1.6807,1.648,1.6166,1.5866,
+    1.5577,1.53,1.5034,1.4777,1.453,1.4291,1.406,
+    1.3837,1.3622,1.3413,1.3211,1.3015,1.2825,1.2641,
+    1.2462,1.2289,1.212,1.1956,1.1796,1.1641,1.149,
+    1.1343,1.1199,1.1059,1.0923,1.079,1.0661,1.0534,
+    1.0411,1.029,1.0172,1.0115;
+
+  FluidProperties:Superheated,
+    R449a,                   !- Fluid Name
+    Enthalpy,                !- Fluid Property Type
+    R449aSuperHeatTemperatures,  !- Temperature Values Name
+    34149,                   !- Pressure {Pa}
+    0,0,364940,367830,370730,373640,376570,
+    379520,382490,385480,388500,391540,394600,397680,
+    400790,403930,407090,410270,413480,416720,419980,
+    423270,426580,429920,433290,436680,440090,443540,
+    447010,450500,454020,457570,461140,464740,468360,
+    472010,475680,479380,481240;
+
+  FluidProperties:Superheated,
+    R449a,                   !- Fluid Name
+    Density,                 !- Fluid Property Type
+    R449aSuperHeatTemperatures,  !- Temperature Values Name
+    43279,                   !- Pressure {Pa}
+    0,0,0,2.1413,2.0986,2.0579,2.019,
+    1.9817,1.946,1.9116,1.8786,1.8467,1.8161,1.7865,
+    1.7579,1.7303,1.7035,1.6777,1.6526,1.6284,1.6048,
+    1.582,1.5598,1.5383,1.5173,1.497,1.4772,1.4579,
+    1.4392,1.4209,1.4031,1.3858,1.3688,1.3523,1.3362,
+    1.3205,1.3052,1.2902,1.2828;
+
+  FluidProperties:Superheated,
+    R449a,                   !- Fluid Name
+    Enthalpy,                !- Fluid Property Type
+    R449aSuperHeatTemperatures,  !- Temperature Values Name
+    43279,                   !- Pressure {Pa}
+    0,0,0,367370,370310,373250,376210,
+    379180,382170,385190,388220,391270,394350,397450,
+    400570,403710,406890,410080,413300,416540,419810,
+    423110,426430,429770,433140,436540,439960,443410,
+    446880,450380,453900,457450,461030,464630,468260,
+    471910,475590,479290,481150;
+
+  FluidProperties:Superheated,
+    R449a,                   !- Fluid Name
+    Density,                 !- Fluid Property Type
+    R449aSuperHeatTemperatures,  !- Temperature Values Name
+    54285,                   !- Pressure {Pa}
+    0,0,0,0,2.648,2.5953,2.5452,
+    2.4972,2.4514,2.4074,2.3651,2.3245,2.2854,2.2477,
+    2.2113,2.1762,2.1423,2.1094,2.0777,2.0469,2.0171,
+    1.9882,1.9601,1.9329,1.9064,1.8807,1.8557,1.8313,
+    1.8077,1.7846,1.7621,1.7403,1.7189,1.6981,1.6778,
+    1.658,1.6387,1.6198,1.6106;
+
+  FluidProperties:Superheated,
+    R449a,                   !- Fluid Name
+    Enthalpy,                !- Fluid Property Type
+    R449aSuperHeatTemperatures,  !- Temperature Values Name
+    54285,                   !- Pressure {Pa}
+    0,0,0,0,369790,372770,375770,
+    378770,381790,384830,387880,390950,394040,397160,
+    400300,403460,406640,409840,413070,416330,419610,
+    422910,426240,429590,432970,436370,439800,443250,
+    446730,450230,453760,457320,460900,464500,468130,
+    471790,475470,479180,481040;
+
+  FluidProperties:Superheated,
+    R449a,                   !- Fluid Name
+    Density,                 !- Fluid Property Type
+    R449aSuperHeatTemperatures,  !- Temperature Values Name
+    67434,                   !- Pressure {Pa}
+    0,0,0,0,0,3.2455,3.1811,
+    3.1197,3.0611,3.0051,2.9514,2.8998,2.8502,2.8025,
+    2.7566,2.7122,2.6694,2.6281,2.5881,2.5494,2.5119,
+    2.4756,2.4403,2.4061,2.3729,2.3407,2.3094,2.2789,
+    2.2493,2.2204,2.1923,2.1649,2.1383,2.1123,2.0869,
+    2.0622,2.038,2.0145,2.0029;
+
+  FluidProperties:Superheated,
+    R449a,                   !- Fluid Name
+    Enthalpy,                !- Fluid Property Type
+    R449aSuperHeatTemperatures,  !- Temperature Values Name
+    67434,                   !- Pressure {Pa}
+    0,0,0,0,0,372190,375230,
+    378270,381320,384390,387470,390570,393680,396810,
+    399970,403140,406340,409560,412810,416070,419360,
+    422670,426010,429370,432760,436170,439610,443070,
+    446550,450060,453600,457160,460740,464350,467990,
+    471650,475330,479040,480910;
+
+  FluidProperties:Superheated,
+    R449a,                   !- Fluid Name
+    Density,                 !- Fluid Property Type
+    R449aSuperHeatTemperatures,  !- Temperature Values Name
+    83012,                   !- Pressure {Pa}
+    0,0,0,0,0,0,3.9452,
+    3.8667,3.7921,3.721,3.653,3.5879,3.5254,3.4653,
+    3.4076,3.3519,3.2983,3.2465,3.1965,3.1481,3.1013,
+    3.056,3.0121,2.9695,2.9282,2.888,2.8491,2.8112,
+    2.7743,2.7385,2.7036,2.6697,2.6366,2.6043,2.5729,
+    2.5422,2.5123,2.4831,2.4688;
+
+  FluidProperties:Superheated,
+    R449a,                   !- Fluid Name
+    Enthalpy,                !- Fluid Property Type
+    R449aSuperHeatTemperatures,  !- Temperature Values Name
+    83012,                   !- Pressure {Pa}
+    0,0,0,0,0,0,374570,
+    377670,380760,383860,386980,390100,393240,396400,
+    399580,402770,405990,409230,412480,415760,419070,
+    422390,425740,429110,432510,435930,439370,442840,
+    446340,449850,453400,456960,460550,464170,467810,
+    471480,475170,478880,480750;
+
+  FluidProperties:Superheated,
+    R449a,                   !- Fluid Name
+    Density,                 !- Fluid Property Type
+    R449aSuperHeatTemperatures,  !- Temperature Values Name
+    101320,                  !- Pressure {Pa}
+    0,0,0,0,0,0,0,
+    4.6925,4.5992,4.5105,4.426,4.3453,4.268,4.1939,
+    4.1228,4.0543,3.9884,3.9249,3.8636,3.8044,3.7471,
+    3.6917,3.6381,3.5861,3.5357,3.4868,3.4394,3.3933,
+    3.3485,3.3049,3.2625,3.2212,3.1811,3.1419,3.1038,
+    3.0666,3.0303,2.9949,2.9775;
+
+  FluidProperties:Superheated,
+    R449a,                   !- Fluid Name
+    Enthalpy,                !- Fluid Property Type
+    R449aSuperHeatTemperatures,  !- Temperature Values Name
+    101320,                  !- Pressure {Pa}
+    0,0,0,0,0,0,0,
+    376930,380090,383240,386390,389550,392720,395910,
+    399110,402330,405570,408830,412100,415400,418720,
+    422060,425420,428810,432220,435650,439100,442580,
+    446080,449610,453160,456740,460330,463960,467600,
+    471280,474970,478690,480560;
+
+  FluidProperties:Superheated,
+    R449a,                   !- Fluid Name
+    Density,                 !- Fluid Property Type
+    R449aSuperHeatTemperatures,  !- Temperature Values Name
+    122700,                  !- Pressure {Pa}
+    0,0,0,0,0,0,0,
+    0,5.7,5.5858,5.4774,5.3744,5.276,5.182,
+    5.0919,5.0054,4.9223,4.8423,4.7653,4.6909,4.6192,
+    4.5498,4.4828,4.4178,4.3549,4.294,4.2348,4.1774,
+    4.1217,4.0675,4.0148,3.9636,3.9137,3.8651,3.8178,
+    3.7717,3.7267,3.6829,3.6614;
+
+  FluidProperties:Superheated,
+    R449a,                   !- Fluid Name
+    Enthalpy,                !- Fluid Property Type
+    R449aSuperHeatTemperatures,  !- Temperature Values Name
+    122700,                  !- Pressure {Pa}
+    0,0,0,0,0,0,0,
+    0,379270,382480,385690,388900,392110,395330,
+    398570,401810,405080,408360,411660,414980,418310,
+    421670,425050,428450,431870,435320,438780,442270,
+    445790,449320,452880,456470,460080,463710,467360,
+    471040,474740,478470,480340;
+
+  FluidProperties:Superheated,
+    R449a,                   !- Fluid Name
+    Density,                 !- Fluid Property Type
+    R449aSuperHeatTemperatures,  !- Temperature Values Name
+    147470,                  !- Pressure {Pa}
+    0,0,0,0,0,0,0,
+    0,0,6.695,6.5604,6.4328,6.3116,6.196,
+    6.0855,5.9797,5.8783,5.7808,5.6871,5.5968,5.5098,
+    5.4257,5.3446,5.2661,5.1901,5.1165,5.0452,4.9761,
+    4.9089,4.8437,4.7804,4.7188,4.6589,4.6006,4.5438,
+    4.4885,4.4346,4.382,4.3563;
+
+  FluidProperties:Superheated,
+    R449a,                   !- Fluid Name
+    Enthalpy,                !- Fluid Property Type
+    R449aSuperHeatTemperatures,  !- Temperature Values Name
+    147470,                  !- Pressure {Pa}
+    0,0,0,0,0,0,0,
+    0,0,6.7815,6.6447,6.5151,6.392,6.2747,
+    6.1626,6.0552,5.9523,5.8535,5.7584,5.6669,5.5786,
+    5.4934,5.4112,5.3316,5.2546,5.18,5.1078,5.0377,
+    4.9696,4.9036,4.8394,4.777,4.7163,4.6572,4.5997,
+    4.5437,4.4891,4.4359,4.4098;
+
+  FluidProperties:Superheated,
+    R449a,                   !- Fluid Name
+    Density,                 !- Fluid Property Type
+    R449aSuperHeatTemperatures,  !- Temperature Values Name
+    175990,                  !- Pressure {Pa}
+    0,0,0,0,0,0,0,
+    0,0,0,8.0183,7.855,7.7007,7.5543,
+    7.4149,7.2819,7.1547,7.0328,6.9159,6.8034,6.6952,
+    6.591,6.4904,6.3933,6.2994,6.2086,6.1207,6.0355,
+    5.9529,5.8727,5.7949,5.7193,5.6458,5.5744,5.5048,
+    5.4371,5.3712,5.3069,5.2754;
+
+  FluidProperties:Superheated,
+    R449a,                   !- Fluid Name
+    Enthalpy,                !- Fluid Property Type
+    R449aSuperHeatTemperatures,  !- Temperature Values Name
+    175990,                  !- Pressure {Pa}
+    0,0,0,0,0,0,0,
+    0,0,0,383860,387200,390530,393850,
+    397170,400490,403830,407170,410530,413900,417280,
+    420690,424110,427550,431010,434480,437980,441500,
+    445040,448610,452190,455800,459430,463080,466760,
+    470450,474170,477920,479800;
+
+  FluidProperties:Superheated,
+    R449a,                   !- Fluid Name
+    Density,                 !- Fluid Property Type
+    R449aSuperHeatTemperatures,  !- Temperature Values Name
+    208650,                  !- Pressure {Pa}
+    0,0,0,0,0,0,0,
+    0,0,0,0,9.4267,9.2327,9.0496,
+    8.8762,8.7113,8.5542,8.404,8.2603,8.1225,7.9901,
+    7.8628,7.7402,7.622,7.5079,7.3977,7.2911,7.188,
+    7.0881,6.9912,6.8973,6.8061,6.7175,6.6314,6.5477,
+    6.4663,6.387,6.3098,6.272;
+
+  FluidProperties:Superheated,
+    R449a,                   !- Fluid Name
+    Enthalpy,                !- Fluid Property Type
+    R449aSuperHeatTemperatures,  !- Temperature Values Name
+    208650,                  !- Pressure {Pa}
+    0,0,0,0,0,0,0,
+    0,0,0,0,386110,389520,392900,
+    396280,399660,403040,406420,409820,413220,416640,
+    420070,423520,426990,430470,433970,437490,441030,
+    444580,448160,451760,455390,459030,462690,466380,
+    470090,473820,477580,479460;
+
+  FluidProperties:Superheated,
+    R449a,                   !- Fluid Name
+    Density,                 !- Fluid Property Type
+    R449aSuperHeatTemperatures,  !- Temperature Values Name
+    245840,                  !- Pressure {Pa}
+    0,0,0,0,0,0,0,
+    0,0,0,0,0,11.024,10.794,
+    10.578,10.373,10.178,9.9935,9.817,9.6481,9.4864,
+    9.3312,9.182,9.0385,8.9002,8.7668,8.6379,8.5134,
+    8.3929,8.2763,8.1633,8.0537,7.9473,7.8441,7.7437,
+    7.6462,7.5513,7.4589,7.4137;
+
+  FluidProperties:Superheated,
+    R449a,                   !- Fluid Name
+    Enthalpy,                !- Fluid Property Type
+    R449aSuperHeatTemperatures,  !- Temperature Values Name
+    245840,                  !- Pressure {Pa}
+    0,0,0,0,0,0,0,
+    0,0,0,0,0,388320,391800,
+    395250,398690,402130,405560,409000,412450,415900,
+    419370,422850,426340,429850,433370,436920,440480,
+    444060,447660,451270,454910,458570,462250,465950,
+    469680,473420,477190,479080;
+
+  FluidProperties:Superheated,
+    R449a,                   !- Fluid Name
+    Density,                 !- Fluid Property Type
+    R449aSuperHeatTemperatures,  !- Temperature Values Name
+    287950,                  !- Pressure {Pa}
+    0,0,0,0,0,0,0,
+    0,0,0,0,0,0,12.827,
+    12.556,12.301,12.06,11.831,11.614,11.408,11.21,
+    11.021,10.84,10.665,10.498,10.337,10.181,10.032,
+    9.8866,9.7465,9.611,9.4796,9.3523,9.2288,9.109,
+    8.9925,8.8794,8.7693,8.7154;
+
+  FluidProperties:Superheated,
+    R449a,                   !- Fluid Name
+    Enthalpy,                !- Fluid Property Type
+    R449aSuperHeatTemperatures,  !- Temperature Values Name
+    287950,                  !- Pressure {Pa}
+    0,0,0,0,0,0,0,
+    0,0,0,0,0,0,390490,
+    394040,397560,401070,404560,408060,411550,415050,
+    418560,422070,425600,429140,432690,436260,439850,
+    443450,447070,450710,454370,458050,461750,465460,
+    469200,472960,476740,478640;
+
+  FluidProperties:Superheated,
+    R449a,                   !- Fluid Name
+    Density,                 !- Fluid Property Type
+    R449aSuperHeatTemperatures,  !- Temperature Values Name
+    335430,                  !- Pressure {Pa}
+    0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,
+    14.859,14.539,14.238,13.956,13.688,13.434,13.193,
+    12.962,12.742,12.531,12.328,12.133,11.946,11.766,
+    11.592,11.424,11.262,11.105,10.953,10.806,10.663,
+    10.524,10.39,10.259,10.195;
+
+  FluidProperties:Superheated,
+    R449a,                   !- Fluid Name
+    Enthalpy,                !- Fluid Property Type
+    R449aSuperHeatTemperatures,  !- Temperature Values Name
+    335430,                  !- Pressure {Pa}
+    0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,
+    392620,396240,399840,403410,406970,410520,414070,
+    417630,421190,424750,428330,431920,435520,439140,
+    442770,446410,450080,453760,457460,461170,464910,
+    468670,472440,476240,478150;
+
+  FluidProperties:Superheated,
+    R449a,                   !- Fluid Name
+    Density,                 !- Fluid Property Type
+    R449aSuperHeatTemperatures,  !- Temperature Values Name
+    388690,                  !- Pressure {Pa}
+    0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,
+    0,17.138,16.761,16.409,16.078,15.765,15.469,
+    15.187,14.919,14.663,14.418,14.183,13.958,13.741,
+    13.533,13.332,13.138,12.95,12.769,12.594,12.424,
+    12.26,12.1,11.945,11.87;
+
+  FluidProperties:Superheated,
+    R449a,                   !- Fluid Name
+    Enthalpy,                !- Fluid Property Type
+    R449aSuperHeatTemperatures,  !- Temperature Values Name
+    388690,                  !- Pressure {Pa}
+    0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,
+    0,394700,398400,402070,405710,409330,412950,
+    416560,420170,423790,427410,431040,434670,438320,
+    441990,445660,449350,453060,456780,460520,464280,
+    468060,471860,475670,477580;
+
+  FluidProperties:Superheated,
+    R449a,                   !- Fluid Name
+    Density,                 !- Fluid Property Type
+    R449aSuperHeatTemperatures,  !- Temperature Values Name
+    448210,                  !- Pressure {Pa}
+    0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,
+    0,0,19.691,19.248,18.835,18.448,18.084,
+    17.739,17.411,17.1,16.803,16.52,16.248,15.988,
+    15.738,15.497,15.265,15.042,14.826,14.618,14.417,
+    14.222,14.033,13.85,13.76;
+
+  FluidProperties:Superheated,
+    R449a,                   !- Fluid Name
+    Enthalpy,                !- Fluid Property Type
+    R449aSuperHeatTemperatures,  !- Temperature Values Name
+    448210,                  !- Pressure {Pa}
+    0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,
+    0,0,396720,400510,404250,407970,411660,
+    415340,419010,422680,426360,430030,433710,437400,
+    441100,444810,448540,452270,456030,459790,463580,
+    467380,471190,475030,476950;
+
+  FluidProperties:Superheated,
+    R449a,                   !- Fluid Name
+    Density,                 !- Fluid Property Type
+    R449aSuperHeatTemperatures,  !- Temperature Values Name
+    514440,                  !- Pressure {Pa}
+    0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,
+    0,0,0,22.543,22.023,21.54,21.088,
+    20.663,20.262,19.883,19.522,19.179,18.851,18.538,
+    18.238,17.95,17.673,17.407,17.151,16.903,16.664,
+    16.434,16.21,15.994,15.889;
+
+  FluidProperties:Superheated,
+    R449a,                   !- Fluid Name
+    Enthalpy,                !- Fluid Property Type
+    R449aSuperHeatTemperatures,  !- Temperature Values Name
+    514440,                  !- Pressure {Pa}
+    0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,
+    0,0,0,398690,402570,406390,410180,
+    413940,417690,421430,425160,428890,432630,436360,
+    440100,443850,447620,451390,455170,458970,462780,
+    466610,470450,474310,476250;
+
+  FluidProperties:Superheated,
+    R449a,                   !- Fluid Name
+    Density,                 !- Fluid Property Type
+    R449aSuperHeatTemperatures,  !- Temperature Values Name
+    587870,                  !- Pressure {Pa}
+    0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,
+    0,0,0,0,25.483,24.883,24.326,
+    23.807,23.319,22.86,22.426,22.014,21.622,21.249,
+    20.893,20.551,20.224,19.91,19.609,19.318,19.038,
+    18.768,18.506,18.254,18.131;
+
+  FluidProperties:Superheated,
+    R449a,                   !- Fluid Name
+    Enthalpy,                !- Fluid Property Type
+    R449aSuperHeatTemperatures,  !- Temperature Values Name
+    587870,                  !- Pressure {Pa}
+    0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,
+    0,0,0,0,400600,404560,408470,
+    412340,416180,420000,423800,427600,431390,435180,
+    438980,442770,446580,450390,454210,458040,461890,
+    465750,469620,473500,475450;
+
+  FluidProperties:Superheated,
+    R449a,                   !- Fluid Name
+    Density,                 !- Fluid Property Type
+    R449aSuperHeatTemperatures,  !- Temperature Values Name
+    669010,                  !- Pressure {Pa}
+    0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,
+    0,0,0,0,0,29.265,28.549,
+    27.889,27.274,26.7,26.161,25.652,25.17,24.714,
+    24.279,23.865,23.469,23.09,22.727,22.378,22.042,
+    21.719,21.408,21.107,20.961;
+
+  FluidProperties:Superheated,
+    R449a,                   !- Fluid Name
+    Enthalpy,                !- Fluid Property Type
+    R449aSuperHeatTemperatures,  !- Temperature Values Name
+    6669010,                 !- Pressure {Pa}
+    0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,
+    0,0,0,0,0,402430,406500,
+    410500,414450,418370,422260,426130,430000,433850,
+    437700,441560,445410,449270,453130,457010,460890,
+    464780,468690,472600,474570;
+
+  FluidProperties:Superheated,
+    R449a,                   !- Fluid Name
+    Density,                 !- Fluid Property Type
+    R449aSuperHeatTemperatures,  !- Temperature Values Name
+    758390,                  !- Pressure {Pa}
+    0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,
+    0,0,0,0,0,0,33.206,
+    32.366,31.593,30.878,30.21,29.585,28.997,28.442,
+    27.916,27.417,26.942,26.488,26.055,25.639,25.241,
+    24.859,24.491,24.136,23.964;
+
+  FluidProperties:Superheated,
+    R449a,                   !- Fluid Name
+    Enthalpy,                !- Fluid Property Type
+    R449aSuperHeatTemperatures,  !- Temperature Values Name
+    758390,                  !- Pressure {Pa}
+    0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,
+    0,0,0,0,0,0,404190,
+    408360,412450,416490,420490,424460,428410,432350,
+    436270,440180,444100,448010,451920,455840,459770,
+    463700,467650,471600,473580;
+
+  FluidProperties:Superheated,
+    R449a,                   !- Fluid Name
+    Density,                 !- Fluid Property Type
+    R449aSuperHeatTemperatures,  !- Temperature Values Name
+    856520,                  !- Pressure {Pa}
+    0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,
+    37.588,36.6,35.696,34.861,34.086,33.362,32.683,
+    32.044,31.439,30.866,30.321,29.803,29.307,28.834,
+    28.38,27.945,27.526,27.323;
+
+  FluidProperties:Superheated,
+    R449a,                   !- Fluid Name
+    Enthalpy,                !- Fluid Property Type
+    R449aSuperHeatTemperatures,  !- Temperature Values Name
+    856520,                  !- Pressure {Pa}
+    0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,
+    405860,410140,414340,418470,422560,426610,430640,
+    434650,438640,442620,446600,450570,454540,458520,
+    462500,466490,470480,472480;
+
+  FluidProperties:Superheated,
+    R449a,                   !- Fluid Name
+    Density,                 !- Fluid Property Type
+    R449aSuperHeatTemperatures,  !- Temperature Values Name
+    963990,                  !- Pressure {Pa}
+    0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,
+    0,42.46,41.296,40.236,39.263,38.363,37.524,
+    36.74,36.003,35.309,34.652,34.028,33.436,32.871,
+    32.331,31.815,31.32,31.08;
+
+  FluidProperties:Superheated,
+    R449a,                   !- Fluid Name
+    Enthalpy,                !- Fluid Property Type
+    R449aSuperHeatTemperatures,  !- Temperature Values Name
+    963990,                  !- Pressure {Pa}
+    0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,
+    0,407430,411840,416150,420380,424560,428700,
+    432810,436890,440960,445010,449050,453090,457120,
+    461160,465190,469240,471260;
+
+  FluidProperties:Superheated,
+    R449a,                   !- Fluid Name
+    Density,                 !- Fluid Property Type
+    R449aSuperHeatTemperatures,  !- Temperature Values Name
+    1081400,                 !- Pressure {Pa}
+    0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,
+    0,0,47.878,46.504,45.261,44.124,43.077,
+    42.106,41.2,40.352,39.554,38.802,38.089,37.412,
+    36.769,36.155,35.568,35.284;
+
+  FluidProperties:Superheated,
+    R449a,                   !- Fluid Name
+    Enthalpy,                !- Fluid Property Type
+    R449aSuperHeatTemperatures,  !- Temperature Values Name
+    1081400,                 !- Pressure {Pa}
+    0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,
+    0,0,408900,413440,417870,422210,426490,
+    430730,434920,439080,443220,447350,451460,455560,
+    459660,463750,467850,469900;
+
+  FluidProperties:Superheated,
+    R449a,                   !- Fluid Name
+    Density,                 !- Fluid Property Type
+    R449aSuperHeatTemperatures,  !- Temperature Values Name
+    1209300,                 !- Pressure {Pa}
+    0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,
+    0,0,0,53.908,52.279,50.816,49.487,
+    48.268,47.143,46.097,45.12,44.204,43.342,42.528,
+    41.756,41.023,40.325,39.989;
+
+  FluidProperties:Superheated,
+    R449a,                   !- Fluid Name
+    Enthalpy,                !- Fluid Property Type
+    R449aSuperHeatTemperatures,  !- Temperature Values Name
+    1209300,                 !- Pressure {Pa}
+    0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,
+    0,0,0,410240,414930,419490,423960,
+    428350,432680,436960,441210,445430,449630,453820,
+    457990,462150,466310,468390;
+
+  FluidProperties:Superheated,
+    R449a,                   !- Fluid Name
+    Density,                 !- Fluid Property Type
+    R449aSuperHeatTemperatures,  !- Temperature Values Name
+    1348400,                 !- Pressure {Pa}
+    0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,
+    0,0,0,0,60.629,58.691,56.965,
+    55.407,53.986,52.68,51.472,50.347,49.295,48.308,
+    47.378,46.498,45.664,45.263;
+
+  FluidProperties:Superheated,
+    R449a,                   !- Fluid Name
+    Enthalpy,                !- Fluid Property Type
+    R449aSuperHeatTemperatures,  !- Temperature Values Name
+    1348400,                 !- Pressure {Pa}
+    0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,
+    0,0,0,0,411450,416310,421020,
+    425610,430110,434550,438930,443270,447580,451860,
+    456120,460360,464590,466700;
+
+  FluidProperties:Superheated,
+    R449a,                   !- Fluid Name
+    Density,                 !- Fluid Property Type
+    R449aSuperHeatTemperatures,  !- Temperature Values Name
+    1499300,                 !- Pressure {Pa}
+    0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,
+    0,0,0,0,0,68.132,65.815,
+    63.771,61.94,60.281,58.764,57.366,56.07,54.862,
+    53.731,52.669,51.666,51.186;
+
+  FluidProperties:Superheated,
+    R449a,                   !- Fluid Name
+    Enthalpy,                !- Fluid Property Type
+    R449aSuperHeatTemperatures,  !- Temperature Values Name
+    1499300,                 !- Pressure {Pa}
+    0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,
+    0,0,0,0,0,412510,417560,
+    422430,427160,431790,436340,440830,445260,449660,
+    454020,458360,462680,464830;
+
+  FluidProperties:Superheated,
+    R449a,                   !- Fluid Name
+    Density,                 !- Fluid Property Type
+    R449aSuperHeatTemperatures,  !- Temperature Values Name
+    1662800,                 !- Pressure {Pa}
+    0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,
+    0,0,0,0,0,0,76.538,
+    73.749,71.318,69.159,67.217,65.451,63.832,62.338,
+    60.95,59.654,58.44,57.861;
+
+  FluidProperties:Superheated,
+    R449a,                   !- Fluid Name
+    Enthalpy,                !- Fluid Property Type
+    R449aSuperHeatTemperatures,  !- Temperature Values Name
+    1662800,                 !- Pressure {Pa}
+    0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,
+    0,0,0,0,0,0,413400,
+    418660,423710,428600,433370,438040,442640,447170,
+    451670,456120,460540,462740;
+
+  FluidProperties:Superheated,
+    R449a,                   !- Fluid Name
+    Density,                 !- Fluid Property Type
+    R449aSuperHeatTemperatures,  !- Temperature Values Name
+    1839700,                 !- Pressure {Pa}
+    0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,
+    85.993,82.611,79.702,77.147,74.866,72.807,70.929,
+    69.203,67.607,66.122,65.417;
+
+  FluidProperties:Superheated,
+    R449a,                   !- Fluid Name
+    Enthalpy,                !- Fluid Property Type
+    R449aSuperHeatTemperatures,  !- Temperature Values Name
+    1839700,                 !- Pressure {Pa}
+    0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,
+    414080,419600,424850,429910,434830,439640,444350,
+    449000,453590,458140,460400;
+
+  FluidProperties:Superheated,
+    R449a,                   !- Fluid Name
+    Density,                 !- Fluid Property Type
+    R449aSuperHeatTemperatures,  !- Temperature Values Name
+    2030700,                 !- Pressure {Pa}
+    0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,
+    0,96.673,92.531,89.03,85.991,83.304,80.896,
+    78.713,76.717,74.88,74.013;
+
+  FluidProperties:Superheated,
+    R449a,                   !- Fluid Name
+    Enthalpy,                !- Fluid Property Type
+    R449aSuperHeatTemperatures,  !- Temperature Values Name
+    2030700,                 !- Pressure {Pa}
+    0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,
+    0,414530,420350,425830,431090,436170,441130,
+    445970,450740,455440,457770;
+
+  FluidProperties:Superheated,
+    R449a,                   !- Fluid Name
+    Density,                 !- Fluid Property Type
+    R449aSuperHeatTemperatures,  !- Temperature Values Name
+    2236900,                 !- Pressure {Pa}
+    0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,
+    0,0,108.83,103.7,99.45,95.815,92.637,
+    89.811,87.268,84.957,83.875;
+
+  FluidProperties:Superheated,
+    R449a,                   !- Fluid Name
+    Enthalpy,                !- Fluid Property Type
+    R449aSuperHeatTemperatures,  !- Temperature Values Name
+    2236900,                 !- Pressure {Pa}
+    0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,
+    0,0,414710,420880,426640,432110,437380,
+    442490,447480,452380,454790;
+
+  FluidProperties:Superheated,
+    R449a,                   !- Fluid Name
+    Density,                 !- Fluid Property Type
+    R449aSuperHeatTemperatures,  !- Temperature Values Name
+    2459300,                 !- Pressure {Pa}
+    0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,
+    0,0,0,122.8,116.34,111.13,106.76,
+    102.98,99.652,96.681,95.307;
+
+  FluidProperties:Superheated,
+    R449a,                   !- Fluid Name
+    Enthalpy,                !- Fluid Property Type
+    R449aSuperHeatTemperatures,  !- Temperature Values Name
+    2459300,                 !- Pressure {Pa}
+    0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,
+    0,0,0,414550,421160,427240,432970,
+    438440,443730,448880,451400;
+
+  FluidProperties:Superheated,
+    R449a,                   !- Fluid Name
+    Density,                 !- Fluid Property Type
+    R449aSuperHeatTemperatures,  !- Temperature Values Name
+    2699100,                 !- Pressure {Pa}
+    0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,
+    0,0,0,0,139.04,130.76,124.3,
+    118.99,114.47,110.54,108.75;
+
+  FluidProperties:Superheated,
+    R449a,                   !- Fluid Name
+    Enthalpy,                !- Fluid Property Type
+    R449aSuperHeatTemperatures,  !- Temperature Values Name
+    2699100,                 !- Pressure {Pa}
+    0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,
+    0,0,0,0,413970,421140,427600,
+    433620,439330,444820,447500;
+
+  FluidProperties:Superheated,
+    R449a,                   !- Fluid Name
+    Density,                 !- Fluid Property Type
+    R449aSuperHeatTemperatures,  !- Temperature Values Name
+    2957900,                 !- Pressure {Pa}
+    0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,
+    0,0,0,0,0,158.27,147.37,
+    139.25,132.74,127.3,124.88;
+
+  FluidProperties:Superheated,
+    R449a,                   !- Fluid Name
+    Enthalpy,                !- Fluid Property Type
+    R449aSuperHeatTemperatures,  !- Temperature Values Name
+    2957900,                 !- Pressure {Pa}
+    0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,
+    0,0,0,0,0,412850,420750,
+    427690,434050,440030,442910;
+
+  FluidProperties:Superheated,
+    R449a,                   !- Fluid Name
+    Density,                 !- Fluid Property Type
+    R449aSuperHeatTemperatures,  !- Temperature Values Name
+    3237400,                 !- Pressure {Pa}
+    0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,
+    0,0,0,0,0,0,181.63,
+    166.76,156.35,148.28,144.84;
+
+  FluidProperties:Superheated,
+    R449a,                   !- Fluid Name
+    Enthalpy,                !- Fluid Property Type
+    R449aSuperHeatTemperatures,  !- Temperature Values Name
+    3237400,                 !- Pressure {Pa}
+    0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,
+    0,0,0,0,0,0,410990,
+    419920,427440,434220,437410;
+
+  FluidProperties:Superheated,
+    R449a,                   !- Fluid Name
+    Density,                 !- Fluid Property Type
+    R449aSuperHeatTemperatures,  !- Temperature Values Name
+    3540400,                 !- Pressure {Pa}
+    0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,
+    211.23,189.83,176.18,170.79;
+
+  FluidProperties:Superheated,
+    R449a,                   !- Fluid Name
+    Enthalpy,                !- Fluid Property Type
+    R449aSuperHeatTemperatures,  !- Temperature Values Name
+    3540400,                 !- Pressure {Pa}
+    0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,
+    408030,418500,426790,430520;
+
+  FluidProperties:Superheated,
+    R449a,                   !- Fluid Name
+    Density,                 !- Fluid Property Type
+    R449aSuperHeatTemperatures,  !- Temperature Values Name
+    3871500,                 !- Pressure {Pa}
+    0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,
+    0,251.82,218.15,207.94;
+
+  FluidProperties:Superheated,
+    R449a,                   !- Fluid Name
+    Enthalpy,                !- Fluid Property Type
+    R449aSuperHeatTemperatures,  !- Temperature Values Name
+    3871500,                 !- Pressure {Pa}
+    0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,
+    0,403180,416260,421180;
+
+  FluidProperties:Superheated,
+    R449a,                   !- Fluid Name
+    Density,                 !- Fluid Property Type
+    R449aSuperHeatTemperatures,  !- Temperature Values Name
+    4242000,                 !- Pressure {Pa}
+    0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,
+    0,0,320.32,277.12;
+
+  FluidProperties:Superheated,
+    R449a,                   !- Fluid Name
+    Enthalpy,                !- Fluid Property Type
+    R449aSuperHeatTemperatures,  !- Temperature Values Name
+    4242000,                 !- Pressure {Pa}
+    0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,
+    0,0,393670,405320;
+
+  FluidProperties:Superheated,
+    R449a,                   !- Fluid Name
+    Density,                 !- Fluid Property Type
+    R449aSuperHeatTemperatures,  !- Temperature Values Name
+    4468000,                 !- Pressure {Pa}
+    0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,
+    0,0,0,418.76;
+
+  FluidProperties:Superheated,
+    R449a,                   !- Fluid Name
+    Enthalpy,                !- Fluid Property Type
+    R449aSuperHeatTemperatures,  !- Temperature Values Name
+    4468000,                 !- Pressure {Pa}
+    0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,
+    0,0,0,378850;
+

@@ -1,0 +1,156 @@
+<?xml version="1.0"?>
+<measure>
+  <schema_version>3.1</schema_version>
+  <name>replace_refrigerant</name>
+  <uid>8d554ec3-34f4-4987-8190-2fc4bec3dd2b</uid>
+  <version_id>18eae138-6991-4c1f-b5c8-cedec35ede34</version_id>
+  <version_modified>2025-07-14T14:58:03Z</version_modified>
+  <xml_checksum>ED75A3FC</xml_checksum>
+  <class_name>AddRefrigerant</class_name>
+  <display_name>Add refrigerant to the model</display_name>
+  <description>Measures that adds selected refrigerant to the model</description>
+  <modeler_description>Add selected refrigerant fluid to the openstudio file using the EnergyPlusMeasure</modeler_description>
+  <arguments>
+    <argument>
+      <name>Refrigerant</name>
+      <display_name>Name of new refrigerant</display_name>
+      <description>This will refer to the corresponding idf file where the data for the refrigerant is located</description>
+      <type>Choice</type>
+      <required>true</required>
+      <model_dependent>false</model_dependent>
+      <default_value>R448a</default_value>
+      <choices>
+        <choice>
+          <value>R448a</value>
+          <display_name>R448a</display_name>
+        </choice>
+        <choice>
+          <value>R449a</value>
+          <display_name>R449a</display_name>
+        </choice>
+      </choices>
+    </argument>
+    <argument>
+      <name>Objects_for_replacement</name>
+      <display_name>Objects to replace replacement</display_name>
+      <description>Selec the objects for which the refrigerant should be replaced with new refrigerant</description>
+      <type>Choice</type>
+      <required>true</required>
+      <model_dependent>false</model_dependent>
+      <default_value>All</default_value>
+      <choices>
+        <choice>
+          <value>Refrigeration:System</value>
+          <display_name>Refrigeration:System</display_name>
+        </choice>
+        <choice>
+          <value>Refrigeration:TranscriticalSystem</value>
+          <display_name>Refrigeration:TranscriticalSystem</display_name>
+        </choice>
+        <choice>
+          <value>Refrigeration:SecondarySystem</value>
+          <display_name>Refrigeration:SecondarySystem</display_name>
+        </choice>
+        <choice>
+          <value>Coil:Cooling:WaterToAirHeatPump:ParameterEstimation</value>
+          <display_name>Coil:Cooling:WaterToAirHeatPump:ParameterEstimation</display_name>
+        </choice>
+        <choice>
+          <value>Coil:Heating:WaterToAirHeatPump:ParameterEstimation</value>
+          <display_name>Coil:Heating:WaterToAirHeatPump:ParameterEstimation</display_name>
+        </choice>
+        <choice>
+          <value>AirConditioner:VariableRefrigerantFlow:FluidTemperatureControl</value>
+          <display_name>AirConditioner:VariableRefrigerantFlow:FluidTemperatureControl</display_name>
+        </choice>
+        <choice>
+          <value>AirConditioner:VariableRefrigerantFlow:FluidTemperatureControl:HR</value>
+          <display_name>AirConditioner:VariableRefrigerantFlow:FluidTemperatureControl:HR</display_name>
+        </choice>
+        <choice>
+          <value>All</value>
+          <display_name>All</display_name>
+        </choice>
+      </choices>
+    </argument>
+    <argument>
+      <name>Refrigerant_to_be_replaced</name>
+      <display_name>Refrigerant to be replace</display_name>
+      <description>If a specific refrigerant is to be replaced, then enter the name of the refrigreation, else all the refrigerant will be replaced</description>
+      <type>String</type>
+      <required>true</required>
+      <model_dependent>false</model_dependent>
+      <default_value>All</default_value>
+    </argument>
+  </arguments>
+  <outputs />
+  <provenances />
+  <tags>
+    <tag>Refrigeration.Compressors</tag>
+  </tags>
+  <attributes>
+    <attribute>
+      <name>Measure Type</name>
+      <value>EnergyPlusMeasure</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Measure Language</name>
+      <value>Python</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Intended Software Tool</name>
+      <value>OpenStudio Application</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Intended Software Tool</name>
+      <value>Parametric Analysis Tool</value>
+      <datatype>string</datatype>
+    </attribute>
+  </attributes>
+  <files>
+    <file>
+      <filename>LICENSE.md</filename>
+      <filetype>md</filetype>
+      <usage_type>license</usage_type>
+      <checksum>CD7F5672</checksum>
+    </file>
+    <file>
+      <filename>.gitkeep</filename>
+      <filetype>gitkeep</filetype>
+      <usage_type>doc</usage_type>
+      <checksum>00000000</checksum>
+    </file>
+    <file>
+      <version>
+        <software_program>OpenStudio</software_program>
+        <identifier>3.9.0</identifier>
+        <min_compatible>3.9.0</min_compatible>
+      </version>
+      <filename>measure.py</filename>
+      <filetype>py</filetype>
+      <usage_type>script</usage_type>
+      <checksum>99A62B4A</checksum>
+    </file>
+    <file>
+      <filename>FluidPropertiesRefData_R448a.idf</filename>
+      <filetype>idf</filetype>
+      <usage_type>resource</usage_type>
+      <checksum>78180A4A</checksum>
+    </file>
+    <file>
+      <filename>FluidPropertiesRefData_R449a.idf</filename>
+      <filetype>idf</filetype>
+      <usage_type>resource</usage_type>
+      <checksum>84100DB0</checksum>
+    </file>
+    <file>
+      <filename>test_add_refrigerant.py</filename>
+      <filetype>py</filetype>
+      <usage_type>test</usage_type>
+      <checksum>A81687BE</checksum>
+    </file>
+  </files>
+</measure>
