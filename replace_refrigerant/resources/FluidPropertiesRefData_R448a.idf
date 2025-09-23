@@ -1118,3 +1118,70 @@
     0,0,0,0,0,0,0,
     0,0,0,388050;
 
+Curve:Bicubic,
+    R448A449A_LT_Capacity,   !- Name
+    42961.71775,             !- Coefficient1 Constant
+    -279.8138906,            !- Coefficient2 x
+    -0.4848484848,           !- Coefficient3 x**2
+    1446.318009,             !- Coefficient4 y
+    16.61662338,             !- Coefficient5 y**2
+    -9.468723277,            !- Coefficient6 x*y
+    -0.004528360528,         !- Coefficient7 x**3
+    0.05878787879,           !- Coefficient8 y**3
+    -0.01749184149,          !- Coefficient9 x**2*y
+    -0.09683116883,          !- Coefficient10 x*y**2
+    -40,                     !- Minimum Value of x
+    -18,                     !- Maximum Value of x
+    5,                       !- Minimum Value of y
+    55;                      !- Maximum Value of y
+
+Curve:Bicubic,
+    R448A449A_LT_Power,      !- Name
+    8472.778355,             !- Coefficient1 Constant
+    55.60519037,             !- Coefficient2 x
+    -1.04979021,             !- Coefficient3 x**2
+    268.3301299,             !- Coefficient4 y
+    4.58025974,              !- Coefficient5 y**2
+    0.09862937063,           !- Coefficient6 x*y
+    0.02391919192,           !- Coefficient7 x**3
+    0.03454545455,           !- Coefficient8 y**3
+    -0.01241958042,          !- Coefficient9 x**2*y
+    -0.0007272727273,        !- Coefficient10 x*y**2
+    -40,                     !- Minimum Value of x
+    -18,                     !- Maximum Value of x
+    5,                       !- Minimum Value of y
+    55;                      !- Maximum Value of y
+
+Curve:Bicubic,
+    R448A449A_MT_Capacity,   !- Name
+    42934.04762,             !- Coefficient1 Constant
+    -278.4662698,            !- Coefficient2 x
+    -0.5095238095,           !- Coefficient3 x**2
+    1441.409524,             !- Coefficient4 y
+    16.37142857,             !- Coefficient5 y**2
+    -9.355952381,            !- Coefficient6 x*y
+    -0.004444444444,         !- Coefficient7 x**3
+    0.05333333333,           !- Coefficient8 y**3
+    -0.01895238095,          !- Coefficient9 x**2*y
+    -0.09642857143,          !- Coefficient10 x*y**2
+    -17,                     !- Minimum Value of x
+    7,                       !- Maximum Value of x
+    5,                       !- Minimum Value of y
+    55;                      !- Maximum Value of y
+
+Curve:Bicubic,
+    R448A449A_MT_Power,      !- Name
+    8565,                    !- Coefficient1 Constant
+    50.96428571,             !- Coefficient2 x
+    -0.9595238095,           !- Coefficient3 x**2
+    276.1619048,             !- Coefficient4 y
+    5.171428571,             !- Coefficient5 y**2
+    0.03571428571,           !- Coefficient6 x*y
+    0.02333333333,           !- Coefficient7 x**3
+    0.04952380952,           !- Coefficient8 y**3
+    -0.012,                  !- Coefficient9 x**2*y
+    -0.001428571429,         !- Coefficient10 x*y**2
+    -17,                     !- Minimum Value of x
+    7,                       !- Maximum Value of x
+    5,                       !- Minimum Value of y
+    55;                      !- Maximum Value of y

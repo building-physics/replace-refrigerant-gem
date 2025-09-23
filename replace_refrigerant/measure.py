@@ -142,7 +142,49 @@ class AddRefrigerant(openstudio.measure.EnergyPlusMeasure):
                             """Replace if existing refrigeratn in object is same as user selected refrigerant ( like R-134A, R-32, etc) """
                             if Refrigerant_to_be_replaced ==obj.getString(index):
                                 obj.setString(index,Refrigerant)              
-                        
+        
+        if Objects_for_replacement=="Refrigeration:System" or Objects_for_replacement=="All": #Change the power and capacity curve if replacement is for "Refrigeration:System"
+            for obj in workspace.getObjectsByType("Refrigeration:System"):
+                case_list_name=obj.getString(1).get()        
+                compressor_list_name=obj.getString(4).get() 
+    
+                compressor_list = workspace.getObjectByTypeAndName("Refrigeration:CompressorList",compressor_list_name).get()
+                #print(compressor_list.get())
+                case_list = workspace.getObjectByTypeAndName("Refrigeration:CaseAndWalkInList",case_list_name).get()
+                #print(case_list.get())
+    
+                first_case_walkin_name = case_list.getString(1).get()
+    
+    
+                #first_case=workspace.getObjectByTypeAndName("Refrigeration:Case",first_case_walkin_name).get()
+                cases=workspace.getObjectsByType("Refrigeration:Case")
+                walkins=workspace.getObjectsByType("Refrigeration:WalkIn")
+                compressors=workspace.getObjectsByType("Refrigeration:Compressor")
+                
+                case_found=False
+                for Case in cases:
+                    if Case.getString(0).get()==first_case_walkin_name:
+                        operating_temperature=float(Case.getString(9).get())
+                        case_found=True
+                        break
+                if not case_found:
+                    for walkin in walkins:
+                        if walkin.getString(0).get()==first_case_walkin_name:
+                            operating_temperature=float(walkin.getString(3).get())
+                            break
+                compressor_namelist=[]
+                for i in range(1,compressor_list.numFields()):
+                    compressor_name=compressor_list.getString(i).get()
+                    compressor_namelist.append(compressor_name)
+                
+                for compressor in compressors:
+                    if compressor.nameString() in compressor_namelist:
+                        if operating_temperature > -18:
+                            compressor.setString(1,"R448A449A_MT_Power")
+                            compressor.setString(2,"R448A449A_MT_Capacity")
+                        else:
+                            compressor.setString(1,"R448A449A_LT_Power")
+                            compressor.setString(2,"R448A449A_LT_Capacity")
         return True
 
 

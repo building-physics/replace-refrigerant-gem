@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
 <measure>
   <schema_version>3.1</schema_version>
-  <name>replace_refrigerant</name>
+  <name>add_refrigerant</name>
   <uid>8d554ec3-34f4-4987-8190-2fc4bec3dd2b</uid>
-  <version_id>18eae138-6991-4c1f-b5c8-cedec35ede34</version_id>
-  <version_modified>2025-07-14T14:58:03Z</version_modified>
+  <version_id>95e0dad7-408e-4a32-b94f-3d4419635ae3</version_id>
+  <version_modified>2025-09-23T22:11:32Z</version_modified>
   <xml_checksum>ED75A3FC</xml_checksum>
   <class_name>AddRefrigerant</class_name>
   <display_name>Add refrigerant to the model</display_name>
@@ -112,18 +112,6 @@
   </attributes>
   <files>
     <file>
-      <filename>LICENSE.md</filename>
-      <filetype>md</filetype>
-      <usage_type>license</usage_type>
-      <checksum>CD7F5672</checksum>
-    </file>
-    <file>
-      <filename>.gitkeep</filename>
-      <filetype>gitkeep</filetype>
-      <usage_type>doc</usage_type>
-      <checksum>00000000</checksum>
-    </file>
-    <file>
       <version>
         <software_program>OpenStudio</software_program>
         <identifier>3.9.0</identifier>
@@ -132,25 +120,19 @@
       <filename>measure.py</filename>
       <filetype>py</filetype>
       <usage_type>script</usage_type>
-      <checksum>99A62B4A</checksum>
+      <checksum>55347867</checksum>
     </file>
     <file>
       <filename>FluidPropertiesRefData_R448a.idf</filename>
       <filetype>idf</filetype>
       <usage_type>resource</usage_type>
-      <checksum>78180A4A</checksum>
+      <checksum>E513893C</checksum>
     </file>
     <file>
       <filename>FluidPropertiesRefData_R449a.idf</filename>
       <filetype>idf</filetype>
       <usage_type>resource</usage_type>
-      <checksum>84100DB0</checksum>
-    </file>
-    <file>
-      <filename>test_add_refrigerant.py</filename>
-      <filetype>py</filetype>
-      <usage_type>test</usage_type>
-      <checksum>A81687BE</checksum>
+      <checksum>80A307FD</checksum>
     </file>
   </files>
 </measure>
