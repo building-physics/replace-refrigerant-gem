@@ -24,7 +24,7 @@ Although OpenStudio Measures grant access to the entire OpenStudio model, they d
 See [resources/README.md](replace_refrigerant/resources/README.md) for dataset details and generation notes.
 
 ## Measure Description
-The **AddRefrigerant** measure is implemented as an `EnergyPlusMeasure` in Python. It operates on the EnergyPlus workspace after the OSM model is translated, ensuring direct access to refrigerant-related objects.  
+The **relace_Refrigerant** measure is implemented as an `EnergyPlusMeasure` in Python. It operates on the EnergyPlus workspace after the OSM model is translated, ensuring direct access to refrigerant-related objects.  
 
 ### Key Arguments
 - **Refrigerant** – Choice of new refrigerant to add (`R448A`, `R449A`).  
@@ -34,8 +34,8 @@ The **AddRefrigerant** measure is implemented as an `EnergyPlusMeasure` in Pytho
 ### Functionality
 - Loads the corresponding refrigerant dataset from `resources/FluidPropertiesRefData_*.idf`.
 - Imports refrigerant property objects into the active EnergyPlus workspace.
-- Loads compressor performance curves for R448A and R449A from `resources/R448A449A_MT_LT_Curves.idf` and updates compressor curve references where applicable.
 - Replaces refrigerant references in selected objects according to user input.
+- Loads compressor performance curves for R448A and R449A from `resources/R448A449A_MT_LT_Curves.idf` and updates compressor curve references where applicable.
 
 This ensures consistent refrigerant replacement across a model while preserving EnergyPlus compatibility.
 
