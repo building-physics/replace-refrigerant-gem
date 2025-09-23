@@ -20,7 +20,8 @@ Although OpenStudio Measures grant access to the entire OpenStudio model, they d
 - **resources/FluidPropertiesRefData_R448a.idf** – Refrigerant property dataset for R448A.  
 - **resources/FluidPropertiesRefData_R449a.idf** – Refrigerant property dataset for R449A.  
 - **resources/R448A449A_MT_LT_Curves.idf** – Compressor performance curves for R448A and R449A (medium- and low-temperature applications).
-See [resources/README.md](resources/replace_refrigerant/README.md) for dataset details and generation notes.
+
+See [resources/README.md](replace_refrigerant/resources/README.md) for dataset details and generation notes.
 
 ## Measure Description
 
