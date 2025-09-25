@@ -17,9 +17,8 @@ Although OpenStudio Measures grant access to the entire OpenStudio model, they d
 ## Repository Structure
 - **measure.py** – Main Python script implementing the EnergyPlus Measure. Defines user arguments and refrigerant replacement logic.  
 - **measure.xml** – Metadata defining measure schema, arguments, and tool compatibility.  
-- **resources/FluidPropertiesRefData_R448a.idf** – Refrigerant property dataset for R448A.  
-- **resources/FluidPropertiesRefData_R449a.idf** – Refrigerant property dataset for R449A.  
-- **resources/R448A449A_MT_LT_Curves.idf** – Compressor performance curves for R448A and R449A (medium- and low-temperature applications).
+- **resources/FluidPropertiesRefData_R448a.idf** – Refrigerant property dataset for R448A and Compressor performance curves for R448A (medium- and low-temperature applications).  
+- **resources/FluidPropertiesRefData_R449a.idf** – Refrigerant property dataset for R449A and Compressor performance curves for R449A (medium- and low-temperature applications).  
 
 See [resources/README.md](replace_refrigerant/resources/README.md) for dataset details and generation notes.
 
@@ -29,13 +28,12 @@ The **relace_Refrigerant** measure is implemented as an `EnergyPlusMeasure` in P
 ### Key Arguments
 - **Refrigerant** – Choice of new refrigerant to add (`R448A`, `R449A`).  
 - **Objects_for_replacement** – Target object type(s) for refrigerant replacement (currently limited to `Refrigeration:System`. Air conditioning equipment is excluded).  
-- **Refrigerant_to_be_replaced** – Specify an existing refrigerant to replace, or use `All` to replace every refrigerant found.  
 
 ### Functionality
 - Loads the corresponding refrigerant dataset from `resources/FluidPropertiesRefData_*.idf`.
 - Imports refrigerant property objects into the active EnergyPlus workspace.
 - Replaces refrigerant references in selected objects according to user input.
-- Loads compressor performance curves for R448A and R449A from `resources/R448A449A_MT_LT_Curves.idf` and updates compressor curve references where applicable.
+- Loads compressor performance curves for R448A and R449A from `resources/FluidPropertiesRefData_*.idf` and updates compressor curve references where applicable.
 
 This ensures consistent refrigerant replacement across a model while preserving EnergyPlus compatibility.
 
