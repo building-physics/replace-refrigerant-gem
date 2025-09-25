@@ -38,7 +38,7 @@ The **relace_Refrigerant** measure is implemented as an `EnergyPlusMeasure` in P
 This ensures consistent refrigerant replacement across a model while preserving EnergyPlus compatibility.
 
 ## Example
-Refrigerants were replaced for two openstudio files one at climate zone 2A and another at climate zone 5A. The results from the simulation are shown in image below.
+Refrigerants were replaced in two OpenStudio SuperMarket models, one located in climate zone 2A and the other in climate zone 5A. The simulation results are shown in the image below.
 
 <img src="example_result.png" width="500" alt="Results for SuperMarket Refrigeration Energy Consumption">
 
