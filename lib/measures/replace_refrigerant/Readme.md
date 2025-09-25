@@ -42,8 +42,7 @@ This ensures consistent refrigerant replacement across a model while preserving 
 ## Example
 Refrigerants were replaced for two openstudio files one at climate zone 2A and another at climate zone 5A. The results from the simulation is shown in image below.
 
-![OpenStudio Simulation Results](example_result.png "Results for SuperMarket Refrigeration Energy Consumption"){width=5,height=5}
-
+<img src="example_result.png" width="400" alt="Results for SuperMarket Refrigeration Energy Consumption">
 
 ## License
 This is a work in progress and will be distributed under the terms of the BSD-3-Clause license
