@@ -3,7 +3,7 @@
 
 ## Overview
 This repository provides an OpenStudio/EnergyPlus Measure developed at **Oak Ridge National Laboratory (ORNL)** to support the use of alternative refrigerants in building energy models.  
-The measure enables users to **add or replace refrigerants** in EnergyPlus models with updated property data.  
+The measure enables users to **replace refrigerants** in EnergyPlus models with updated property data.  
 Currently, it supports **R448A** and **R449A**, both of which are non-flammable A1 safety-class refrigerants intended as replacements for R404A in commercial refrigeration systems.
 
 ## Background
