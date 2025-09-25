@@ -1,0 +1,326 @@
+[openstudio.CLI] <-2> Setting Log Level to Debug (-2)
+[openstudio.workflow.OSWorkflow] <Debug> Removing existing run directory: C:/Users/vyk/AppData/Local/Temp/osmodel-f9a0-71a4-5891-b2e8-1758723290-0/resources/run
+[openstudio.workflow.OSWorkflow] <Debug> Registering that the workflow has started with the adapter
+[openstudio.workflow.OSWorkflow] <Debug> Initialization - selected = true
+[38;2;000;128;000m
+┌────────────────────────────────────────────────────────────────────────────────┐
+│                         Starting State Initialization                          │
+└────────────────────────────────────────────────────────────────────────────────┘[0m
+[openstudio.workflow.OSWorkflow] <Debug> The root_dir for the datapoint is C:/Users/vyk/AppData/Local/Temp/osmodel-f9a0-71a4-5891-b2e8-1758723290-0/resources
+[openstudio.workflow.OSWorkflow] <Debug> Removing existing generated files directory: C:/Users/vyk/AppData/Local/Temp/osmodel-f9a0-71a4-5891-b2e8-1758723290-0/resources/generated_files
+[openstudio.workflow.OSWorkflow] <Debug> Creating generated files directory: C:/Users/vyk/AppData/Local/Temp/osmodel-f9a0-71a4-5891-b2e8-1758723290-0/resources/generated_files
+[openstudio.workflow.OSWorkflow] <Debug> Removing existing reports directory: C:/Users/vyk/AppData/Local/Temp/osmodel-f9a0-71a4-5891-b2e8-1758723290-0/resources/reports
+[openstudio.workflow.OSWorkflow] <Info> Attempting to validate the measure workflow
+[openstudio.WorkflowJSON] <Debug> Validating step 0
+[openstudio.workflow.OSWorkflow] <Info> Validated the measure workflow
+[openstudio.workflow.OSWorkflow] <Debug> Finding and loading the seed file
+[openstudio.worklow.Util] <Info> Loading OSM model
+[openstudio.worklow.Util] <Info> Reading in OSM model C:/Users/vyk/AppData/Local/Temp/osmodel-f9a0-71a4-5891-b2e8-1758723290-0/SuperMarket-90.1-2004-ASHRAE 169-2013-5A_448A.osm
+[openstudio.osversion.VersionTranslator] <Debug> Starting translation from Version 3.9.0.
+[openstudio.osversion.VersionTranslator] <Debug> Initial model has 1818 objects.
+[openstudio.osversion.VersionTranslator] <Debug> Final model has 1818 objects in IDF form.
+[utilities.idf.Workspace] <Debug> Workspace::isValid called.
+[openstudio.osversion.VersionTranslator] <Debug> Final model has 1818 objects in Model form.
+[openstudio.workflow.OSWorkflow] <Debug> Initialize the weather file from osw
+[openstudio.workflow.OSWorkflow] <Debug> Search for weather file defined by osw USA_NY_Buffalo-Greater.Buffalo.Intl.AP.725280_TMY3.epw
+[openstudio.EpwFile] <Debug> No Daylightings Saving start Date
+[openstudio.EpwFile] <Info> Successive data points (1980-Jan-31 to 1988-Feb-01, ending on line 753) are greater than 1 day apart in EPW file 'C:/Users/vyk/AppData/Local/Temp/osmodel-f9a0-71a4-5891-b2e8-1758723290-0/resources/files/USA_NY_Buffalo-Greater.Buffalo.Intl.AP.725280_TMY3.epw'. Data will be treated as typical (TMY)
+[38;2;000;128;000m#######################Returned from State Initialization#######################[0m
+[openstudio.workflow.OSWorkflow] <Debug> OpenStudioMeasures - selected = true
+[38;2;000;128;000m
+┌────────────────────────────────────────────────────────────────────────────────┐
+│                       Starting State OpenStudioMeasures                        │
+└────────────────────────────────────────────────────────────────────────────────┘[0m
+[openstudio.workflow.OSWorkflow] <Info> Beginning to execute OpenStudio Measures
+[openstudio.workflow.OSWorkflow] <Debug> Finding measures of type ModelMeasure
+[openstudio.workflow.OSWorkflow] <Info> Finished applying OpenStudio Measures.
+[38;2;000;128;000m#####################Returned from State OpenStudioMeasures#####################[0m
+[openstudio.workflow.OSWorkflow] <Debug> Translator - selected = true
+[38;2;000;128;000m
+┌────────────────────────────────────────────────────────────────────────────────┐
+│                           Starting State Translator                            │
+└────────────────────────────────────────────────────────────────────────────────┘[0m
+[openstudio.workflow.OSWorkflow] <Info> Beginning the translation to IDF
+[openstudio.model.SimulationControl] <Debug> You have zonal equipment and design days, and SimulationControl::DoZoneSizingCalculation is defaulted: turning on.
+[openstudio.model.SimulationControl] <Debug> You have AirLoopHVAC(s) and design day(s), and SimulationControl::DoSystemSizingCalculation is defaulted: assuming on.
+[openstudio.model.SimulationControl] <Debug> You have PlantLoop(s) and design days, and SimulationControl::DoPlantSizingCalculation is defaulted: assuming on.
+[openstudio.energyplus.ForwardTranslator] <Warn> OS_ProgramControl is not currently translated
+[openstudio.model.EnergyManagementSystemSensor] <Info>  does not have an Output Variable attached.
+[openstudio.model.EnergyManagementSystemSensor] <Info>  does not have an Output Meter attached.
+[openstudio.workflow.OSWorkflow] <Info> Successfully translated to IDF
+[38;2;000;128;000m#########################Returned from State Translator#########################[0m
+[openstudio.workflow.OSWorkflow] <Debug> EnergyPlusMeasures - selected = true
+[38;2;000;128;000m
+┌────────────────────────────────────────────────────────────────────────────────┐
+│                       Starting State EnergyPlusMeasures                        │
+└────────────────────────────────────────────────────────────────────────────────┘[0m
+[openstudio.workflow.OSWorkflow] <Info> Beginning to execute EnergyPlus Measures.
+[openstudio.workflow.OSWorkflow] <Debug> Finding measures of type EnergyPlusMeasure
+[openstudio.workflow.OSWorkflow] <Debug> Running step 0
+[openstudio.workflow.OSWorkflow] <Debug> Find model's weather file and update LastEpwFilePath
+[openstudio.workflow.OSWorkflow] <Debug> Search for weather file C:/Users/vyk/AppData/Local/Temp/osmodel-f9a0-71a4-5891-b2e8-1758723290-0/resources/files/USA_NY_Buffalo-Greater.Buffalo.Intl.AP.725280_TMY3.epw
+[openstudio.workflow.OSWorkflow] <Debug> Creating run directory for measure in 'C:/Users/vyk/AppData/Local/Temp/osmodel-f9a0-71a4-5891-b2e8-1758723290-0/resources/run/000_replace_refrigerant'
+[openstudio.workflow.OSWorkflow] <Debug> Found replace_refrigerant at primaryScriptPath: 'C:/Users/vyk/AppData/Local/Temp/osmodel-f9a0-71a4-5891-b2e8-1758723290-0/resources/measures/replace_refrigerant/measure.py'
+[openstudio.workflow.OSWorkflow] <Debug> Class Name: AddRefrigerant
+[openstudio.workflow.OSWorkflow] <Debug> Measure Script Path: C:/Users/vyk/AppData/Local/Temp/osmodel-f9a0-71a4-5891-b2e8-1758723290-0/resources/measures/replace_refrigerant/measure.py
+[openstudio.workflow.OSWorkflow] <Debug> Measure Type: EnergyPlusMeasure
+[openstudio.workflow.OSWorkflow] <Debug> Measure Language: Python
+[ApplicationPathHelpers] <Debug> getOpenStudioModule, szPath = 'C:\openstudioapplication-1.9.0-rc1\bin\openstudiolib.dll'
+[PathHelpers] <Debug> completeAndNormalize: result = C:/openstudioapplication-1.9.0-rc1/bin/openstudiolib.dll
+[ApplicationPathHelpers] <Debug> getOpenStudioModule, found 'C:/openstudioapplication-1.9.0-rc1/bin/openstudiolib.dll'
+[ApplicationPathHelpers] <Debug> getOpenStudioModule, szPath = 'C:\openstudioapplication-1.9.0-rc1\bin\openstudiolib.dll'
+[PathHelpers] <Debug> completeAndNormalize: result = C:/openstudioapplication-1.9.0-rc1/bin/openstudiolib.dll
+[ApplicationPathHelpers] <Debug> getOpenStudioModule, found 'C:/openstudioapplication-1.9.0-rc1/bin/openstudiolib.dll'
+[ApplicationPathHelpers] <Debug> Searching for EnergyPlus in 'C:/openstudioapplication-1.9.0-rc1/EnergyPlus/energyplus.exe'
+[PathHelpers] <Debug> completeAndNormalize: result = C:/openstudioapplication-1.9.0-rc1/EnergyPlus/energyplus.exe
+[ApplicationPathHelpers] <Debug> Found EnergyPlus at 'C:/openstudioapplication-1.9.0-rc1/EnergyPlus/energyplus.exe'
+[PathHelpers] <Debug> completeAndNormalize: result = C:/openstudioapplication-1.9.0-rc1/EnergyPlus/energyplus.exe
+[ApplicationPathHelpers] <Debug> getOpenStudioModule, szPath = 'C:\openstudioapplication-1.9.0-rc1\bin\openstudiolib.dll'
+[PathHelpers] <Debug> completeAndNormalize: result = C:/openstudioapplication-1.9.0-rc1/bin/openstudiolib.dll
+[ApplicationPathHelpers] <Debug> getOpenStudioModule, found 'C:/openstudioapplication-1.9.0-rc1/bin/openstudiolib.dll'
+[ApplicationPathHelpers] <Debug> getOpenStudioModule, szPath = 'C:\openstudioapplication-1.9.0-rc1\bin\openstudiolib.dll'
+[PathHelpers] <Debug> completeAndNormalize: result = C:/openstudioapplication-1.9.0-rc1/bin/openstudiolib.dll
+[ApplicationPathHelpers] <Debug> getOpenStudioModule, found 'C:/openstudioapplication-1.9.0-rc1/bin/openstudiolib.dll'
+[openstudio.workflow.OSWorkflow] <Debug> measure->name()= 'Add refrigerant to the model'
+[openstudio.workflow.OSWorkflow] <Debug> Current step has 0 arguments
+[openstudio.workflow.OSWorkflow] <Debug> argumentMap={"Objects_for_replacement": "All", "Refrigerant": "R448a", "Refrigerant_to_be_replaced": "All"}
+[openstudio.workflow.OSWorkflow] <Debug> Step Result: Success
+[openstudio.workflow.OSWorkflow] <Info> Finished applying EnergyPlus Measures.
+[38;2;000;128;000m#####################Returned from State EnergyPlusMeasures#####################[0m
+[openstudio.workflow.OSWorkflow] <Debug> PreProcess - selected = true
+[38;2;000;128;000m
+┌────────────────────────────────────────────────────────────────────────────────┐
+│                           Starting State PreProcess                            │
+└────────────────────────────────────────────────────────────────────────────────┘[0m
+[openstudio.workflow.OSWorkflow] <Info> Beginning to collect output requests from Reporting measures.
+[openstudio.workflow.OSWorkflow] <Debug> Finding measures of type ReportingMeasure
+[openstudio.workflow.OSWorkflow] <Info> Finished collecting output requests from Reporting measures.
+[openstudio.workflow.OSWorkflow] <Info> Running EnergyPlus Preprocess
+[openstudio.workflow.OSWorkflow] <Info> Finished preprocess job for EnergyPlus simulation
+[openstudio.workflow.OSWorkflow] <Debug> Saved final IDF as C:/Users/vyk/AppData/Local/Temp/osmodel-f9a0-71a4-5891-b2e8-1758723290-0/resources/run/in.idf
+[38;2;000;128;000m#########################Returned from State PreProcess#########################[0m
+[openstudio.workflow.OSWorkflow] <Debug> EnergyPlus - selected = true
+[38;2;000;128;000m
+┌────────────────────────────────────────────────────────────────────────────────┐
+│                           Starting State EnergyPlus                            │
+└────────────────────────────────────────────────────────────────────────────────┘[0m
+[openstudio.OSWorkflow.prepareEnergyPlusDir] <Debug> Original Directory: C:/Users/vyk/OneDrive - Oak Ridge National Laboratory/OpenStudio/OpenStudio_files
+[openstudio.OSWorkflow.prepareEnergyPlusDir] <Debug> Changing To run directory: C:/Users/vyk/AppData/Local/Temp/osmodel-f9a0-71a4-5891-b2e8-1758723290-0/resources/run
+[ApplicationPathHelpers] <Debug> getOpenStudioModule, szPath = 'C:\openstudioapplication-1.9.0-rc1\bin\openstudiolib.dll'
+[PathHelpers] <Debug> completeAndNormalize: result = C:/openstudioapplication-1.9.0-rc1/bin/openstudiolib.dll
+[ApplicationPathHelpers] <Debug> getOpenStudioModule, found 'C:/openstudioapplication-1.9.0-rc1/bin/openstudiolib.dll'
+[ApplicationPathHelpers] <Debug> Searching for EnergyPlus in 'C:/openstudioapplication-1.9.0-rc1/EnergyPlus/energyplus.exe'
+[PathHelpers] <Debug> completeAndNormalize: result = C:/openstudioapplication-1.9.0-rc1/EnergyPlus/energyplus.exe
+[ApplicationPathHelpers] <Debug> Found EnergyPlus at 'C:/openstudioapplication-1.9.0-rc1/EnergyPlus/energyplus.exe'
+[PathHelpers] <Debug> completeAndNormalize: result = C:/openstudioapplication-1.9.0-rc1/EnergyPlus/energyplus.exe
+[openstudio.OSWorkflow.prepareEnergyPlusDir] <Info> EnergyPlus executable path is C:/openstudioapplication-1.9.0-rc1/EnergyPlus/energyplus.exe
+[openstudio.OSWorkflow.prepareEnergyPlusDir] <Info> ExpandObjects executable path is C:/openstudioapplication-1.9.0-rc1/EnergyPlus/ExpandObjects.exe
+[openstudio.workflow.OSWorkflow] <Info> Starting simulation in run directory: C:/Users/vyk/AppData/Local/Temp/osmodel-f9a0-71a4-5891-b2e8-1758723290-0/resources/run
+[openstudio.workflow.OSWorkflow] <Info> Running command '"C:/openstudioapplication-1.9.0-rc1\EnergyPlus\ExpandObjects.exe"'
+ExpandObjects Started.
+No expanded file generated.
+ExpandObjects Finished. Time:     0.219
+[openstudio.workflow.OSWorkflow] <Info> Running command '"C:/openstudioapplication-1.9.0-rc1\EnergyPlus\energyplus.exe" in.idf'
+EnergyPlus Starting
+EnergyPlus, Version 24.2.0-94a887817b, YMD=2025.09.24 10:17
+Initializing Response Factors
+Calculating CTFs for "INTERIORFURNISHINGS"
+Calculating CTFs for "TYPICAL IEAD ROOF R-15.87"
+Calculating CTFs for "TYPICAL INSULATED EXTERIOR MASS WALL R-8.13"
+Calculating CTFs for "TYPICAL INTERIOR WALL"
+Calculating CTFs for "FOUNDATION F 126 PERIM 0 AREA 208239"
+Calculating CTFs for "FOUNDATION F 126 PERIM 1118 AREA 2784"
+Calculating CTFs for "FOUNDATION F 126 PERIM 154 AREA 4941"
+Calculating CTFs for "FOUNDATION F 126 PERIM 227 AREA 2247"
+Calculating CTFs for "FOUNDATION F 126 PERIM 2348 AREA 10735"
+Calculating CTFs for "FOUNDATION F 126 PERIM 3102 AREA 20903"
+Calculating CTFs for "FOUNDATION F 126 PERIM 5601 AREA 42217"
+Calculating CTFs for "FOUNDATION F 126 PERIM 6005 AREA 71136"
+Calculating CTFs for "FOUNDATION F 126 PERIM 61 AREA 2787"
+Calculating CTFs for "FOUNDATION F 126 PERIM 625 AREA 4646"
+Calculating CTFs for "FOUNDATION F 126 PERIM 749 AREA 5574"
+Calculating CTFs for "FOUNDATION F 126 PERIM 843 AREA 6271"
+Initializing Window Optical Properties
+Initializing Solar Calculations
+Allocate Solar Module Arrays
+Initializing Zone and Enclosure Report Variables
+Initializing Surface (Shading) Report Variables
+Computing Interior Solar Absorption Factors
+Determining Shadowing Combinations
+Computing Window Shade Absorption Factors
+Proceeding with Initializing Solar Calculations
+Initializing Surfaces
+Initializing Outdoor environment for Surfaces
+Setting up Surface Reporting Variables
+Initializing Temperature and Flux Histories
+Initializing Window Shading
+Computing Interior Absorption Factors
+Computing Interior Diffuse Solar Absorption Factors
+Initializing Solar Heat Gains
+Initializing Internal Heat Gains
+Initializing Interior Solar Distribution
+Initializing Interior Convection Coefficients
+Gathering Information for Predefined Reporting
+Completed Initializing Surface Heat Balance
+Calculate Outside Surface Heat Balance
+Calculate Inside Surface Heat Balance
+Calculate Air Heat Balance
+Initializing HVAC
+Warming up
+Warming up
+Warming up
+Warming up
+Warming up
+Performing Zone Sizing Simulation
+...for Sizing Period: #1 BUFFALO NIAGARA INTL AP ANN CLG .4% CONDNS DB=>MWB
+Warming up
+Warming up
+Warming up
+Warming up
+Warming up
+Performing Zone Sizing Simulation
+...for Sizing Period: #2 BUFFALO NIAGARA INTL AP ANN CLG .4% CONDNS DP=>MDB
+Warming up
+Warming up
+Warming up
+Warming up
+Warming up
+Performing Zone Sizing Simulation
+...for Sizing Period: #3 BUFFALO NIAGARA INTL AP ANN CLG .4% CONDNS ENTH=>MDB
+Warming up
+Warming up
+Warming up
+Warming up
+Warming up
+Performing Zone Sizing Simulation
+...for Sizing Period: #4 BUFFALO NIAGARA INTL AP ANN CLG .4% CONDNS WB=>MDB
+Warming up
+Warming up
+Warming up
+Warming up
+Warming up
+Warming up
+Warming up
+Performing Zone Sizing Simulation
+...for Sizing Period: #5 BUFFALO NIAGARA INTL AP ANN HTG 99.6% CONDNS DB
+Warming up
+Warming up
+Warming up
+Warming up
+Warming up
+Performing Zone Sizing Simulation
+...for Sizing Period: #6 BUFFALO NIAGARA INTL AP ANN HTG WIND 99.6% CONDNS WS=>MCDB
+Warming up
+Warming up
+Warming up
+Warming up
+Warming up
+Warming up
+Warming up
+Performing Zone Sizing Simulation
+...for Sizing Period: #7 BUFFALO NIAGARA INTL AP ANN HUM_N 99.6% CONDNS DP=>MCDB
+Calculating System sizing
+...for Sizing Period: #1 BUFFALO NIAGARA INTL AP ANN CLG .4% CONDNS DB=>MWB
+Calculating System sizing
+...for Sizing Period: #2 BUFFALO NIAGARA INTL AP ANN CLG .4% CONDNS DP=>MDB
+Calculating System sizing
+...for Sizing Period: #3 BUFFALO NIAGARA INTL AP ANN CLG .4% CONDNS ENTH=>MDB
+Calculating System sizing
+...for Sizing Period: #4 BUFFALO NIAGARA INTL AP ANN CLG .4% CONDNS WB=>MDB
+Calculating System sizing
+...for Sizing Period: #5 BUFFALO NIAGARA INTL AP ANN HTG 99.6% CONDNS DB
+Calculating System sizing
+...for Sizing Period: #6 BUFFALO NIAGARA INTL AP ANN HTG WIND 99.6% CONDNS WS=>MCDB
+Calculating System sizing
+...for Sizing Period: #7 BUFFALO NIAGARA INTL AP ANN HUM_N 99.6% CONDNS DP=>MCDB
+Adjusting Air System Sizing
+Adjusting Standard 62.1 Ventilation Sizing
+Initializing Simulation
+Reporting Surfaces
+Beginning Primary Simulation
+Initializing New Environment Parameters
+Warming up {1}
+Warming up {2}
+Warming up {3}
+Warming up {4}
+Warming up {5}
+Warming up {6}
+Warming up {7}
+Warming up {8}
+Starting Simulation at 01/01/2006 for RUN PERIOD 1
+Updating Shadowing Calculations, Start Date=01/21/2006
+Continuing Simulation at 01/21/2006 for RUN PERIOD 1
+Updating Shadowing Calculations, Start Date=02/10/2006
+Continuing Simulation at 02/10/2006 for RUN PERIOD 1
+Updating Shadowing Calculations, Start Date=03/02/2006
+Continuing Simulation at 03/02/2006 for RUN PERIOD 1
+Updating Shadowing Calculations, Start Date=03/22/2006
+Continuing Simulation at 03/22/2006 for RUN PERIOD 1
+Updating Shadowing Calculations, Start Date=04/11/2006
+Continuing Simulation at 04/11/2006 for RUN PERIOD 1
+Updating Shadowing Calculations, Start Date=05/01/2006
+Continuing Simulation at 05/01/2006 for RUN PERIOD 1
+Updating Shadowing Calculations, Start Date=05/21/2006
+Continuing Simulation at 05/21/2006 for RUN PERIOD 1
+Updating Shadowing Calculations, Start Date=06/10/2006
+Continuing Simulation at 06/10/2006 for RUN PERIOD 1
+Updating Shadowing Calculations, Start Date=06/30/2006
+Continuing Simulation at 06/30/2006 for RUN PERIOD 1
+Updating Shadowing Calculations, Start Date=07/20/2006
+Continuing Simulation at 07/20/2006 for RUN PERIOD 1
+Updating Shadowing Calculations, Start Date=08/09/2006
+Continuing Simulation at 08/09/2006 for RUN PERIOD 1
+Updating Shadowing Calculations, Start Date=08/29/2006
+Continuing Simulation at 08/29/2006 for RUN PERIOD 1
+Updating Shadowing Calculations, Start Date=09/18/2006
+Continuing Simulation at 09/18/2006 for RUN PERIOD 1
+Updating Shadowing Calculations, Start Date=10/08/2006
+Continuing Simulation at 10/08/2006 for RUN PERIOD 1
+Updating Shadowing Calculations, Start Date=10/28/2006
+Continuing Simulation at 10/28/2006 for RUN PERIOD 1
+Updating Shadowing Calculations, Start Date=11/17/2006
+Continuing Simulation at 11/17/2006 for RUN PERIOD 1
+Updating Shadowing Calculations, Start Date=12/07/2006
+Continuing Simulation at 12/07/2006 for RUN PERIOD 1
+Updating Shadowing Calculations, Start Date=12/27/2006
+Continuing Simulation at 12/27/2006 for RUN PERIOD 1
+Writing tabular output file results using HTML format.
+Computing Life Cycle Costs and Reporting
+Writing final SQL reports
+EnergyPlus Run Time=00hr 04min 37.16sec
+EnergyPlus Completed Successfully.
+[openstudio.workflow.OSWorkflow] <Info> EnergyPlus returned '0'
+RunEnergyPlus: Completed Successfully with [38;2;255;000;000m0 Fatal Errors, [0m[38;2;255;165;000m0 Severe Errors, [0m[38;2;255;255;000m122 Warnings.[0m
+[openstudio.workflow.OSWorkflow] <Info> EnergyPlus finished with 1414092 warnings and 0 severe errors
+[openstudio.OSWorkflow.prepareEnergyPlusDir] <Info> Removing any copied EnergyPlus files
+[openstudio.OSWorkflow.prepareEnergyPlusDir] <Debug> Changing Current Directory back to: C:/Users/vyk/OneDrive - Oak Ridge National Laboratory/OpenStudio/OpenStudio_files
+[38;2;000;128;000m#########################Returned from State EnergyPlus#########################[0m
+[openstudio.workflow.OSWorkflow] <Debug> ReportingMeasures - selected = true
+[38;2;000;128;000m
+┌────────────────────────────────────────────────────────────────────────────────┐
+│                        Starting State ReportingMeasures                        │
+└────────────────────────────────────────────────────────────────────────────────┘[0m
+[openstudio.workflow.OSWorkflow] <Info> Beginning to execute Reporting Measures.
+[openstudio.workflow.OSWorkflow] <Debug> Finding measures of type ReportingMeasure
+[openstudio.workflow.OSWorkflow] <Info> Finished applying Reporting Measures.
+[38;2;000;128;000m#####################Returned from State ReportingMeasures######################[0m
+[openstudio.workflow.OSWorkflow] <Debug> PostProcess - selected = true
+[38;2;000;128;000m
+┌────────────────────────────────────────────────────────────────────────────────┐
+│                           Starting State PostProcess                           │
+└────────────────────────────────────────────────────────────────────────────────┘[0m
+[openstudio.workflow.OSWorkflow] <Info> Gathering reports
+[openstudio.workflow.Util] <Info> Run directory: C:/Users/vyk/AppData/Local/Temp/osmodel-f9a0-71a4-5891-b2e8-1758723290-0/resources/run
+[openstudio.workflow.Util] <Info> Reports directoryC:/Users/vyk/AppData/Local/Temp/osmodel-f9a0-71a4-5891-b2e8-1758723290-0/resources
+[openstudio.workflow.Util] <Info> Saving EnergyPlus HTML report to C:/Users/vyk/AppData/Local/Temp/osmodel-f9a0-71a4-5891-b2e8-1758723290-0/resources/reports/eplustbl.html
+[openstudio.workflow.Util] <Info> Removing empty directory C:/Users/vyk/AppData/Local/Temp/osmodel-f9a0-71a4-5891-b2e8-1758723290-0/resources/run/000_replace_refrigerant
+[openstudio.workflow.OSWorkflow] <Info> Finished gathering reports
+[38;2;000;128;000m########################Returned from State PostProcess#########################[0m
+[openstudio.workflow.OSWorkflow] <Debug> Cleanup - selected = true
+[38;2;000;128;000m
+┌────────────────────────────────────────────────────────────────────────────────┐
+│                             Starting State Cleanup                             │
+└────────────────────────────────────────────────────────────────────────────────┘[0m
+[openstudio.workflow.OSWorkflow] <Info> Beginning cleanup of the run directory
+[openstudio.workflow.OSWorkflow] <Info> Finished cleanup of the run directory
+[38;2;000;128;000m##########################Returned from State Cleanup###########################[0m

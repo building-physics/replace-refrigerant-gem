@@ -1,0 +1,7 @@
+{
+   "created_at" : "20250918T174858Z",
+   "seed_file" : "../SuperMarket-90.1-2004-ASHRAE 169-2013-5A.osm",
+   "steps" : [],
+   "updated_at" : "20250918T175440Z",
+   "weather_file" : "USA_NY_Buffalo-Greater.Buffalo.Intl.AP.725280_TMY3.epw"
+}

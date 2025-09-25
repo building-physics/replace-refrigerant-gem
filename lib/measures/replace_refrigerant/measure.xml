@@ -3,8 +3,8 @@
   <schema_version>3.1</schema_version>
   <name>add_refrigerant</name>
   <uid>8d554ec3-34f4-4987-8190-2fc4bec3dd2b</uid>
-  <version_id>95e0dad7-408e-4a32-b94f-3d4419635ae3</version_id>
-  <version_modified>2025-09-23T22:11:32Z</version_modified>
+  <version_id>ddac841f-9795-4ba3-98b0-853580c42ca0</version_id>
+  <version_modified>2025-09-25T21:11:46Z</version_modified>
   <xml_checksum>ED75A3FC</xml_checksum>
   <class_name>AddRefrigerant</class_name>
   <display_name>Add refrigerant to the model</display_name>
@@ -33,54 +33,17 @@
     <argument>
       <name>Objects_for_replacement</name>
       <display_name>Objects to replace replacement</display_name>
-      <description>Selec the objects for which the refrigerant should be replaced with new refrigerant</description>
+      <description>Select the objects for which the refrigerant should be replaced with new refrigerant</description>
       <type>Choice</type>
       <required>true</required>
       <model_dependent>false</model_dependent>
-      <default_value>All</default_value>
+      <default_value>Refrigeration:System</default_value>
       <choices>
         <choice>
           <value>Refrigeration:System</value>
           <display_name>Refrigeration:System</display_name>
         </choice>
-        <choice>
-          <value>Refrigeration:TranscriticalSystem</value>
-          <display_name>Refrigeration:TranscriticalSystem</display_name>
-        </choice>
-        <choice>
-          <value>Refrigeration:SecondarySystem</value>
-          <display_name>Refrigeration:SecondarySystem</display_name>
-        </choice>
-        <choice>
-          <value>Coil:Cooling:WaterToAirHeatPump:ParameterEstimation</value>
-          <display_name>Coil:Cooling:WaterToAirHeatPump:ParameterEstimation</display_name>
-        </choice>
-        <choice>
-          <value>Coil:Heating:WaterToAirHeatPump:ParameterEstimation</value>
-          <display_name>Coil:Heating:WaterToAirHeatPump:ParameterEstimation</display_name>
-        </choice>
-        <choice>
-          <value>AirConditioner:VariableRefrigerantFlow:FluidTemperatureControl</value>
-          <display_name>AirConditioner:VariableRefrigerantFlow:FluidTemperatureControl</display_name>
-        </choice>
-        <choice>
-          <value>AirConditioner:VariableRefrigerantFlow:FluidTemperatureControl:HR</value>
-          <display_name>AirConditioner:VariableRefrigerantFlow:FluidTemperatureControl:HR</display_name>
-        </choice>
-        <choice>
-          <value>All</value>
-          <display_name>All</display_name>
-        </choice>
       </choices>
-    </argument>
-    <argument>
-      <name>Refrigerant_to_be_replaced</name>
-      <display_name>Refrigerant to be replace</display_name>
-      <description>If a specific refrigerant is to be replaced, then enter the name of the refrigreation, else all the refrigerant will be replaced</description>
-      <type>String</type>
-      <required>true</required>
-      <model_dependent>false</model_dependent>
-      <default_value>All</default_value>
     </argument>
   </arguments>
   <outputs />
@@ -120,7 +83,7 @@
       <filename>measure.py</filename>
       <filetype>py</filetype>
       <usage_type>script</usage_type>
-      <checksum>55347867</checksum>
+      <checksum>14F32939</checksum>
     </file>
     <file>
       <filename>FluidPropertiesRefData_R448a.idf</filename>

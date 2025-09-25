@@ -1,0 +1,7 @@
+{
+   "created_at" : "20250916T175119Z",
+   "seed_file" : "../SuperMarket-90.1-2004-ASHRAE 169-2013-2A.osm",
+   "steps" : [],
+   "updated_at" : "20250918T174038Z",
+   "weather_file" : "USA_TX_Houston-Bush.Intercontinental.AP.722430_TMY3.epw"
+}

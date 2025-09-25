@@ -1,0 +1,19 @@
+{
+   "created_at" : "20250916T175119Z",
+   "seed_file" : "../SuperMarket-90.1-2004-ASHRAE 169-2013-2A_449A.osm",
+   "steps" : 
+   [
+      {
+         "arguments" : 
+         {
+            "Refrigerant" : "R449a"
+         },
+         "description" : "Measures that adds selected refrigerant to the model",
+         "measure_dir_name" : "replace_refrigerant",
+         "modeler_description" : "Add selected refrigerant fluid to the openstudio file using the EnergyPlusMeasure",
+         "name" : "Add refrigerant to the model"
+      }
+   ],
+   "updated_at" : "20250924T141940Z",
+   "weather_file" : "USA_TX_Houston-Bush.Intercontinental.AP.722430_TMY3.epw"
+}

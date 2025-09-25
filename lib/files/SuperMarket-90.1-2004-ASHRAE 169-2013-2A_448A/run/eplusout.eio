@@ -1,0 +1,949 @@
+Program Version,EnergyPlus, Version 24.2.0-94a887817b, YMD=2025.09.23 18:30
+! <Version>, Version ID
+ Version, 24.2
+! <Timesteps per Hour>, #TimeSteps, Minutes per TimeStep {minutes}
+ Timesteps per Hour, 12,  5
+! <System Convergence Limits>, Minimum System TimeStep {minutes}, Max HVAC Iterations, Minimum Plant Iterations, Maximum Plant Iterations
+ System Convergence Limits, 1, 20, 2, 8
+! <Simulation Control>, Do Zone Sizing, Do System Sizing, Do Plant Sizing, Do Design Days, Do Weather Simulation, Do HVAC Sizing Simulation
+ Simulation Control, Yes, Yes, Yes, No, Yes, No
+! <Performance Precision Tradeoffs>, Use Coil Direct Simulation, Zone Radiant Exchange Algorithm, Override Mode, Number of Timestep In Hour, Force Euler Method, Minimum Number of Warmup Days, Force Suppress All Begin Environment Resets, Minimum System Timestep, MaxZoneTempDiff, MaxAllowedDelTemp
+ Performance Precision Tradeoffs, No, ScriptF, Normal, 12, No, 1, No, 1.0, 0.300, 2.0000E-003
+! <Output Reporting Tolerances>, Tolerance for Time Heating Setpoint Not Met, Tolerance for Zone Cooling Setpoint Not Met Time
+ Output Reporting Tolerances, 0.200, 0.200, 
+! <Site:GroundTemperature:BuildingSurface>,Jan{C},Feb{C},Mar{C},Apr{C},May{C},Jun{C},Jul{C},Aug{C},Sep{C},Oct{C},Nov{C},Dec{C}
+ Site:GroundTemperature:BuildingSurface,  18.00,  18.00,  18.00,  18.00,  18.00,  18.00,  18.00,  18.00,  18.00,  18.00,  18.00,  18.00
+! <Site:GroundTemperature:FCfactorMethod>,Jan{C},Feb{C},Mar{C},Apr{C},May{C},Jun{C},Jul{C},Aug{C},Sep{C},Oct{C},Nov{C},Dec{C}
+ Site:GroundTemperature:FCfactorMethod,  24.20,  18.90,  15.70,  13.60,  15.50,  17.10,  21.20,  26.90,  27.60,  27.90,  27.40,  26.20
+! <Site:GroundTemperature:Shallow>,Jan{C},Feb{C},Mar{C},Apr{C},May{C},Jun{C},Jul{C},Aug{C},Sep{C},Oct{C},Nov{C},Dec{C}
+ Site:GroundTemperature:Shallow,  13.00,  13.00,  13.00,  13.00,  13.00,  13.00,  13.00,  13.00,  13.00,  13.00,  13.00,  13.00
+! <Site:GroundTemperature:Deep>,Jan{C},Feb{C},Mar{C},Apr{C},May{C},Jun{C},Jul{C},Aug{C},Sep{C},Oct{C},Nov{C},Dec{C}
+ Site:GroundTemperature:Deep,  16.00,  16.00,  16.00,  16.00,  16.00,  16.00,  16.00,  16.00,  16.00,  16.00,  16.00,  16.00
+! <Site:GroundReflectance>,Jan{dimensionless},Feb{dimensionless},Mar{dimensionless},Apr{dimensionless},May{dimensionless},Jun{dimensionless},Jul{dimensionless},Aug{dimensionless},Sep{dimensionless},Oct{dimensionless},Nov{dimensionless},Dec{dimensionless}
+ Site:GroundReflectance,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20
+! <Site:GroundReflectance:SnowModifier>, Normal, Daylighting {dimensionless}
+ Site:GroundReflectance:SnowModifier,   1.000,   1.000
+! <Site:GroundReflectance:Snow>,Jan{dimensionless},Feb{dimensionless},Mar{dimensionless},Apr{dimensionless},May{dimensionless},Jun{dimensionless},Jul{dimensionless},Aug{dimensionless},Sep{dimensionless},Oct{dimensionless},Nov{dimensionless},Dec{dimensionless}
+ Site:GroundReflectance:Snow,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20
+! <Site:GroundReflectance:Snow:Daylighting>,Jan{dimensionless},Feb{dimensionless},Mar{dimensionless},Apr{dimensionless},May{dimensionless},Jun{dimensionless},Jul{dimensionless},Aug{dimensionless},Sep{dimensionless},Oct{dimensionless},Nov{dimensionless},Dec{dimensionless}
+ Site:GroundReflectance:Snow:Daylighting,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20
+! <Environment:Weather Station>,Wind Sensor Height Above Ground {m},Wind Speed Profile Exponent {},Wind Speed Profile Boundary Layer Thickness {m},Air Temperature Sensor Height Above Ground {m},Wind Speed Modifier Coefficient-Internal,Temperature Modifier Coefficient-Internal
+Environment:Weather Station,10.000,0.140,270.000,1.500,1.586,9.750E-003
+! <Site:Location>, Location Name, Latitude {N+/S- Deg}, Longitude {E+/W- Deg},  Time Zone Number {GMT+/-}, Elevation {m},  Standard Pressure at Elevation {Pa}, Standard RhoAir at Elevation
+Site:Location,Houston Bush Intercontinental TX USA TMY3 WMO#=722430,30.00,-95.37,-6.00,29.00,100977,1.2002
+! <Site Water Mains Temperature Information>,Calculation Method{},Water Mains Temperature Schedule Name{},Annual Average Outdoor Air Temperature{C},Maximum Difference In Monthly Average Outdoor Air Temperatures{deltaC},Fixed Default Water Mains Temperature{C}
+Site Water Mains Temperature Information,Correlation,NA,21.85,14.30,NA
+! <Building Information>, Building Name,North Axis {deg},Terrain,  Loads Convergence Tolerance Value,Temperature Convergence Tolerance Value,  Solar Distribution,Maximum Number of Warmup Days,Minimum Number of Warmup Days
+ Building Information,-SuperMarket-ASHRAE 169-2013-2A created: 2021-08-10 18:02:30 -0400,0.000,City,4.00000E-002,0.40000,FullExterior,25,1
+! <Inside Convection Algorithm>, Algorithm {Simple | TARP | CeilingDiffuser | AdaptiveConvectionAlgorithm}
+Inside Convection Algorithm,TARP
+! <Outside Convection Algorithm>, Algorithm {SimpleCombined | TARP | MoWitt | DOE-2 | AdaptiveConvectionAlgorithm}
+Outside Convection Algorithm,TARP
+! <Sky Radiance Distribution>, Value {Anisotropic}
+Sky Radiance Distribution,Anisotropic
+! <Zone Air Solution Algorithm>, Algorithm {ThirdOrderBackwardDifference | AnalyticalSolution | EulerMethod}, Space Heat Balance Sizing, Space Heat Balance Simulation
+ Zone Air Solution Algorithm, ThirdOrderBackwardDifference, No, No
+! <Zone Air Carbon Dioxide Balance Simulation>, Simulation {Yes/No}, Carbon Dioxide Concentration
+ Zone Air Carbon Dioxide Balance Simulation, No,N/A
+! <Zone Air Generic Contaminant Balance Simulation>, Simulation {Yes/No}, Generic Contaminant Concentration
+ Zone Air Generic Contaminant Balance Simulation, No,N/A
+! <Zone Air Mass Flow Balance Simulation>, Enforce Mass Balance, Adjust Zone Mixing and Return {AdjustMixingOnly | AdjustReturnOnly | AdjustMixingThenReturn | AdjustReturnThenMixing | None}, Adjust Zone Infiltration {AddInfiltration | AdjustInfiltration | None}, Infiltration Zones {MixingSourceZonesOnly | AllZones}
+ Zone Air Mass Flow Balance Simulation, No,N/A,N/A,N/A
+! <HVACSystemRootFindingAlgorithm>, Value {RegulaFalsi | Bisection | BisectionThenRegulaFalsi | RegulaFalsiThenBisection}
+ HVACSystemRootFindingAlgorithm, RegulaFalsi
+! <Environment:Site Atmospheric Variation>,Wind Speed Profile Exponent {},Wind Speed Profile Boundary Layer Thickness {m},Air Temperature Gradient Coefficient {K/m}
+Environment:Site Atmospheric Variation,0.330,460.000,6.500000E-003
+! <Shadowing/Sun Position Calculations Annual Simulations>, Shading Calculation Method, Shading Calculation Update Frequency Method, Shading Calculation Update Frequency {days}, Maximum Figures in Shadow Overlap Calculations {}, Polygon Clipping Algorithm, Pixel Counting Resolution, Sky Diffuse Modeling Algorithm, Output External Shading Calculation Results, Disable Self-Shading Within Shading Zone Groups, Disable Self-Shading From Shading Zone Groups to Other Zones
+Shadowing/Sun Position Calculations Annual Simulations,PolygonClipping,Periodic,20,15000,SutherlandHodgman,512,SimpleSkyDiffuseModeling,No,No,No
+! <Surface Geometry>,Starting Corner,Vertex Input Direction,Coordinate System,Daylight Reference Point Coordinate System,Rectangular (Simple) Surface Coordinate System
+ Surface Geometry,UpperLeftCorner,Counterclockwise,RelativeCoordinateSystem,RelativeCoordinateSystem,RelativeToZoneOrigin
+! <Surface Heat Transfer Algorithm>, Value {CTF - ConductionTransferFunction | EMPD - MoisturePenetrationDepthConductionTransferFunction | CondFD - ConductionFiniteDifference | HAMT - CombinedHeatAndMoistureFiniteElement} - Description,Inside Surface Max Temperature Limit{C}, Surface Convection Coefficient Lower Limit {W/m2-K}, Surface Convection Coefficient Upper Limit {W/m2-K}
+Surface Heat Transfer Algorithm, CTF - ConductionTransferFunction,200,0.10,1000.0
+! <Shading Summary>, Number of Fixed Detached Shades, Number of Building Detached Shades, Number of Attached Shades
+ Shading Summary,0,0,0
+! <Zone Summary>, Number of Zones, Number of Zone Surfaces, Number of SubSurfaces
+ Zone Summary,14,113,3
+! <Zone Information>,Zone Name,North Axis {deg},Origin X-Coordinate {m},Origin Y-Coordinate {m},Origin Z-Coordinate {m},Centroid X-Coordinate {m},Centroid Y-Coordinate {m},Centroid Z-Coordinate {m},Type,Zone Multiplier,Zone List Multiplier,Minimum X {m},Maximum X {m},Minimum Y {m},Maximum Y {m},Minimum Z {m},Maximum Z {m},Ceiling Height {m},Volume {m3},Zone Inside Convection Algorithm {Simple-Detailed-CeilingDiffuser-TrombeWall},Zone Outside Convection Algorithm {Simple-Detailed-Tarp-MoWitt-DOE-2-BLAST}, Floor Area {m2},Exterior Gross Wall Area {m2},Exterior Net Wall Area {m2},Exterior Window Area {m2}, Number of Surfaces, Number of SubSurfaces, Number of Shading SubSurfaces,  Part of Total Building Area
+ Zone Information, ACTIVE STORAGE ZN,0.0,2.89E-015,0.00,1.29E-016,39.44,48.31,2.29,1,1,1,15.92,62.96,43.82,52.80,-4.89E-015,4.57,4.57,1930.15,TARP,TARP,422.17,256.08,256.08,0.00,8,0,0,Yes
+ Zone Information, BAKERY ZN,0.0,2.89E-015,0.00,1.29E-016,58.01,10.56,2.29,1,1,1,53.06,62.96,-1.88E-031,21.12,-4.37E-015,4.57,4.57,955.70,TARP,TARP,209.03,141.81,141.81,0.00,7,0,0,Yes
+ Zone Information, CORRIDOR ZN,0.0,2.89E-015,0.00,1.29E-016,-0.16,44.59,2.29,1,1,1,-16.23,15.92,43.82,45.36,-4.34E-015,4.57,4.57,225.91,TARP,TARP,49.41,7.03,7.03,0.00,11,0,0,Yes
+ Zone Information, DELI ZN,0.0,2.89E-015,0.00,1.29E-016,58.01,32.47,2.29,1,1,1,53.06,62.96,21.12,43.82,-5.23E-015,4.57,4.57,1027.33,TARP,TARP,224.70,103.79,103.79,0.00,6,0,0,Yes
+ Zone Information, DINING ROOM ZN,0.0,2.89E-015,0.00,1.29E-016,-3.12,49.08,2.29,1,1,1,-6.25,-1.48E-003,45.36,52.80,-4.69E-015,4.57,4.57,212.41,TARP,TARP,46.46,28.55,28.55,0.00,6,0,0,Yes
+ Zone Information, EAST PERIMETER SALES ZN,0.0,2.89E-015,0.00,1.29E-016,41.32,2.29,2.29,1,1,1,29.58,53.06,-6.87E-032,4.57,-1.99E-015,4.57,4.57,490.82,TARP,TARP,107.35,107.35,64.38,42.98,6,1,0,Yes
+ Zone Information, ENCLOSED OFFICE ZN,0.0,2.89E-015,0.00,1.29E-016,-14.36,49.08,2.29,1,1,1,-16.23,-12.49,45.36,52.80,-7.22E-016,4.57,4.57,127.27,TARP,TARP,27.84,51.12,51.12,0.00,6,0,0,Yes
+ Zone Information, MAIN SALES ZN,0.0,2.89E-015,0.00,1.29E-016,26.53,24.20,2.29,1,1,1,2.89E-015,53.06,4.57,43.82,-1.74E-015,4.57,4.57,9520.67,TARP,TARP,2082.39,0.00,0.00,0.00,10,0,0,Yes
+ Zone Information, MECHANICAL ROOM ZN,0.0,2.89E-015,0.00,1.29E-016,12.17,49.08,2.29,1,1,1,8.43,15.92,45.36,52.80,-1.94E-015,4.57,4.57,254.85,TARP,TARP,55.74,34.26,34.26,0.00,6,0,0,Yes
+ Zone Information, MEETING ROOM ZN,0.0,2.89E-015,0.00,1.29E-016,-9.37,49.08,2.29,1,1,1,-12.49,-6.25,45.36,52.80,-5.78E-015,4.57,4.57,212.41,TARP,TARP,46.46,28.55,28.55,0.00,6,0,0,Yes
+ Zone Information, PRODUCE ZN,0.0,2.89E-015,0.00,1.29E-016,-8.12,21.91,2.29,1,1,1,-16.23,2.99E-015,-6.46E-033,43.82,-1.24E-016,4.57,4.57,3252.35,TARP,TARP,711.36,274.57,274.57,0.00,7,0,0,Yes
+ Zone Information, RESTROOM ZN,0.0,2.89E-015,0.00,1.29E-016,4.21,49.08,2.29,1,1,1,-1.48E-003,8.43,45.36,52.80,-5.41E-015,4.57,4.57,286.70,TARP,TARP,62.71,38.54,38.54,0.00,6,0,0,Yes
+ Zone Information, VESTIBULE ZN,0.0,2.89E-015,0.00,1.29E-016,26.53,2.29,2.29,1,1,1,23.48,29.58,-2.28E-031,4.57,-2.18E-015,4.57,4.57,127.43,TARP,TARP,27.87,27.87,16.85,11.02,6,1,0,Yes
+ Zone Information, WEST PERIMETER SALES ZN,0.0,2.89E-015,0.00,0.00,11.74,2.29,2.29,1,1,1,2.89E-015,23.48,0.00,4.57,-3.23E-017,4.57,4.57,490.82,TARP,TARP,107.35,107.35,64.38,42.98,6,1,0,Yes
+! <Zone Internal Gains Nominal>,Zone Name, Floor Area {m2},# Occupants,Area per Occupant {m2/person},Occupant per Area {person/m2},Interior Lighting {W/m2},Electric Load {W/m2},Gas Load {W/m2},Other Load {W/m2},Hot Water Eq {W/m2},Steam Equipment {W/m2},Sum Loads per Area {W/m2},Outdoor Controlled Baseboard Heat
+ Zone Internal Gains Nominal, ACTIVE STORAGE ZN,422.17,15.2,27.815,3.595E-002,8.611,3.337,0.000,0.000,0.000,0.000,11.948,No
+ Zone Internal Gains Nominal, BAKERY ZN,209.03,18.0,11.613,8.611E-002,12.917,55.958,26.909,0.000,0.000,0.000,95.783,No
+ Zone Internal Gains Nominal, CORRIDOR ZN,49.41,4.3,11.613,8.611E-002,5.382,0.000,0.000,0.000,0.000,0.000,5.382,No
+ Zone Internal Gains Nominal, DELI ZN,224.70,19.3,11.613,8.611E-002,12.917,60.890,26.909,0.000,0.000,0.000,100.715,No
+ Zone Internal Gains Nominal, DINING ROOM ZN,46.46,35.0,1.327,0.753,9.688,41.226,0.000,0.000,0.000,0.000,50.913,No
+ Zone Internal Gains Nominal, EAST PERIMETER SALES ZN,107.35,9.2,11.613,8.611E-002,18.299,10.979,0.000,0.000,0.000,0.000,29.278,No
+ Zone Internal Gains Nominal, ENCLOSED OFFICE ZN,27.84,1.5,18.581,5.382E-002,11.840,0.000,0.000,0.000,0.000,0.000,11.840,No
+ Zone Internal Gains Nominal, MAIN SALES ZN,2082.39,179.3,11.613,8.611E-002,18.299,10.979,0.000,0.000,0.000,0.000,29.278,No
+ Zone Internal Gains Nominal, MECHANICAL ROOM ZN,55.74,0.0,N/A,0.000,16.146,0.000,0.000,0.000,0.000,0.000,16.146,No
+ Zone Internal Gains Nominal, MEETING ROOM ZN,46.46,25.0,1.858,0.538,13.993,0.000,0.000,0.000,0.000,0.000,13.993,No
+ Zone Internal Gains Nominal, PRODUCE ZN,711.36,61.3,11.613,8.611E-002,18.299,0.538,0.000,0.000,0.000,0.000,18.837,No
+ Zone Internal Gains Nominal, RESTROOM ZN,62.71,5.4,11.613,8.611E-002,9.688,0.000,0.000,0.000,0.000,0.000,9.688,No
+ Zone Internal Gains Nominal, VESTIBULE ZN,27.87,2.4,11.613,8.611E-002,5.382,0.000,0.000,0.000,0.000,0.000,5.382,No
+ Zone Internal Gains Nominal, WEST PERIMETER SALES ZN,107.35,9.2,11.613,8.611E-002,18.299,10.979,0.000,0.000,0.000,0.000,29.278,No
+! <People Internal Gains Nominal>,Name,Schedule Name,Zone Name,Zone Floor Area {m2},# Zone Occupants,Number of People {},People/Floor Area {person/m2},Floor Area per person {m2/person},Fraction Radiant,Fraction Convected,Sensible Fraction Calculation,Activity level,ASHRAE 55 Warnings,Carbon Dioxide Generation Rate,Minimum Number of People for All Day Types,Maximum Number of People for All Day Types,Minimum Number of People for Weekdays, Maximum Number of People for Weekdays, Minimum Number of People for Weekends/Holidays, Maximum Number of People for Weekends /Holidays,Minimum Number of People for Summer Design Days, Maximum Number of People for Summer Design Days,Minimum Number of People for Winter Design Days, Maximum Number of People for Winter Design Days
+ People Internal Gains Nominal, ACTIVE STORAGE SUPERMARKET DRYSTORAGE PEOPLE,SUPERMARKET BLDG OCC,ACTIVE STORAGE ZN,422.17,15.2,15.2,3.595E-002,27.815,0.300,0.700,AutoCalculate,SUPERMARKET ACTIVITY,No,3.8200E-008,0.0,15.2,0.0,12.1,0.0,12.1,15.2,15.2,0.0,0.0,
+ People Internal Gains Nominal, BAKERY SUPERMARKET BAKERY PEOPLE,SUPERMARKET BLDG OCC,BAKERY ZN,209.03,18.0,18.0,8.611E-002,11.613,0.300,0.700,AutoCalculate,SUPERMARKET ACTIVITY,No,3.8200E-008,0.0,18.0,0.0,14.4,0.0,14.4,18.0,18.0,0.0,0.0,
+ People Internal Gains Nominal, CORRIDOR SUPERMARKET CORRIDOR PEOPLE,SUPERMARKET BLDG OCC,CORRIDOR ZN,49.41,4.3,4.3,8.611E-002,11.613,0.300,0.700,AutoCalculate,SUPERMARKET ACTIVITY,No,3.8200E-008,0.0,4.3,0.0,3.4,0.0,3.4,4.3,4.3,0.0,0.0,
+ People Internal Gains Nominal, DELI SUPERMARKET DELI PEOPLE,SUPERMARKET BLDG OCC,DELI ZN,224.70,19.3,19.3,8.611E-002,11.613,0.300,0.700,AutoCalculate,SUPERMARKET ACTIVITY,No,3.8200E-008,0.0,19.3,0.0,15.5,0.0,15.5,19.3,19.3,0.0,0.0,
+ People Internal Gains Nominal, DINING ROOM SUPERMARKET DINING PEOPLE,SUPERMARKET BLDG OCC,DINING ROOM ZN,46.46,35.0,35.0,0.753,1.327,0.300,0.700,AutoCalculate,SUPERMARKET ACTIVITY,No,3.8200E-008,0.0,35.0,0.0,28.0,0.0,28.0,35.0,35.0,0.0,0.0,
+ People Internal Gains Nominal, WEST PERIMETER SALES SUPERMARKET SALES PEOPLE,SUPERMARKET BLDG OCC,WEST PERIMETER SALES ZN,107.35,9.2,9.2,8.611E-002,11.613,0.300,0.700,AutoCalculate,SUPERMARKET ACTIVITY,No,3.8200E-008,0.0,9.2,0.0,7.4,0.0,7.4,9.2,9.2,0.0,0.0,
+ People Internal Gains Nominal, EAST PERIMETER SALES SUPERMARKET SALES PEOPLE,SUPERMARKET BLDG OCC,EAST PERIMETER SALES ZN,107.35,9.2,9.2,8.611E-002,11.613,0.300,0.700,AutoCalculate,SUPERMARKET ACTIVITY,No,3.8200E-008,0.0,9.2,0.0,7.4,0.0,7.4,9.2,9.2,0.0,0.0,
+ People Internal Gains Nominal, MAIN SALES SUPERMARKET SALES PEOPLE,SUPERMARKET BLDG OCC,MAIN SALES ZN,2082.39,179.3,179.3,8.611E-002,11.613,0.300,0.700,AutoCalculate,SUPERMARKET ACTIVITY,No,3.8200E-008,0.0,179.3,0.0,143.5,0.0,143.5,179.3,179.3,0.0,0.0,
+ People Internal Gains Nominal, ENCLOSED OFFICE SUPERMARKET OFFICE PEOPLE,SUPERMARKET BLDG OCC,ENCLOSED OFFICE ZN,27.84,1.5,1.5,5.382E-002,18.581,0.300,0.700,AutoCalculate,SUPERMARKET ACTIVITY,No,3.8200E-008,0.0,1.5,0.0,1.2,0.0,1.2,1.5,1.5,0.0,0.0,
+ People Internal Gains Nominal, MEETING ROOM SUPERMARKET MEETING PEOPLE,SUPERMARKET BLDG OCC,MEETING ROOM ZN,46.46,25.0,25.0,0.538,1.858,0.300,0.700,AutoCalculate,SUPERMARKET ACTIVITY,No,3.8200E-008,0.0,25.0,0.0,20.0,0.0,20.0,25.0,25.0,0.0,0.0,
+ People Internal Gains Nominal, PRODUCE SUPERMARKET PRODUCE PEOPLE,SUPERMARKET BLDG OCC,PRODUCE ZN,711.36,61.3,61.3,8.611E-002,11.613,0.300,0.700,AutoCalculate,SUPERMARKET ACTIVITY,No,3.8200E-008,0.0,61.3,0.0,49.0,0.0,49.0,61.3,61.3,0.0,0.0,
+ People Internal Gains Nominal, RESTROOM SUPERMARKET RESTROOM PEOPLE,SUPERMARKET BLDG OCC,RESTROOM ZN,62.71,5.4,5.4,8.611E-002,11.613,0.300,0.700,AutoCalculate,SUPERMARKET ACTIVITY,No,3.8200E-008,0.0,5.4,0.0,4.3,0.0,4.3,5.4,5.4,0.0,0.0,
+ People Internal Gains Nominal, VESTIBULE SUPERMARKET VESTIBULE PEOPLE,SUPERMARKET BLDG OCC,VESTIBULE ZN,27.87,2.4,2.4,8.611E-002,11.613,0.300,0.700,AutoCalculate,SUPERMARKET ACTIVITY,No,3.8200E-008,0.0,2.4,0.0,1.9,0.0,1.9,2.4,2.4,0.0,0.0,
+! <Lights Internal Gains Nominal>,Name,Schedule Name,Zone Name,Zone Floor Area {m2},# Zone Occupants,Lighting Level {W},Lights/Floor Area {W/m2},Lights per person {W/person},Fraction Return Air,Fraction Radiant,Fraction Short Wave,Fraction Convected,Fraction Replaceable,End-Use, Minimum Lighting Level for All Day Types {W},Maximum Lighting Level for All Day Types {W},Minimum Lighting Level for Weekdays {W}, Maximum Lighting Level for Weekdays {W},Minimum Lighting Level for Weekends/Holidays {W}, Maximum Lighting Level for Weekends /Holidays {W},Minimum Lighting Level for Summer Design Days {W}, Maximum Lighting Level for Summer Design Days {W},Minimum Lighting Level for Winter Design Days {W}, Maximum Lighting Level for Winter Design Days {W}
+ Lights Internal Gains Nominal, ACTIVE STORAGE SUPERMARKET DRYSTORAGE LIGHTS,SUPERMARKET BLDG LIGHT,ACTIVE STORAGE ZN,422.17,15.2,3635.331,8.611,239.521,0.000,0.700,0.200,0.100,1.000,General,0.000,3635.331,181.767,3271.8,181.767,3271.798,3635.331,3635.331,0.000,0.000
+ Lights Internal Gains Nominal, BAKERY SUPERMARKET BAKERY LIGHTS,SUPERMARKET BLDG LIGHT,BAKERY ZN,209.03,18.0,2700.015,12.917,150.000,0.000,0.700,0.200,0.100,1.000,General,0.000,2700.015,135.001,2430.0,135.001,2430.014,2700.015,2700.015,0.000,0.000
+ Lights Internal Gains Nominal, CORRIDOR SUPERMARKET CORRIDOR LIGHTS,SUPERMARKET BLDG LIGHT,CORRIDOR ZN,49.41,4.3,265.936,5.382,62.500,0.000,0.700,0.200,0.100,1.000,General,0.000,265.936,13.297,239.3,13.297,239.342,265.936,265.936,0.000,0.000
+ Lights Internal Gains Nominal, DELI SUPERMARKET DELI LIGHTS,SUPERMARKET BLDG LIGHT,DELI ZN,224.70,19.3,2902.377,12.917,150.000,0.000,0.700,0.200,0.100,1.000,General,0.000,2902.377,145.119,2612.1,145.119,2612.140,2902.377,2902.377,0.000,0.000
+ Lights Internal Gains Nominal, DINING ROOM SUPERMARKET DINING LIGHTS,SUPERMARKET BLDG LIGHT,DINING ROOM ZN,46.46,35.0,450.065,9.688,12.857,0.000,0.700,0.200,0.100,1.000,General,0.000,450.065,22.503,405.1,22.503,405.058,450.065,450.065,0.000,0.000
+ Lights Internal Gains Nominal, WEST PERIMETER SALES SUPERMARKET SALES LIGHTS,SUPERMARKET BLDG LIGHT,WEST PERIMETER SALES ZN,107.35,9.2,1964.429,18.299,212.500,0.000,0.700,0.200,0.100,1.000,General,0.000,1964.429,98.221,1768.0,98.221,1767.986,1964.429,1964.429,0.000,0.000
+ Lights Internal Gains Nominal, EAST PERIMETER SALES SUPERMARKET SALES LIGHTS,SUPERMARKET BLDG LIGHT,EAST PERIMETER SALES ZN,107.35,9.2,1964.429,18.299,212.500,0.000,0.700,0.200,0.100,1.000,General,0.000,1964.429,98.221,1768.0,98.221,1767.986,1964.429,1964.429,0.000,0.000
+ Lights Internal Gains Nominal, MAIN SALES SUPERMARKET SALES LIGHTS,SUPERMARKET BLDG LIGHT,MAIN SALES ZN,2082.39,179.3,38104.852,18.299,212.500,0.000,0.700,0.200,0.100,1.000,General,0.000,38104.852,1905.243,34294.4,1905.243,34294.367,38104.852,38104.852,0.000,0.000
+ Lights Internal Gains Nominal, ENCLOSED OFFICE SUPERMARKET OFFICE LIGHTS,SUPERMARKET BLDG LIGHT,ENCLOSED OFFICE ZN,27.84,1.5,329.587,11.840,220.000,0.000,0.700,0.200,0.100,1.000,General,0.000,329.587,16.479,296.6,16.479,296.628,329.587,329.587,0.000,0.000
+ Lights Internal Gains Nominal, MECHANICAL ROOM SUPERMARKET ELEC/MECHROOM LIGHTS,SUPERMARKET BLDG LIGHT,MECHANICAL ROOM ZN,55.74,0.0,899.977,16.146,N/A,0.000,0.700,0.200,0.100,1.000,General,0.000,899.977,44.999,810.0,44.999,809.980,899.977,899.977,0.000,0.000
+ Lights Internal Gains Nominal, MEETING ROOM SUPERMARKET MEETING LIGHTS,SUPERMARKET BLDG LIGHT,MEETING ROOM ZN,46.46,25.0,650.091,13.993,26.000,0.000,0.700,0.200,0.100,1.000,General,0.000,650.091,32.505,585.1,32.505,585.082,650.091,650.091,0.000,0.000
+ Lights Internal Gains Nominal, PRODUCE SUPERMARKET PRODUCE LIGHTS,SUPERMARKET BLDG LIGHT,PRODUCE ZN,711.36,61.3,13016.960,18.299,212.500,0.000,0.700,0.200,0.100,1.000,General,0.000,13016.960,650.848,11715.3,650.848,11715.264,13016.960,13016.960,0.000,0.000
+ Lights Internal Gains Nominal, RESTROOM SUPERMARKET RESTROOM LIGHTS,SUPERMARKET BLDG LIGHT,RESTROOM ZN,62.71,5.4,607.481,9.688,112.500,0.000,0.700,0.200,0.100,1.000,General,0.000,607.481,30.374,546.7,30.374,546.733,607.481,607.481,0.000,0.000
+ Lights Internal Gains Nominal, VESTIBULE SUPERMARKET VESTIBULE LIGHTS,SUPERMARKET BLDG LIGHT,VESTIBULE ZN,27.87,2.4,150.000,5.382,62.500,0.000,0.700,0.200,0.100,1.000,General,0.000,150.000,7.500,135.0,7.500,135.000,150.000,150.000,0.000,0.000
+! <ElectricEquipment Internal Gains Nominal>,Name,Schedule Name,Zone Name,Zone Floor Area {m2},# Zone Occupants,Equipment Level {W},Equipment/Floor Area {W/m2},Equipment per person {W/person},Fraction Latent,Fraction Radiant,Fraction Lost,Fraction Convected,End-Use SubCategory,Minimum Equipment Level for All Day Types {W},Maximum Equipment Level for All Day Types {W},Minimum Equipment Level for Weekdays {W}, Maximum Equipment Level for Weekdays {W},Minimum Equipment Level for Weekends/Holidays {W}, Maximum Equipment Level for Weekends /Holidays {W},Minimum Equipment Level for Summer Design Days {W}, Maximum Equipment Level for Summer Design Days {W},Minimum Equipment Level for Winter Design Days {W}, Maximum Equipment Level for Winter Design Days {W}
+ ElectricEquipment Internal Gains Nominal, ACTIVE STORAGE SUPERMARKET DRYSTORAGE ELEC EQUIP,SUPERMARKET BLDG EQUIP NEW,ACTIVE STORAGE ZN,422.17,15.2,1408.691,3.337,92.814,0.000,0.500,0.000,0.500,General,0.000,1408.691,563.476,1267.822,422.607,1267.822,1408.691,1408.691,0.000,0.000
+ ElectricEquipment Internal Gains Nominal, BAKERY SUPERMARKET BAKERY ELEC EQUIP,SUPERMARKET BLDG EQUIP NEW,BAKERY ZN,209.03,18.0,22.500,0.108,1.250,0.000,0.500,0.000,0.500,General,0.000,22.500,9.000,20.250,6.750,20.250,22.500,22.500,0.000,0.000
+ ElectricEquipment Internal Gains Nominal, KITCHEN EQUIPMENT 1,SUPERMARKETELE KIT EQUIP SCH,BAKERY ZN,209.03,18.0,11674.500,55.850,648.580,0.250,0.300,0.200,0.250,General,0.000,11674.500,2685.135,11674.500,2685.135,11674.500,2685.135,11674.500,0.000,0.000
+ ElectricEquipment Internal Gains Nominal, DELI SUPERMARKET DELI ELEC EQUIP,SUPERMARKET BLDG EQUIP NEW,DELI ZN,224.70,19.3,2007.478,8.934,103.750,0.000,0.500,0.000,0.500,General,0.000,2007.478,802.991,1806.730,602.243,1806.730,2007.478,2007.478,0.000,0.000
+ ElectricEquipment Internal Gains Nominal, KITCHEN EQUIPMENT,SUPERMARKETELE KIT EQUIP SCH,DELI ZN,224.70,19.3,11674.500,51.956,603.359,0.250,0.300,0.200,0.250,General,0.000,11674.500,2685.135,11674.500,2685.135,11674.500,2685.135,11674.500,0.000,0.000
+ ElectricEquipment Internal Gains Nominal, DINING ROOM SUPERMARKET DINING ELEC EQUIP,SUPERMARKET BLDG EQUIP NEW,DINING ROOM ZN,46.46,35.0,1915.277,41.226,54.714,0.000,0.500,0.000,0.500,General,0.000,1915.277,766.111,1723.749,574.583,1723.749,1915.277,1915.277,0.000,0.000
+ ElectricEquipment Internal Gains Nominal, WEST PERIMETER SALES SUPERMARKET SALES ELEC EQUIP,SUPERMARKET BLDG EQUIP NEW,WEST PERIMETER SALES ZN,107.35,9.2,1178.657,10.979,127.500,0.000,0.500,0.000,0.500,General,0.000,1178.657,471.463,1060.791,353.597,1060.791,1178.657,1178.657,0.000,0.000
+ ElectricEquipment Internal Gains Nominal, EAST PERIMETER SALES SUPERMARKET SALES ELEC EQUIP,SUPERMARKET BLDG EQUIP NEW,EAST PERIMETER SALES ZN,107.35,9.2,1178.657,10.979,127.500,0.000,0.500,0.000,0.500,General,0.000,1178.657,471.463,1060.791,353.597,1060.791,1178.657,1178.657,0.000,0.000
+ ElectricEquipment Internal Gains Nominal, MAIN SALES SUPERMARKET SALES ELEC EQUIP,SUPERMARKET BLDG EQUIP NEW,MAIN SALES ZN,2082.39,179.3,22862.911,10.979,127.500,0.000,0.500,0.000,0.500,General,0.000,22862.911,9145.164,20576.620,6858.873,20576.620,22862.911,22862.911,0.000,0.000
+ ElectricEquipment Internal Gains Nominal, PRODUCE SUPERMARKET PRODUCE ELEC EQUIP,SUPERMARKET BLDG EQUIP NEW,PRODUCE ZN,711.36,61.3,382.852,0.538,6.250,0.000,0.500,0.000,0.500,General,0.000,382.852,153.141,344.567,114.856,344.567,382.852,382.852,0.000,0.000
+! <GasEquipment Internal Gains Nominal>,Name,Schedule Name,Zone Name,Zone Floor Area {m2},# Zone Occupants,Equipment Level {W},Equipment/Floor Area {W/m2},Equipment per person {W/person},Fraction Latent,Fraction Radiant,Fraction Lost,Fraction Convected,End-Use SubCategory,Minimum Equipment Level for All Day Types {W},Maximum Equipment Level for All Day Types {W},Minimum Equipment Level for Weekdays {W}, Maximum Equipment Level for Weekdays {W},Minimum Equipment Level for Weekends/Holidays {W}, Maximum Equipment Level for Weekends /Holidays {W},Minimum Equipment Level for Summer Design Days {W}, Maximum Equipment Level for Summer Design Days {W},Minimum Equipment Level for Winter Design Days {W}, Maximum Equipment Level for Winter Design Days {W}
+ GasEquipment Internal Gains Nominal, BAKERY SUPERMARKET BAKERY GAS EQUIP,SUPERMARKET GAS EQUIP NEW,BAKERY ZN,209.03,18.0,5624.798,26.909,312.487,0.100,0.200,0.700,0.000,General,0.000,5624.798,56.248,5624.798,56.248,5624.798,56.248,5624.798,0.000,0.000
+ GasEquipment Internal Gains Nominal, DELI SUPERMARKET DELI GAS EQUIP,SUPERMARKET GAS EQUIP NEW,DELI ZN,224.70,19.3,6046.369,26.909,312.487,0.100,0.200,0.700,0.000,General,0.000,6046.369,60.464,6046.369,60.464,6046.369,60.464,6046.369,0.000,0.000
+! <#Detailed Refrigeration Systems>,Number of Detailed Refrigeration Systems
+! <Detailed Refrigeration System>,Refrigeration System Name,Refrigerant Used, # Refrigerated Cases Connected, # WalkInCoolers Connected, #Air Chillers Connected, # Secondary Loops Served, # Cascade Condensers Served, # Mechanical Subcoolers Served, # Compressors Connected, # Compression Stages, Intercooler Type, Intercooler Effectiveness, # Subcoolers Connected, Minimum Condensing Temperature (C)
+!  <Refrigeration Compressor>,Compressor Number,Compressor Name,Nominal Capacity (W)
+!  <Refrigeration Case>,Refrigeration Case Number, Refrigeration Case Name,Zone Name,Zone Node #,Zone Node Name,Capacity (W/m),LHR,Temperature (C),Length (m),Fan (W/m),Installed Lighting (W/m),Anti-Sweat (W/m),Defrost (W/m)
+!  <Refrigeration Walk In Cooler>, Walk In Number, Walk In Name,Capacity (W),Temperature (C),Coil Fan (W), Circulating Fan (W), Lighting (W),Heaters (W),Defrost (W), # Zones
+!      <Walk-In Surfaces Facing Zone>, ZoneName, Wall/Ceiling Area (m2), UValue (W/m2-C), AreaStockDoors (m2), HeightStockDoors, UValueStockDoors (W/m2-C), AreaGlassDoors (m2), HeightGlassDoors (m),  UValueGlassDoors (W/m2-C)
+!  <Refrigeration Condenser:Air-Cooled>,Condenser Number,Condenser Name,Rated Condensing Temperature (C),Rated Capacity (W), Rated Fan Power (W)
+#Detailed Refrigeration Systems,4
+ Detailed Refrigeration System,RACK A,R448A,2,1,0,0,0,0,20,1,0,0.80,0,21.0
+   Refrigeration Case,1,ICE CREAM REACH-INS,MAIN SALES ZN,112,MAIN SALES ZN ZONE AIR NODE,617.4,0.10,-23.9,43.8,70.2,99.1,286.7,1221.5
+   Refrigeration Case,2,ICE CREAM COFFINS,MAIN SALES ZN,112,MAIN SALES ZN ZONE AIR NODE,695.2,0.20,-26.1,2.4,23.6,0.0,254.6,1430.4
+   Refrigeration Walk In Cooler,1,GROCERY FREEZER,7687.9,-26.1,615.0,0.0,518.4,0.0,6073.5,1
+      Walk-In Surfaces Facing Zone, ACTIVE STORAGE ZN,111.3,0.1770,3.30,2.10,0.1770,0.00,1.83,2.2697
+   Refrigeration Compressor,1,REFRIGERATION COMPRESSOR 1,201616
+   Refrigeration Compressor,2,REFRIGERATION COMPRESSOR 2,201616
+   Refrigeration Compressor,3,REFRIGERATION COMPRESSOR 3,201616
+   Refrigeration Compressor,4,REFRIGERATION COMPRESSOR 4,201616
+   Refrigeration Compressor,5,REFRIGERATION COMPRESSOR 5,201616
+   Refrigeration Compressor,6,REFRIGERATION COMPRESSOR 6,201616
+   Refrigeration Compressor,7,REFRIGERATION COMPRESSOR 7,201616
+   Refrigeration Compressor,8,REFRIGERATION COMPRESSOR 8,201616
+   Refrigeration Compressor,9,REFRIGERATION COMPRESSOR 9,201616
+   Refrigeration Compressor,10,REFRIGERATION COMPRESSOR 10,201616
+   Refrigeration Compressor,11,REFRIGERATION COMPRESSOR 11,201616
+   Refrigeration Compressor,12,REFRIGERATION COMPRESSOR 12,201616
+   Refrigeration Compressor,13,REFRIGERATION COMPRESSOR 13,201616
+   Refrigeration Compressor,14,REFRIGERATION COMPRESSOR 14,201616
+   Refrigeration Compressor,15,REFRIGERATION COMPRESSOR 15,201616
+   Refrigeration Compressor,16,REFRIGERATION COMPRESSOR 16,201616
+   Refrigeration Compressor,17,REFRIGERATION COMPRESSOR 17,201616
+   Refrigeration Compressor,18,REFRIGERATION COMPRESSOR 18,201616
+   Refrigeration Compressor,19,REFRIGERATION COMPRESSOR 19,201616
+   Refrigeration Compressor,20,REFRIGERATION COMPRESSOR 20,201616
+   Refrigeration Condenser:Air-Cooled,1,REFRIGERATION CONDENSER AIR COOLED 1,51.7,229970.8,4102.9
+ Detailed Refrigeration System,RACK B,R448A,1,1,0,0,0,0,20,1,0,0.80,0,21.0
+   Refrigeration Case,3,FROZEN FOOD REACH-INS,MAIN SALES ZN,112,MAIN SALES ZN ZONE AIR NODE,583.7,0.10,-20.0,41.4,70.2,99.1,286.7,1221.5
+   Refrigeration Walk In Cooler,2,BAKERY FREEZER,2850.3,-26.1,228.0,0.0,129.6,0.0,2251.8,1
+      Walk-In Surfaces Facing Zone, BAKERY ZN,49.3,0.1770,3.30,2.10,0.1770,0.00,1.83,2.2697
+   Refrigeration Compressor,21,REFRIGERATION COMPRESSOR 21,201616
+   Refrigeration Compressor,22,REFRIGERATION COMPRESSOR 22,201616
+   Refrigeration Compressor,23,REFRIGERATION COMPRESSOR 23,201616
+   Refrigeration Compressor,24,REFRIGERATION COMPRESSOR 24,201616
+   Refrigeration Compressor,25,REFRIGERATION COMPRESSOR 25,201616
+   Refrigeration Compressor,26,REFRIGERATION COMPRESSOR 26,201616
+   Refrigeration Compressor,27,REFRIGERATION COMPRESSOR 27,201616
+   Refrigeration Compressor,28,REFRIGERATION COMPRESSOR 28,201616
+   Refrigeration Compressor,29,REFRIGERATION COMPRESSOR 29,201616
+   Refrigeration Compressor,30,REFRIGERATION COMPRESSOR 30,201616
+   Refrigeration Compressor,31,REFRIGERATION COMPRESSOR 31,201616
+   Refrigeration Compressor,32,REFRIGERATION COMPRESSOR 32,201616
+   Refrigeration Compressor,33,REFRIGERATION COMPRESSOR 33,201616
+   Refrigeration Compressor,34,REFRIGERATION COMPRESSOR 34,201616
+   Refrigeration Compressor,35,REFRIGERATION COMPRESSOR 35,201616
+   Refrigeration Compressor,36,REFRIGERATION COMPRESSOR 36,201616
+   Refrigeration Compressor,37,REFRIGERATION COMPRESSOR 37,201616
+   Refrigeration Compressor,38,REFRIGERATION COMPRESSOR 38,201616
+   Refrigeration Compressor,39,REFRIGERATION COMPRESSOR 39,201616
+   Refrigeration Compressor,40,REFRIGERATION COMPRESSOR 40,201616
+   Refrigeration Condenser:Air-Cooled,2,REFRIGERATION CONDENSER AIR COOLED 2,51.7,152990.6,2962.2
+ Detailed Refrigeration System,RACK C,R448A,5,2,0,0,0,0,20,1,0,0.80,0,21.0
+   Refrigeration Case,4,DELI CASES,MAIN SALES ZN,112,MAIN SALES ZN ZONE AIR NODE,410.0,0.00,-2.9,25.5,50.9,0.0,63.6,856.3
+   Refrigeration Case,5,DAIRY CASES,MAIN SALES ZN,112,MAIN SALES ZN ZONE AIR NODE,1382.3,0.30,0.6,7.3,43.0,72.5,0.0,0.0
+   Refrigeration Case,6,DAIRY_MEAT CASES,MAIN SALES ZN,112,MAIN SALES ZN ZONE AIR NODE,1437.6,0.30,0.6,18.3,43.0,72.5,0.0,0.0
+   Refrigeration Case,7,MEAT_CASES,MAIN SALES ZN,112,MAIN SALES ZN ZONE AIR NODE,1437.6,0.30,0.6,18.3,43.0,72.5,0.0,0.0
+   Refrigeration Case,8,SERVICE MEAT CASES,MAIN SALES ZN,112,MAIN SALES ZN ZONE AIR NODE,808.0,0.10,-2.9,6.1,31.8,71.5,63.6,0.0
+   Refrigeration Walk In Cooler,3,DAIRY COOLER,10861.2,1.7,868.9,0.0,669.6,0.0,0.0,1
+      Walk-In Surfaces Facing Zone, ACTIVE STORAGE ZN,135.5,0.2030,3.30,2.10,0.2030,0.00,1.83,21.7000
+   Refrigeration Walk In Cooler,4,BEER COOLER,8249.5,1.7,660.0,0.0,475.2,0.0,0.0,1
+      Walk-In Surfaces Facing Zone, ACTIVE STORAGE ZN,135.5,0.2030,3.30,2.10,0.2030,0.00,1.83,21.7000
+   Refrigeration Compressor,41,REFRIGERATION COMPRESSOR 41,175052
+   Refrigeration Compressor,42,REFRIGERATION COMPRESSOR 42,175052
+   Refrigeration Compressor,43,REFRIGERATION COMPRESSOR 43,175052
+   Refrigeration Compressor,44,REFRIGERATION COMPRESSOR 44,175052
+   Refrigeration Compressor,45,REFRIGERATION COMPRESSOR 45,175052
+   Refrigeration Compressor,46,REFRIGERATION COMPRESSOR 46,175052
+   Refrigeration Compressor,47,REFRIGERATION COMPRESSOR 47,175052
+   Refrigeration Compressor,48,REFRIGERATION COMPRESSOR 48,175052
+   Refrigeration Compressor,49,REFRIGERATION COMPRESSOR 49,175052
+   Refrigeration Compressor,50,REFRIGERATION COMPRESSOR 50,175052
+   Refrigeration Compressor,51,REFRIGERATION COMPRESSOR 51,175052
+   Refrigeration Compressor,52,REFRIGERATION COMPRESSOR 52,175052
+   Refrigeration Compressor,53,REFRIGERATION COMPRESSOR 53,175052
+   Refrigeration Compressor,54,REFRIGERATION COMPRESSOR 54,175052
+   Refrigeration Compressor,55,REFRIGERATION COMPRESSOR 55,175052
+   Refrigeration Compressor,56,REFRIGERATION COMPRESSOR 56,175052
+   Refrigeration Compressor,57,REFRIGERATION COMPRESSOR 57,175052
+   Refrigeration Compressor,58,REFRIGERATION COMPRESSOR 58,175052
+   Refrigeration Compressor,59,REFRIGERATION COMPRESSOR 59,175052
+   Refrigeration Compressor,60,REFRIGERATION COMPRESSOR 60,175052
+   Refrigeration Condenser:Air-Cooled,3,REFRIGERATION CONDENSER AIR COOLED 3,51.7,327802.6,5552.7
+ Detailed Refrigeration System,RACK D,R448A,7,6,0,0,0,0,20,1,0,0.80,0,21.0
+   Refrigeration Case,9,BEVERAGE CASES,MAIN SALES ZN,112,MAIN SALES ZN ZONE AIR NODE,1437.6,0.30,0.6,4.9,43.0,72.5,0.0,0.0
+   Refrigeration Case,10,SERVICE DELI CASES,MAIN SALES ZN,112,MAIN SALES ZN ZONE AIR NODE,808.0,0.10,-2.9,13.4,31.8,71.5,63.6,0.0
+   Refrigeration Case,11,SALAD CASES,MAIN SALES ZN,112,MAIN SALES ZN ZONE AIR NODE,1437.6,0.30,0.6,14.6,43.0,72.5,0.0,0.0
+   Refrigeration Case,12,PRODUCE ISLANDS,MAIN SALES ZN,112,MAIN SALES ZN ZONE AIR NODE,410.0,0.20,-2.9,18.3,50.9,0.0,0.0,856.3
+   Refrigeration Case,13,FLORAL CASES,MAIN SALES ZN,112,MAIN SALES ZN ZONE AIR NODE,1437.6,0.30,0.6,3.7,43.0,72.5,0.0,0.0
+   Refrigeration Case,14,SERVICE BAKERY CASES,MAIN SALES ZN,112,MAIN SALES ZN ZONE AIR NODE,808.0,0.10,-2.9,2.4,31.8,71.5,0.0,0.0
+   Refrigeration Case,15,PREPARED FOODS CASES,MAIN SALES ZN,112,MAIN SALES ZN ZONE AIR NODE,1437.6,0.30,0.6,17.0,43.0,72.5,0.0,0.0
+   Refrigeration Walk In Cooler,5,MEAT COOLER,7330.1,1.7,586.4,0.0,410.4,0.0,0.0,1
+      Walk-In Surfaces Facing Zone, ACTIVE STORAGE ZN,94.1,0.2030,3.30,2.10,0.2030,0.00,1.83,0.2030
+   Refrigeration Walk In Cooler,6,MEAT PREP,10015.0,1.7,801.2,0.0,604.8,0.0,0.0,1
+      Walk-In Surfaces Facing Zone, DELI ZN,125.1,0.2030,3.30,2.10,0.2030,0.00,1.83,2.2697
+   Refrigeration Walk In Cooler,7,BLOOM BOX,2015.0,1.7,161.2,0.0,64.8,0.0,0.0,1
+      Walk-In Surfaces Facing Zone, ACTIVE STORAGE ZN,39.0,0.2030,3.30,2.10,0.2030,0.00,1.83,2.2697
+   Refrigeration Walk In Cooler,8,DELI COOLER,2891.2,1.7,231.3,0.0,118.8,0.0,0.0,1
+      Walk-In Surfaces Facing Zone, DELI ZN,47.6,0.2030,3.30,2.10,0.2030,0.00,1.83,2.2697
+   Refrigeration Walk In Cooler,9,PRODUCE COOLER,7174.5,1.7,574.0,0.0,399.6,0.0,0.0,1
+      Walk-In Surfaces Facing Zone, ACTIVE STORAGE ZN,92.4,0.2030,3.30,2.10,0.2030,0.00,1.83,2.2697
+   Refrigeration Walk In Cooler,10,FISH COOLER,2191.6,1.7,175.3,0.0,75.6,0.0,0.0,1
+      Walk-In Surfaces Facing Zone, ACTIVE STORAGE ZN,40.7,0.2030,3.30,2.10,0.2030,0.00,1.83,2.2697
+   Refrigeration Compressor,61,REFRIGERATION COMPRESSOR 61,185514
+   Refrigeration Compressor,62,REFRIGERATION COMPRESSOR 62,185514
+   Refrigeration Compressor,63,REFRIGERATION COMPRESSOR 63,185514
+   Refrigeration Compressor,64,REFRIGERATION COMPRESSOR 64,185514
+   Refrigeration Compressor,65,REFRIGERATION COMPRESSOR 65,185514
+   Refrigeration Compressor,66,REFRIGERATION COMPRESSOR 66,185514
+   Refrigeration Compressor,67,REFRIGERATION COMPRESSOR 67,185514
+   Refrigeration Compressor,68,REFRIGERATION COMPRESSOR 68,185514
+   Refrigeration Compressor,69,REFRIGERATION COMPRESSOR 69,185514
+   Refrigeration Compressor,70,REFRIGERATION COMPRESSOR 70,185514
+   Refrigeration Compressor,71,REFRIGERATION COMPRESSOR 71,185514
+   Refrigeration Compressor,72,REFRIGERATION COMPRESSOR 72,185514
+   Refrigeration Compressor,73,REFRIGERATION COMPRESSOR 73,185514
+   Refrigeration Compressor,74,REFRIGERATION COMPRESSOR 74,185514
+   Refrigeration Compressor,75,REFRIGERATION COMPRESSOR 75,185514
+   Refrigeration Compressor,76,REFRIGERATION COMPRESSOR 76,185514
+   Refrigeration Compressor,77,REFRIGERATION COMPRESSOR 77,185514
+   Refrigeration Compressor,78,REFRIGERATION COMPRESSOR 78,185514
+   Refrigeration Compressor,79,REFRIGERATION COMPRESSOR 79,185514
+   Refrigeration Compressor,80,REFRIGERATION COMPRESSOR 80,185514
+   Refrigeration Condenser:Air-Cooled,4,REFRIGERATION CONDENSER AIR COOLED 4,51.7,587499.3,9401.1
+! <Water Heater Information>,Type,Name,Volume {m3},Maximum Capacity {W},Standard Rated Recovery Efficiency, Standard Rated Energy Factor
+! <ZoneInfiltration Airflow Stats Nominal>,Name,Schedule Name,Zone Name, Zone Floor Area {m2}, # Zone Occupants,Design Volume Flow Rate {m3/s},Volume Flow Rate/Floor Area {m3/s-m2},Volume Flow Rate/Exterior Surface Area {m3/s-m2},ACH - Air Changes per Hour,Equation A - Constant Term Coefficient {},Equation B - Temperature Term Coefficient {1/C},Equation C - Velocity Term Coefficient {s/m}, Equation D - Velocity Squared Term Coefficient {s2/m2}
+ ZoneInfiltration Airflow Stats Nominal, ACTIVE STORAGE INFILTRATION,SUPERMARKET INFIL NEW,ACTIVE STORAGE ZN,422.17,15.2,0.263,6.219E-004,3.871E-004,0.490,0.000,0.000,0.224,0.000
+ ZoneInfiltration Airflow Stats Nominal, BAKERY INFILTRATION,SUPERMARKET INFIL NEW,BAKERY ZN,209.03,18.0,0.145,6.955E-004,4.144E-004,0.548,0.000,0.000,0.224,0.000
+ ZoneInfiltration Airflow Stats Nominal, CORRIDOR INFILTRATION,SUPERMARKET INFIL NEW,CORRIDOR ZN,49.41,4.3,7.203E-003,1.458E-004,1.276E-004,0.115,0.000,0.000,0.224,0.000
+ ZoneInfiltration Airflow Stats Nominal, DELI INFILTRATION,SUPERMARKET INFIL NEW,DELI ZN,224.70,19.3,0.106,4.736E-004,3.239E-004,0.373,0.000,0.000,0.224,0.000
+ ZoneInfiltration Airflow Stats Nominal, DINING ROOM INFILTRATION,SUPERMARKET INFIL NEW,DINING ROOM ZN,46.46,35.0,2.927E-002,6.301E-004,3.903E-004,0.496,0.000,0.000,0.224,0.000
+ ZoneInfiltration Airflow Stats Nominal, EAST PERIMETER SALES INFILTRATION,SUPERMARKET INFIL NEW,EAST PERIMETER SALES ZN,107.35,9.2,0.110,1.025E-003,5.126E-004,0.807,0.000,0.000,0.224,0.000
+ ZoneInfiltration Airflow Stats Nominal, ENCLOSED OFFICE INFILTRATION,SUPERMARKET INFIL NEW,ENCLOSED OFFICE ZN,27.84,1.5,5.241E-002,1.883E-003,6.638E-004,1.483,0.000,0.000,0.224,0.000
+ ZoneInfiltration Airflow Stats Nominal, MECHANICAL ROOM INFILTRATION,SUPERMARKET INFIL NEW,MECHANICAL ROOM ZN,55.74,0.0,3.512E-002,6.301E-004,3.903E-004,0.496,0.000,0.000,0.224,0.000
+ ZoneInfiltration Airflow Stats Nominal, MEETING ROOM INFILTRATION,SUPERMARKET INFIL NEW,MEETING ROOM ZN,46.46,25.0,2.927E-002,6.301E-004,3.903E-004,0.496,0.000,0.000,0.224,0.000
+ ZoneInfiltration Airflow Stats Nominal, PRODUCE INFILTRATION,SUPERMARKET INFIL NEW,PRODUCE ZN,711.36,61.3,0.281,3.957E-004,2.855E-004,0.312,0.000,0.000,0.224,0.000
+ ZoneInfiltration Airflow Stats Nominal, RESTROOM INFILTRATION,SUPERMARKET INFIL NEW,RESTROOM ZN,62.71,5.4,3.951E-002,6.301E-004,3.903E-004,0.496,0.000,0.000,0.224,0.000
+ ZoneInfiltration Airflow Stats Nominal, VESTIBULE INFILTRATION,SUPERMARKET INFIL NEW,VESTIBULE ZN,27.87,2.4,2.857E-002,1.025E-003,5.126E-004,0.807,0.000,0.000,0.224,0.000
+ ZoneInfiltration Airflow Stats Nominal, WEST PERIMETER SALES INFILTRATION,SUPERMARKET INFIL NEW,WEST PERIMETER SALES ZN,107.35,9.2,0.110,1.025E-003,5.126E-004,0.807,0.000,0.000,0.224,0.000
+! <AirFlow Model>, Simple
+ AirFlow Model, Simple
+! <RoomAir Model>, Zone Name, Mixing/Mundt/UCSDDV/UCSDCV/UCSDUFI/UCSDUFE/User Defined
+RoomAir Model,ACTIVE STORAGE ZN,Mixing/Well-Stirred
+RoomAir Model,BAKERY ZN,Mixing/Well-Stirred
+RoomAir Model,CORRIDOR ZN,Mixing/Well-Stirred
+RoomAir Model,DELI ZN,Mixing/Well-Stirred
+RoomAir Model,DINING ROOM ZN,Mixing/Well-Stirred
+RoomAir Model,EAST PERIMETER SALES ZN,Mixing/Well-Stirred
+RoomAir Model,ENCLOSED OFFICE ZN,Mixing/Well-Stirred
+RoomAir Model,MAIN SALES ZN,Mixing/Well-Stirred
+RoomAir Model,MECHANICAL ROOM ZN,Mixing/Well-Stirred
+RoomAir Model,MEETING ROOM ZN,Mixing/Well-Stirred
+RoomAir Model,PRODUCE ZN,Mixing/Well-Stirred
+RoomAir Model,RESTROOM ZN,Mixing/Well-Stirred
+RoomAir Model,VESTIBULE ZN,Mixing/Well-Stirred
+RoomAir Model,WEST PERIMETER SALES ZN,Mixing/Well-Stirred
+! <AirflowNetwork Model:Control>, No Multizone or Distribution/Multizone with Distribution/Multizone without Distribution/Multizone with Distribution only during Fan Operation
+AirflowNetwork Model:Control,NoMultizoneOrDistribution
+! <Zone Volume Capacitance Multiplier>, Sensible Heat Capacity Multiplier, Moisture Capacity Multiplier, Carbon Dioxide Capacity Multiplier, Generic Contaminant Capacity Multiplier
+Zone Volume Capacitance Multiplier,   1.000 ,   1.000,   1.000,   1.000
+! <Load Timesteps in Zone Design Calculation Averaging Window>, Value
+ Load Timesteps in Zone Design Calculation Averaging Window,   12
+! <Heating Sizing Factor Information>, Sizing Factor ID, Value
+ Heating Sizing Factor Information, Global,   1.2500    
+ Heating Sizing Factor Information, Zone ACTIVE STORAGE ZN,   1.2500    
+ Heating Sizing Factor Information, Zone BAKERY ZN,   1.2500    
+ Heating Sizing Factor Information, Zone CORRIDOR ZN,   1.2500    
+ Heating Sizing Factor Information, Zone DELI ZN,   1.2500    
+ Heating Sizing Factor Information, Zone DINING ROOM ZN,   1.2500    
+ Heating Sizing Factor Information, Zone EAST PERIMETER SALES ZN,   1.2500    
+ Heating Sizing Factor Information, Zone ENCLOSED OFFICE ZN,   1.2500    
+ Heating Sizing Factor Information, Zone MAIN SALES ZN,   1.2500    
+ Heating Sizing Factor Information, Zone MECHANICAL ROOM ZN,   1.2500    
+ Heating Sizing Factor Information, Zone MEETING ROOM ZN,   1.2500    
+ Heating Sizing Factor Information, Zone PRODUCE ZN,   1.2500    
+ Heating Sizing Factor Information, Zone RESTROOM ZN,   1.2500    
+ Heating Sizing Factor Information, Zone VESTIBULE ZN,   1.2500    
+ Heating Sizing Factor Information, Zone WEST PERIMETER SALES ZN,   1.2500    
+! <Cooling Sizing Factor Information>, Sizing Factor ID, Value
+ Cooling Sizing Factor Information, Global,   1.1500    
+ Cooling Sizing Factor Information, Zone ACTIVE STORAGE ZN,   1.1500    
+ Cooling Sizing Factor Information, Zone BAKERY ZN,   1.1500    
+ Cooling Sizing Factor Information, Zone CORRIDOR ZN,   1.1500    
+ Cooling Sizing Factor Information, Zone DELI ZN,   1.1500    
+ Cooling Sizing Factor Information, Zone DINING ROOM ZN,   1.1500    
+ Cooling Sizing Factor Information, Zone EAST PERIMETER SALES ZN,   1.1500    
+ Cooling Sizing Factor Information, Zone ENCLOSED OFFICE ZN,   1.1500    
+ Cooling Sizing Factor Information, Zone MAIN SALES ZN,   1.1500    
+ Cooling Sizing Factor Information, Zone MECHANICAL ROOM ZN,   1.1500    
+ Cooling Sizing Factor Information, Zone MEETING ROOM ZN,   1.1500    
+ Cooling Sizing Factor Information, Zone PRODUCE ZN,   1.1500    
+ Cooling Sizing Factor Information, Zone RESTROOM ZN,   1.1500    
+ Cooling Sizing Factor Information, Zone VESTIBULE ZN,   1.1500    
+ Cooling Sizing Factor Information, Zone WEST PERIMETER SALES ZN,   1.1500    
+! <Zone Sizing Information>, Zone Name, Load Type, Calc Des Load {W}, User Des Load {W}, Calc Des Air Flow Rate {m3/s}, User Des Air Flow Rate {m3/s}, Design Day Name, Date/Time of Peak, Temperature at Peak {C}, Humidity Ratio at Peak {kgWater/kgDryAir}, Floor Area {m2}, # Occupants, Calc Outdoor Air Flow Rate {m3/s}, Calc DOAS Heat Addition Rate {W}
+ Zone Sizing Information, ACTIVE STORAGE ZN, Cooling, 1534.46197, 1764.63127, 9.88557E-002, 0.32169, HOUSTON BUSH INTERCONTINENTAL ANN CLG .4% CONDNS DB=>MWB, 7/21 06:05:00, 26.16092, 1.52050E-002, 422.16666, 15.17751, 0.32169, 0.00000
+ Zone Sizing Information, ACTIVE STORAGE ZN, Heating, 33737.18096, 42171.47620, 0.92032, 1.15040, HOUSTON BUSH INTERCONTINENTAL ANN HTG 99.6% CONDNS DB, 1/21 07:00:00, -1.60000, 3.31476E-003, 422.16666, 15.17751, 0.32169, 0.00000
+ Zone Sizing Information, BAKERY ZN, Cooling, 13075.62936, 15036.97377, 0.86370, 0.99325, HOUSTON BUSH INTERCONTINENTAL ANN CLG .4% CONDNS DB=>MWB, 7/21 07:00:00, 26.80900, 1.52062E-002, 209.03302, 18.00010, 0.31355, 0.00000
+ Zone Sizing Information, BAKERY ZN, Heating, 14494.26336, 18117.82920, 0.39539, 0.49424, HOUSTON BUSH INTERCONTINENTAL ANN HTG 99.6% CONDNS DB, 1/21 07:00:00, -1.60000, 3.31476E-003, 209.03302, 18.00010, 0.31355, 0.00000
+ Zone Sizing Information, CORRIDOR ZN, Cooling, 4392.49308, 5051.36705, 0.30358, 0.34912, HOUSTON BUSH INTERCONTINENTAL ANN CLG .4% CONDNS DB=>MWB, 7/21 07:00:00, 26.80900, 1.52062E-002, 49.41243, 4.25497, 1.25508E-002, 0.00000
+ Zone Sizing Information, CORRIDOR ZN, Heating, 2590.31992, 3237.89989, 7.15040E-002, 8.93800E-002, HOUSTON BUSH INTERCONTINENTAL ANN HTG 99.6% CONDNS DB, 1/21 07:00:00, -1.60000, 3.31476E-003, 49.41243, 4.25497, 1.25508E-002, 0.00000
+ Zone Sizing Information, DELI ZN, Cooling, 17321.43962, 19919.65556, 1.16597, 1.34087, HOUSTON BUSH INTERCONTINENTAL ANN CLG .4% CONDNS DB=>MWB, 7/21 07:00:00, 26.80900, 1.52062E-002, 224.69974, 19.34918, 0.33705, 0.00000
+ Zone Sizing Information, DELI ZN, Heating, 12302.25618, 15377.82022, 0.33433, 0.41792, HOUSTON BUSH INTERCONTINENTAL ANN HTG 99.6% CONDNS DB, 1/21 07:00:00, -1.60000, 3.31476E-003, 224.69974, 19.34918, 0.33705, 0.00000
+ Zone Sizing Information, DINING ROOM ZN, Cooling, 6768.48099, 7783.75313, 0.47189, 0.54267, HOUSTON BUSH INTERCONTINENTAL ANN CLG .4% CONDNS DB=>MWB, 7/21 07:00:00, 26.80900, 1.52062E-002, 46.45823, 35.00505, 0.33041, 0.00000
+ Zone Sizing Information, DINING ROOM ZN, Heating, 2082.28756, 2602.85945, 5.68077E-002, 0.33041, HOUSTON BUSH INTERCONTINENTAL ANN HTG 99.6% CONDNS DB, 1/21 07:00:00, -1.60000, 3.31476E-003, 46.45823, 35.00505, 0.33041, 0.00000
+ Zone Sizing Information, EAST PERIMETER SALES ZN, Cooling, 9972.73300, 11468.64295, 0.72553, 0.83436, HOUSTON BUSH INTERCONTINENTAL ANN CLG .4% CONDNS DB=>MWB, 7/21 13:35:00, 35.78958, 1.52228E-002, 107.35376, 9.24437, 0.16361, 0.00000
+ Zone Sizing Information, EAST PERIMETER SALES ZN, Heating, 9302.67413, 11628.34266, 0.25446, 0.31807, HOUSTON BUSH INTERCONTINENTAL ANN HTG 99.6% CONDNS DB, 1/21 07:00:00, -1.60000, 3.31476E-003, 107.35376, 9.24437, 0.16361, 0.00000
+ Zone Sizing Information, ENCLOSED OFFICE ZN, Cooling, 1860.32315, 2139.37162, 0.12720, 0.14627, HOUSTON BUSH INTERCONTINENTAL ANN CLG .4% CONDNS DB=>MWB, 7/21 07:00:00, 26.80900, 1.52062E-002, 27.83599, 1.49812, 1.41407E-002, 0.00000
+ Zone Sizing Information, ENCLOSED OFFICE ZN, Heating, 2012.00329, 2515.00412, 5.47634E-002, 6.84543E-002, HOUSTON BUSH INTERCONTINENTAL ANN HTG 99.6% CONDNS DB, 1/21 07:00:00, -1.60000, 3.31476E-003, 27.83599, 1.49812, 1.41407E-002, 0.00000
+ Zone Sizing Information, MAIN SALES ZN, Cooling, 147403.63212, 169514.17694, 9.84241, 11.31877, HOUSTON BUSH INTERCONTINENTAL ANN CLG .4% CONDNS DB=>MWB, 7/21 07:00:00, 26.80900, 1.52062E-002, 2082.38622, 179.31695, 3.17356, 0.00000
+ Zone Sizing Information, MAIN SALES ZN, Heating, 59308.05526, 74135.06908, 1.60970, 3.17356, HOUSTON BUSH INTERCONTINENTAL ANN HTG 99.6% CONDNS DB, 1/21 07:00:00, -1.60000, 3.31476E-003, 2082.38622, 179.31695, 3.17356, 0.00000
+ Zone Sizing Information, MECHANICAL ROOM ZN, Cooling, 2576.43959, 2962.90553, 0.17565, 0.20200, HOUSTON BUSH INTERCONTINENTAL ANN CLG .4% CONDNS DB=>MWB, 7/21 07:00:00, 26.80900, 1.52062E-002, 55.74043, 0.00000, 0.00000, 0.00000
+ Zone Sizing Information, MECHANICAL ROOM ZN, Heating, 2544.56130, 3180.70162, 6.92878E-002, 8.66097E-002, HOUSTON BUSH INTERCONTINENTAL ANN HTG 99.6% CONDNS DB, 1/21 07:00:00, -1.60000, 3.31476E-003, 55.74043, 0.00000, 0.00000, 0.00000
+ Zone Sizing Information, MEETING ROOM ZN, Cooling, 4635.41128, 5330.72297, 0.31752, 0.36515, HOUSTON BUSH INTERCONTINENTAL ANN CLG .4% CONDNS DB=>MWB, 7/21 07:00:00, 26.80900, 1.52062E-002, 46.45804, 25.00351, 0.23601, 0.00000
+ Zone Sizing Information, MEETING ROOM ZN, Heating, 2162.25083, 2702.81353, 5.89512E-002, 0.23601, HOUSTON BUSH INTERCONTINENTAL ANN HTG 99.6% CONDNS DB, 1/21 07:00:00, -1.60000, 3.31476E-003, 46.45804, 25.00351, 0.23601, 0.00000
+ Zone Sizing Information, PRODUCE ZN, Cooling, 45957.96199, 52851.65629, 3.04258, 3.49897, HOUSTON BUSH INTERCONTINENTAL ANN CLG .4% CONDNS DB=>MWB, 7/21 07:00:00, 26.80900, 1.52062E-002, 711.36187, 61.25628, 1.08412, 0.00000
+ Zone Sizing Information, PRODUCE ZN, Heating, 25760.93982, 32201.17478, 0.69539, 1.08412, HOUSTON BUSH INTERCONTINENTAL ANN HTG 99.6% CONDNS DB, 1/21 07:00:00, -1.60000, 3.31476E-003, 711.36187, 61.25628, 1.08412, 0.00000
+ Zone Sizing Information, RESTROOM ZN, Cooling, 3465.03506, 3984.79032, 0.23449, 0.33130, HOUSTON BUSH INTERCONTINENTAL ANN CLG .4% CONDNS DB=>MWB, 7/21 07:00:00, 26.80900, 1.52062E-002, 62.70761, 5.39983, 0.33130, 0.00000
+ Zone Sizing Information, RESTROOM ZN, Heating, 2732.60656, 3415.75820, 7.44134E-002, 0.33130, HOUSTON BUSH INTERCONTINENTAL ANN HTG 99.6% CONDNS DB, 1/21 07:00:00, -1.60000, 3.31476E-003, 62.70761, 5.39983, 0.33130, 0.00000
+ Zone Sizing Information, VESTIBULE ZN, Cooling, 0.00000, 0.00000, 0.00000, 7.07921E-003, HOUSTON BUSH INTERCONTINENTAL ANN CLG .4% CONDNS DB=>MWB, 7/21 13:50:00, 35.91583, 1.52230E-002, 27.87091, 2.40000, 7.07921E-003, 0.00000
+ Zone Sizing Information, VESTIBULE ZN, Heating, 0.00000, 0.00000, 0.00000, 7.07921E-003, HOUSTON BUSH INTERCONTINENTAL ANN HTG 99.6% CONDNS DB, 1/21 06:15:00, -1.60000, 3.31476E-003, 27.87091, 2.40000, 7.07921E-003, 0.00000
+ Zone Sizing Information, WEST PERIMETER SALES ZN, Cooling, 9955.14461, 11448.41631, 0.72425, 0.83289, HOUSTON BUSH INTERCONTINENTAL ANN CLG .4% CONDNS DB=>MWB, 7/21 13:40:00, 35.83167, 1.52228E-002, 107.35376, 9.24437, 0.16361, 0.00000
+ Zone Sizing Information, WEST PERIMETER SALES ZN, Heating, 9276.25621, 11595.32027, 0.25371, 0.31714, HOUSTON BUSH INTERCONTINENTAL ANN HTG 99.6% CONDNS DB, 1/21 07:00:00, -1.60000, 3.31476E-003, 107.35376, 9.24437, 0.16361, 0.00000
+! <System Sizing Information>, System Name, Load Type, Peak Load Kind, User Design Capacity [W], Calc Des Air Flow Rate [m3/s], User Des Air Flow Rate [m3/s], Design Day Name, Date/Time of Peak
+ System Sizing Information, ACTIVE STORAGE ZN PSZ_14, Cooling, Sensible, 9009.31, 0.32169, 0.32169, HOUSTON BUSH INTERCONTINENTAL ANN CLG .4% CONDNS DB=>MWB, 7/21 14:00:00
+ System Sizing Information, ACTIVE STORAGE ZN PSZ_14, Heating, Sensible, 49438.82, 1.15040, 1.15040, HOUSTON BUSH INTERCONTINENTAL ANN HTG 99.6% CONDNS DB, 1/21 07:00:00
+ System Sizing Information, BAKERY ZN PSZ_6, Cooling, Sensible, 15001.49, 0.99325, 0.99325, HOUSTON BUSH INTERCONTINENTAL ANN CLG .4% CONDNS DB=>MWB, 7/21 12:30:00
+ System Sizing Information, BAKERY ZN PSZ_6, Heating, Sensible, 25919.29, 0.49424, 0.49424, HOUSTON BUSH INTERCONTINENTAL ANN HTG 99.6% CONDNS DB, 1/21 07:00:00
+ System Sizing Information, CORRIDOR ZN PSZ_12, Cooling, Sensible, 4783.80, 0.34912, 0.34912, HOUSTON BUSH INTERCONTINENTAL ANN CLG .4% CONDNS DB=>MWB, 7/21 07:00:00
+ System Sizing Information, CORRIDOR ZN PSZ_12, Heating, Sensible, 3499.48, 8.93800E-002, 8.93800E-002, HOUSTON BUSH INTERCONTINENTAL ANN HTG 99.6% CONDNS DB, 1/21 07:00:00
+ System Sizing Information, DELI ZN PSZ_5, Cooling, Sensible, 19851.91, 1.34087, 1.34087, HOUSTON BUSH INTERCONTINENTAL ANN CLG .4% CONDNS DB=>MWB, 7/21 12:30:00
+ System Sizing Information, DELI ZN PSZ_5, Heating, Sensible, 23848.15, 0.41792, 0.41792, HOUSTON BUSH INTERCONTINENTAL ANN HTG 99.6% CONDNS DB, 1/21 07:00:00
+ System Sizing Information, DINING ROOM ZN PSZ_9, Cooling, Sensible, 10979.53, 0.54267, 0.54267, HOUSTON BUSH INTERCONTINENTAL ANN CLG .4% CONDNS DB=>MWB, 7/21 14:00:00
+ System Sizing Information, DINING ROOM ZN PSZ_9, Heating, Sensible, 20561.42, 0.33041, 0.33041, HOUSTON BUSH INTERCONTINENTAL ANN HTG 99.6% CONDNS DB, 1/21 00:05:00
+ System Sizing Information, EAST PERIMETER SALES ZN PSZ_3, Cooling, Sensible, 13632.73, 0.83436, 0.83436, HOUSTON BUSH INTERCONTINENTAL ANN CLG .4% CONDNS DB=>MWB, 7/21 13:50:00
+ System Sizing Information, EAST PERIMETER SALES ZN PSZ_3, Heating, Sensible, 15664.77, 0.31807, 0.31807, HOUSTON BUSH INTERCONTINENTAL ANN HTG 99.6% CONDNS DB, 1/21 07:00:00
+ System Sizing Information, ENCLOSED OFFICE ZN PSZ_7, Cooling, Sensible, 2030.95, 0.14627, 0.14627, HOUSTON BUSH INTERCONTINENTAL ANN CLG .4% CONDNS DB=>MWB, 7/21 07:00:00
+ System Sizing Information, ENCLOSED OFFICE ZN PSZ_7, Heating, Sensible, 2807.73, 6.84543E-002, 6.84543E-002, HOUSTON BUSH INTERCONTINENTAL ANN HTG 99.6% CONDNS DB, 1/21 07:00:00
+ System Sizing Information, MAIN SALES ZN PSZ_1, Cooling, Sensible, 164259.16, 11.31877, 11.31877, HOUSTON BUSH INTERCONTINENTAL ANN CLG .4% CONDNS DB=>MWB, 7/21 07:00:00
+ System Sizing Information, MAIN SALES ZN PSZ_1, Heating, Sensible, 197489.96, 3.17356, 3.17356, HOUSTON BUSH INTERCONTINENTAL ANN HTG 99.6% CONDNS DB, 1/21 00:05:00
+ System Sizing Information, MECHANICAL ROOM ZN PSZ_11, Cooling, Sensible, 2733.13, 0.20200, 0.20200, HOUSTON BUSH INTERCONTINENTAL ANN CLG .4% CONDNS DB=>MWB, 7/21 07:00:00
+ System Sizing Information, MECHANICAL ROOM ZN PSZ_11, Heating, Sensible, 3071.65, 8.66097E-002, 8.66097E-002, HOUSTON BUSH INTERCONTINENTAL ANN HTG 99.6% CONDNS DB, 1/21 07:00:00
+ System Sizing Information, MEETING ROOM ZN PSZ_8, Cooling, Sensible, 7224.22, 0.36515, 0.36515, HOUSTON BUSH INTERCONTINENTAL ANN CLG .4% CONDNS DB=>MWB, 7/21 14:00:00
+ System Sizing Information, MEETING ROOM ZN PSZ_8, Heating, Sensible, 14686.67, 0.23601, 0.23601, HOUSTON BUSH INTERCONTINENTAL ANN HTG 99.6% CONDNS DB, 1/21 00:05:00
+ System Sizing Information, PRODUCE ZN PSZ_4, Cooling, Sensible, 53093.35, 3.49897, 3.49897, HOUSTON BUSH INTERCONTINENTAL ANN CLG .4% CONDNS DB=>MWB, 7/21 14:00:00
+ System Sizing Information, PRODUCE ZN PSZ_4, Heating, Sensible, 67464.35, 1.08412, 1.08412, HOUSTON BUSH INTERCONTINENTAL ANN HTG 99.6% CONDNS DB, 1/21 00:05:00
+ System Sizing Information, RESTROOM ZN PSZ_10, Cooling, Sensible, 9278.34, 0.33130, 0.33130, HOUSTON BUSH INTERCONTINENTAL ANN CLG .4% CONDNS DB=>MWB, 7/21 14:00:00
+ System Sizing Information, RESTROOM ZN PSZ_10, Heating, Sensible, 20616.55, 0.33130, 0.33130, HOUSTON BUSH INTERCONTINENTAL ANN HTG 99.6% CONDNS DB, 1/21 00:05:00
+ System Sizing Information, VESTIBULE ZN PSZ_13, Cooling, Sensible, 198.26, 7.07921E-003, 7.07921E-003, HOUSTON BUSH INTERCONTINENTAL ANN CLG .4% CONDNS DB=>MWB, 7/21 14:00:00
+ System Sizing Information, VESTIBULE ZN PSZ_13, Heating, Sensible, 440.54, 7.07921E-003, 7.07921E-003, HOUSTON BUSH INTERCONTINENTAL ANN HTG 99.6% CONDNS DB, 1/21 00:05:00
+ System Sizing Information, WEST PERIMETER SALES ZN PSZ_2, Cooling, Sensible, 13614.69, 0.83289, 0.83289, HOUSTON BUSH INTERCONTINENTAL ANN CLG .4% CONDNS DB=>MWB, 7/21 13:50:00
+ System Sizing Information, WEST PERIMETER SALES ZN PSZ_2, Heating, Sensible, 15631.71, 0.31714, 0.31714, HOUSTON BUSH INTERCONTINENTAL ANN HTG 99.6% CONDNS DB, 1/21 07:00:00
+! <Component Sizing Information>, Component Type, Component Name, Input Field Description, Value
+ Component Sizing Information, AirTerminal:SingleDuct:ConstantVolume:NoReheat, ACTIVE STORAGE ZN PSZ_14 DIFFUSER, Design Size Maximum Air Flow Rate [m3/s], 1.15040
+ Component Sizing Information, AirTerminal:SingleDuct:ConstantVolume:NoReheat, BAKERY ZN PSZ_6 DIFFUSER, Design Size Maximum Air Flow Rate [m3/s], 0.99325
+ Component Sizing Information, Fan:ZoneExhaust, BAKERY ZN EXHAUST FAN, Design Electric Power Consumption [W], 98.33333
+ Component Sizing Information, AirTerminal:SingleDuct:ConstantVolume:NoReheat, CORRIDOR ZN PSZ_12 DIFFUSER, Design Size Maximum Air Flow Rate [m3/s], 0.34912
+ Component Sizing Information, AirTerminal:SingleDuct:ConstantVolume:NoReheat, DELI ZN PSZ_5 DIFFUSER, Design Size Maximum Air Flow Rate [m3/s], 1.34087
+ Component Sizing Information, Fan:ZoneExhaust, DELI ZN EXHAUST FAN, Design Electric Power Consumption [W], 93.72222
+ Component Sizing Information, AirTerminal:SingleDuct:ConstantVolume:NoReheat, DINING ROOM ZN PSZ_9 DIFFUSER, Design Size Maximum Air Flow Rate [m3/s], 0.54267
+ Component Sizing Information, AirTerminal:SingleDuct:ConstantVolume:NoReheat, EAST PERIMETER SALES ZN PSZ_3 DIFFUSER, Design Size Maximum Air Flow Rate [m3/s], 0.83436
+ Component Sizing Information, AirTerminal:SingleDuct:ConstantVolume:NoReheat, ENCLOSED OFFICE ZN PSZ_7 DIFFUSER, Design Size Maximum Air Flow Rate [m3/s], 0.14627
+ Component Sizing Information, AirTerminal:SingleDuct:ConstantVolume:NoReheat, MAIN SALES ZN PSZ_1 DIFFUSER, Design Size Maximum Air Flow Rate [m3/s], 11.31877
+ Component Sizing Information, AirTerminal:SingleDuct:ConstantVolume:NoReheat, MECHANICAL ROOM ZN PSZ_11 DIFFUSER, Design Size Maximum Air Flow Rate [m3/s], 0.20200
+ Component Sizing Information, AirTerminal:SingleDuct:ConstantVolume:NoReheat, MEETING ROOM ZN PSZ_8 DIFFUSER, Design Size Maximum Air Flow Rate [m3/s], 0.36515
+ Component Sizing Information, AirTerminal:SingleDuct:ConstantVolume:NoReheat, PRODUCE ZN PSZ_4 DIFFUSER, Design Size Maximum Air Flow Rate [m3/s], 3.49897
+ Component Sizing Information, AirTerminal:SingleDuct:ConstantVolume:NoReheat, RESTROOM ZN PSZ_10 DIFFUSER, Design Size Maximum Air Flow Rate [m3/s], 0.33130
+ Component Sizing Information, AirTerminal:SingleDuct:ConstantVolume:NoReheat, VESTIBULE ZN PSZ_13 DIFFUSER, Design Size Maximum Air Flow Rate [m3/s], 7.07921E-003
+ Component Sizing Information, AirTerminal:SingleDuct:ConstantVolume:NoReheat, WEST PERIMETER SALES ZN PSZ_2 DIFFUSER, Design Size Maximum Air Flow Rate [m3/s], 0.83289
+ Component Sizing Information, AirLoopHVAC, ACTIVE STORAGE ZN PSZ_14, Sum of Air Terminal Maximum Heating Flow Rates [m3/s], 1.15040
+ Component Sizing Information, AirLoopHVAC, ACTIVE STORAGE ZN PSZ_14, Sum of Air Terminal Minimum Heating Flow Rates [m3/s], 1.15040
+ Component Sizing Information, AirLoopHVAC, ACTIVE STORAGE ZN PSZ_14, Sum of Air Terminal Maximum Flow Rates [m3/s], 1.15040
+ Component Sizing Information, AirLoopHVAC, ACTIVE STORAGE ZN PSZ_14, Adjusted Heating Design Air Flow Rate [m3/s], 1.15040
+ Component Sizing Information, AirLoopHVAC, ACTIVE STORAGE ZN PSZ_14, Adjusted Cooling Design Air Flow Rate [m3/s], 1.15040
+ Component Sizing Information, AirLoopHVAC, ACTIVE STORAGE ZN PSZ_14, Adjusted Main Design Air Flow Rate [m3/s], 1.15040
+ Component Sizing Information, AirLoopHVAC, ACTIVE STORAGE ZN PSZ_14, User Heating Air Flow Ratio [], 1.00000
+ Component Sizing Information, AirLoopHVAC, ACTIVE STORAGE ZN PSZ_14, Calculated Heating Air Flow Ratio [], 1.00000
+ Component Sizing Information, AirLoopHVAC, BAKERY ZN PSZ_6, Sum of Air Terminal Maximum Heating Flow Rates [m3/s], 0.99325
+ Component Sizing Information, AirLoopHVAC, BAKERY ZN PSZ_6, Sum of Air Terminal Minimum Heating Flow Rates [m3/s], 0.99325
+ Component Sizing Information, AirLoopHVAC, BAKERY ZN PSZ_6, Sum of Air Terminal Maximum Flow Rates [m3/s], 0.99325
+ Component Sizing Information, AirLoopHVAC, BAKERY ZN PSZ_6, Adjusted Heating Design Air Flow Rate [m3/s], 0.99325
+ Component Sizing Information, AirLoopHVAC, BAKERY ZN PSZ_6, Adjusted Cooling Design Air Flow Rate [m3/s], 0.99325
+ Component Sizing Information, AirLoopHVAC, BAKERY ZN PSZ_6, Adjusted Main Design Air Flow Rate [m3/s], 0.99325
+ Component Sizing Information, AirLoopHVAC, BAKERY ZN PSZ_6, User Heating Air Flow Ratio [], 1.00000
+ Component Sizing Information, AirLoopHVAC, BAKERY ZN PSZ_6, Calculated Heating Air Flow Ratio [], 1.00000
+ Component Sizing Information, AirLoopHVAC, CORRIDOR ZN PSZ_12, Sum of Air Terminal Maximum Heating Flow Rates [m3/s], 0.34912
+ Component Sizing Information, AirLoopHVAC, CORRIDOR ZN PSZ_12, Sum of Air Terminal Minimum Heating Flow Rates [m3/s], 0.34912
+ Component Sizing Information, AirLoopHVAC, CORRIDOR ZN PSZ_12, Sum of Air Terminal Maximum Flow Rates [m3/s], 0.34912
+ Component Sizing Information, AirLoopHVAC, CORRIDOR ZN PSZ_12, Adjusted Heating Design Air Flow Rate [m3/s], 0.34912
+ Component Sizing Information, AirLoopHVAC, CORRIDOR ZN PSZ_12, Adjusted Cooling Design Air Flow Rate [m3/s], 0.34912
+ Component Sizing Information, AirLoopHVAC, CORRIDOR ZN PSZ_12, Adjusted Main Design Air Flow Rate [m3/s], 0.34912
+ Component Sizing Information, AirLoopHVAC, CORRIDOR ZN PSZ_12, User Heating Air Flow Ratio [], 1.00000
+ Component Sizing Information, AirLoopHVAC, CORRIDOR ZN PSZ_12, Calculated Heating Air Flow Ratio [], 1.00000
+ Component Sizing Information, AirLoopHVAC, DELI ZN PSZ_5, Sum of Air Terminal Maximum Heating Flow Rates [m3/s], 1.34087
+ Component Sizing Information, AirLoopHVAC, DELI ZN PSZ_5, Sum of Air Terminal Minimum Heating Flow Rates [m3/s], 1.34087
+ Component Sizing Information, AirLoopHVAC, DELI ZN PSZ_5, Sum of Air Terminal Maximum Flow Rates [m3/s], 1.34087
+ Component Sizing Information, AirLoopHVAC, DELI ZN PSZ_5, Adjusted Heating Design Air Flow Rate [m3/s], 1.34087
+ Component Sizing Information, AirLoopHVAC, DELI ZN PSZ_5, Adjusted Cooling Design Air Flow Rate [m3/s], 1.34087
+ Component Sizing Information, AirLoopHVAC, DELI ZN PSZ_5, Adjusted Main Design Air Flow Rate [m3/s], 1.34087
+ Component Sizing Information, AirLoopHVAC, DELI ZN PSZ_5, User Heating Air Flow Ratio [], 1.00000
+ Component Sizing Information, AirLoopHVAC, DELI ZN PSZ_5, Calculated Heating Air Flow Ratio [], 1.00000
+ Component Sizing Information, AirLoopHVAC, DINING ROOM ZN PSZ_9, Sum of Air Terminal Maximum Heating Flow Rates [m3/s], 0.54267
+ Component Sizing Information, AirLoopHVAC, DINING ROOM ZN PSZ_9, Sum of Air Terminal Minimum Heating Flow Rates [m3/s], 0.54267
+ Component Sizing Information, AirLoopHVAC, DINING ROOM ZN PSZ_9, Sum of Air Terminal Maximum Flow Rates [m3/s], 0.54267
+ Component Sizing Information, AirLoopHVAC, DINING ROOM ZN PSZ_9, Adjusted Heating Design Air Flow Rate [m3/s], 0.54267
+ Component Sizing Information, AirLoopHVAC, DINING ROOM ZN PSZ_9, Adjusted Cooling Design Air Flow Rate [m3/s], 0.54267
+ Component Sizing Information, AirLoopHVAC, DINING ROOM ZN PSZ_9, Adjusted Main Design Air Flow Rate [m3/s], 0.54267
+ Component Sizing Information, AirLoopHVAC, DINING ROOM ZN PSZ_9, User Heating Air Flow Ratio [], 1.00000
+ Component Sizing Information, AirLoopHVAC, DINING ROOM ZN PSZ_9, Calculated Heating Air Flow Ratio [], 1.00000
+ Component Sizing Information, AirLoopHVAC, EAST PERIMETER SALES ZN PSZ_3, Sum of Air Terminal Maximum Heating Flow Rates [m3/s], 0.83436
+ Component Sizing Information, AirLoopHVAC, EAST PERIMETER SALES ZN PSZ_3, Sum of Air Terminal Minimum Heating Flow Rates [m3/s], 0.83436
+ Component Sizing Information, AirLoopHVAC, EAST PERIMETER SALES ZN PSZ_3, Sum of Air Terminal Maximum Flow Rates [m3/s], 0.83436
+ Component Sizing Information, AirLoopHVAC, EAST PERIMETER SALES ZN PSZ_3, Adjusted Heating Design Air Flow Rate [m3/s], 0.83436
+ Component Sizing Information, AirLoopHVAC, EAST PERIMETER SALES ZN PSZ_3, Adjusted Cooling Design Air Flow Rate [m3/s], 0.83436
+ Component Sizing Information, AirLoopHVAC, EAST PERIMETER SALES ZN PSZ_3, Adjusted Main Design Air Flow Rate [m3/s], 0.83436
+ Component Sizing Information, AirLoopHVAC, EAST PERIMETER SALES ZN PSZ_3, User Heating Air Flow Ratio [], 1.00000
+ Component Sizing Information, AirLoopHVAC, EAST PERIMETER SALES ZN PSZ_3, Calculated Heating Air Flow Ratio [], 1.00000
+ Component Sizing Information, AirLoopHVAC, ENCLOSED OFFICE ZN PSZ_7, Sum of Air Terminal Maximum Heating Flow Rates [m3/s], 0.14627
+ Component Sizing Information, AirLoopHVAC, ENCLOSED OFFICE ZN PSZ_7, Sum of Air Terminal Minimum Heating Flow Rates [m3/s], 0.14627
+ Component Sizing Information, AirLoopHVAC, ENCLOSED OFFICE ZN PSZ_7, Sum of Air Terminal Maximum Flow Rates [m3/s], 0.14627
+ Component Sizing Information, AirLoopHVAC, ENCLOSED OFFICE ZN PSZ_7, Adjusted Heating Design Air Flow Rate [m3/s], 0.14627
+ Component Sizing Information, AirLoopHVAC, ENCLOSED OFFICE ZN PSZ_7, Adjusted Cooling Design Air Flow Rate [m3/s], 0.14627
+ Component Sizing Information, AirLoopHVAC, ENCLOSED OFFICE ZN PSZ_7, Adjusted Main Design Air Flow Rate [m3/s], 0.14627
+ Component Sizing Information, AirLoopHVAC, ENCLOSED OFFICE ZN PSZ_7, User Heating Air Flow Ratio [], 1.00000
+ Component Sizing Information, AirLoopHVAC, ENCLOSED OFFICE ZN PSZ_7, Calculated Heating Air Flow Ratio [], 1.00000
+ Component Sizing Information, AirLoopHVAC, MAIN SALES ZN PSZ_1, Sum of Air Terminal Maximum Heating Flow Rates [m3/s], 11.31877
+ Component Sizing Information, AirLoopHVAC, MAIN SALES ZN PSZ_1, Sum of Air Terminal Minimum Heating Flow Rates [m3/s], 11.31877
+ Component Sizing Information, AirLoopHVAC, MAIN SALES ZN PSZ_1, Sum of Air Terminal Maximum Flow Rates [m3/s], 11.31877
+ Component Sizing Information, AirLoopHVAC, MAIN SALES ZN PSZ_1, Adjusted Heating Design Air Flow Rate [m3/s], 11.31877
+ Component Sizing Information, AirLoopHVAC, MAIN SALES ZN PSZ_1, Adjusted Cooling Design Air Flow Rate [m3/s], 11.31877
+ Component Sizing Information, AirLoopHVAC, MAIN SALES ZN PSZ_1, Adjusted Main Design Air Flow Rate [m3/s], 11.31877
+ Component Sizing Information, AirLoopHVAC, MAIN SALES ZN PSZ_1, User Heating Air Flow Ratio [], 1.00000
+ Component Sizing Information, AirLoopHVAC, MAIN SALES ZN PSZ_1, Calculated Heating Air Flow Ratio [], 1.00000
+ Component Sizing Information, AirLoopHVAC, MECHANICAL ROOM ZN PSZ_11, Sum of Air Terminal Maximum Heating Flow Rates [m3/s], 0.20200
+ Component Sizing Information, AirLoopHVAC, MECHANICAL ROOM ZN PSZ_11, Sum of Air Terminal Minimum Heating Flow Rates [m3/s], 0.20200
+ Component Sizing Information, AirLoopHVAC, MECHANICAL ROOM ZN PSZ_11, Sum of Air Terminal Maximum Flow Rates [m3/s], 0.20200
+ Component Sizing Information, AirLoopHVAC, MECHANICAL ROOM ZN PSZ_11, Adjusted Heating Design Air Flow Rate [m3/s], 0.20200
+ Component Sizing Information, AirLoopHVAC, MECHANICAL ROOM ZN PSZ_11, Adjusted Cooling Design Air Flow Rate [m3/s], 0.20200
+ Component Sizing Information, AirLoopHVAC, MECHANICAL ROOM ZN PSZ_11, Adjusted Main Design Air Flow Rate [m3/s], 0.20200
+ Component Sizing Information, AirLoopHVAC, MECHANICAL ROOM ZN PSZ_11, User Heating Air Flow Ratio [], 1.00000
+ Component Sizing Information, AirLoopHVAC, MECHANICAL ROOM ZN PSZ_11, Calculated Heating Air Flow Ratio [], 1.00000
+ Component Sizing Information, AirLoopHVAC, MEETING ROOM ZN PSZ_8, Sum of Air Terminal Maximum Heating Flow Rates [m3/s], 0.36515
+ Component Sizing Information, AirLoopHVAC, MEETING ROOM ZN PSZ_8, Sum of Air Terminal Minimum Heating Flow Rates [m3/s], 0.36515
+ Component Sizing Information, AirLoopHVAC, MEETING ROOM ZN PSZ_8, Sum of Air Terminal Maximum Flow Rates [m3/s], 0.36515
+ Component Sizing Information, AirLoopHVAC, MEETING ROOM ZN PSZ_8, Adjusted Heating Design Air Flow Rate [m3/s], 0.36515
+ Component Sizing Information, AirLoopHVAC, MEETING ROOM ZN PSZ_8, Adjusted Cooling Design Air Flow Rate [m3/s], 0.36515
+ Component Sizing Information, AirLoopHVAC, MEETING ROOM ZN PSZ_8, Adjusted Main Design Air Flow Rate [m3/s], 0.36515
+ Component Sizing Information, AirLoopHVAC, MEETING ROOM ZN PSZ_8, User Heating Air Flow Ratio [], 1.00000
+ Component Sizing Information, AirLoopHVAC, MEETING ROOM ZN PSZ_8, Calculated Heating Air Flow Ratio [], 1.00000
+ Component Sizing Information, AirLoopHVAC, PRODUCE ZN PSZ_4, Sum of Air Terminal Maximum Heating Flow Rates [m3/s], 3.49897
+ Component Sizing Information, AirLoopHVAC, PRODUCE ZN PSZ_4, Sum of Air Terminal Minimum Heating Flow Rates [m3/s], 3.49897
+ Component Sizing Information, AirLoopHVAC, PRODUCE ZN PSZ_4, Sum of Air Terminal Maximum Flow Rates [m3/s], 3.49897
+ Component Sizing Information, AirLoopHVAC, PRODUCE ZN PSZ_4, Adjusted Heating Design Air Flow Rate [m3/s], 3.49897
+ Component Sizing Information, AirLoopHVAC, PRODUCE ZN PSZ_4, Adjusted Cooling Design Air Flow Rate [m3/s], 3.49897
+ Component Sizing Information, AirLoopHVAC, PRODUCE ZN PSZ_4, Adjusted Main Design Air Flow Rate [m3/s], 3.49897
+ Component Sizing Information, AirLoopHVAC, PRODUCE ZN PSZ_4, User Heating Air Flow Ratio [], 1.00000
+ Component Sizing Information, AirLoopHVAC, PRODUCE ZN PSZ_4, Calculated Heating Air Flow Ratio [], 1.00000
+ Component Sizing Information, AirLoopHVAC, RESTROOM ZN PSZ_10, Sum of Air Terminal Maximum Heating Flow Rates [m3/s], 0.33130
+ Component Sizing Information, AirLoopHVAC, RESTROOM ZN PSZ_10, Sum of Air Terminal Minimum Heating Flow Rates [m3/s], 0.33130
+ Component Sizing Information, AirLoopHVAC, RESTROOM ZN PSZ_10, Sum of Air Terminal Maximum Flow Rates [m3/s], 0.33130
+ Component Sizing Information, AirLoopHVAC, RESTROOM ZN PSZ_10, Adjusted Heating Design Air Flow Rate [m3/s], 0.33130
+ Component Sizing Information, AirLoopHVAC, RESTROOM ZN PSZ_10, Adjusted Cooling Design Air Flow Rate [m3/s], 0.33130
+ Component Sizing Information, AirLoopHVAC, RESTROOM ZN PSZ_10, Adjusted Main Design Air Flow Rate [m3/s], 0.33130
+ Component Sizing Information, AirLoopHVAC, RESTROOM ZN PSZ_10, User Heating Air Flow Ratio [], 1.00000
+ Component Sizing Information, AirLoopHVAC, RESTROOM ZN PSZ_10, Calculated Heating Air Flow Ratio [], 1.00000
+ Component Sizing Information, AirLoopHVAC, VESTIBULE ZN PSZ_13, Sum of Air Terminal Maximum Heating Flow Rates [m3/s], 7.07921E-003
+ Component Sizing Information, AirLoopHVAC, VESTIBULE ZN PSZ_13, Sum of Air Terminal Minimum Heating Flow Rates [m3/s], 7.07921E-003
+ Component Sizing Information, AirLoopHVAC, VESTIBULE ZN PSZ_13, Sum of Air Terminal Maximum Flow Rates [m3/s], 7.07921E-003
+ Component Sizing Information, AirLoopHVAC, VESTIBULE ZN PSZ_13, Adjusted Heating Design Air Flow Rate [m3/s], 7.07921E-003
+ Component Sizing Information, AirLoopHVAC, VESTIBULE ZN PSZ_13, Adjusted Cooling Design Air Flow Rate [m3/s], 7.07921E-003
+ Component Sizing Information, AirLoopHVAC, VESTIBULE ZN PSZ_13, Adjusted Main Design Air Flow Rate [m3/s], 7.07921E-003
+ Component Sizing Information, AirLoopHVAC, VESTIBULE ZN PSZ_13, User Heating Air Flow Ratio [], 1.00000
+ Component Sizing Information, AirLoopHVAC, VESTIBULE ZN PSZ_13, Calculated Heating Air Flow Ratio [], 1.00000
+ Component Sizing Information, AirLoopHVAC, WEST PERIMETER SALES ZN PSZ_2, Sum of Air Terminal Maximum Heating Flow Rates [m3/s], 0.83289
+ Component Sizing Information, AirLoopHVAC, WEST PERIMETER SALES ZN PSZ_2, Sum of Air Terminal Minimum Heating Flow Rates [m3/s], 0.83289
+ Component Sizing Information, AirLoopHVAC, WEST PERIMETER SALES ZN PSZ_2, Sum of Air Terminal Maximum Flow Rates [m3/s], 0.83289
+ Component Sizing Information, AirLoopHVAC, WEST PERIMETER SALES ZN PSZ_2, Adjusted Heating Design Air Flow Rate [m3/s], 0.83289
+ Component Sizing Information, AirLoopHVAC, WEST PERIMETER SALES ZN PSZ_2, Adjusted Cooling Design Air Flow Rate [m3/s], 0.83289
+ Component Sizing Information, AirLoopHVAC, WEST PERIMETER SALES ZN PSZ_2, Adjusted Main Design Air Flow Rate [m3/s], 0.83289
+ Component Sizing Information, AirLoopHVAC, WEST PERIMETER SALES ZN PSZ_2, User Heating Air Flow Ratio [], 1.00000
+ Component Sizing Information, AirLoopHVAC, WEST PERIMETER SALES ZN PSZ_2, Calculated Heating Air Flow Ratio [], 1.00000
+ Component Sizing Information, AirLoopHVAC, ACTIVE STORAGE ZN PSZ_14, Design Supply Air Flow Rate [m3/s], 1.15040
+ Component Sizing Information, AirLoopHVAC, BAKERY ZN PSZ_6, Design Supply Air Flow Rate [m3/s], 0.99325
+ Component Sizing Information, AirLoopHVAC, CORRIDOR ZN PSZ_12, Design Supply Air Flow Rate [m3/s], 0.34912
+ Component Sizing Information, AirLoopHVAC, DELI ZN PSZ_5, Design Supply Air Flow Rate [m3/s], 1.34087
+ Component Sizing Information, AirLoopHVAC, DINING ROOM ZN PSZ_9, Design Supply Air Flow Rate [m3/s], 0.54267
+ Component Sizing Information, AirLoopHVAC, EAST PERIMETER SALES ZN PSZ_3, Design Supply Air Flow Rate [m3/s], 0.83436
+ Component Sizing Information, AirLoopHVAC, ENCLOSED OFFICE ZN PSZ_7, Design Supply Air Flow Rate [m3/s], 0.14627
+ Component Sizing Information, AirLoopHVAC, MAIN SALES ZN PSZ_1, Design Supply Air Flow Rate [m3/s], 11.31877
+ Component Sizing Information, AirLoopHVAC, MECHANICAL ROOM ZN PSZ_11, Design Supply Air Flow Rate [m3/s], 0.20200
+ Component Sizing Information, AirLoopHVAC, MEETING ROOM ZN PSZ_8, Design Supply Air Flow Rate [m3/s], 0.36515
+ Component Sizing Information, AirLoopHVAC, PRODUCE ZN PSZ_4, Design Supply Air Flow Rate [m3/s], 3.49897
+ Component Sizing Information, AirLoopHVAC, RESTROOM ZN PSZ_10, Design Supply Air Flow Rate [m3/s], 0.33130
+ Component Sizing Information, AirLoopHVAC, VESTIBULE ZN PSZ_13, Design Supply Air Flow Rate [m3/s], 7.07921E-003
+ Component Sizing Information, AirLoopHVAC, WEST PERIMETER SALES ZN PSZ_2, Design Supply Air Flow Rate [m3/s], 0.83289
+!<Controller:MechanicalVentilation>,Name,Availability Schedule Name,Demand Controlled Ventilation {Yes/No},System Outdoor Air Method,Zone Maximum Outdoor Air Fraction,Number of Zones,Zone Name,DSOA Name,DSZAD Name
+ Controller:MechanicalVentilation,CONTROLLER MECHANICAL VENTILATION 14,ALWAYS ON DISCRETE,No,ZoneSum,1.00,1,ACTIVE STORAGE ZN,SUPERMARKET DRYSTORAGE VENTILATION,
+ Controller:MechanicalVentilation,CONTROLLER MECHANICAL VENTILATION 6,ALWAYS ON DISCRETE,No,ZoneSum,1.00,1,BAKERY ZN,SUPERMARKET BAKERY VENTILATION,
+ Controller:MechanicalVentilation,CONTROLLER MECHANICAL VENTILATION 12,ALWAYS ON DISCRETE,No,ZoneSum,1.00,1,CORRIDOR ZN,SUPERMARKET CORRIDOR VENTILATION,
+ Controller:MechanicalVentilation,CONTROLLER MECHANICAL VENTILATION 5,ALWAYS ON DISCRETE,No,ZoneSum,1.00,1,DELI ZN,SUPERMARKET DELI VENTILATION,
+ Controller:MechanicalVentilation,CONTROLLER MECHANICAL VENTILATION 9,ALWAYS ON DISCRETE,No,ZoneSum,1.00,1,DINING ROOM ZN,SUPERMARKET DINING VENTILATION,
+ Controller:MechanicalVentilation,CONTROLLER MECHANICAL VENTILATION 3,ALWAYS ON DISCRETE,No,ZoneSum,1.00,1,EAST PERIMETER SALES ZN,SUPERMARKET SALES VENTILATION,
+ Controller:MechanicalVentilation,CONTROLLER MECHANICAL VENTILATION 7,ALWAYS ON DISCRETE,No,ZoneSum,1.00,1,ENCLOSED OFFICE ZN,SUPERMARKET OFFICE VENTILATION,
+ Controller:MechanicalVentilation,CONTROLLER MECHANICAL VENTILATION 1,ALWAYS ON DISCRETE,No,ZoneSum,1.00,1,MAIN SALES ZN,SUPERMARKET SALES VENTILATION,
+ Controller:MechanicalVentilation,CONTROLLER MECHANICAL VENTILATION 11,ALWAYS ON DISCRETE,No,ZoneSum,1.00,1,MECHANICAL ROOM ZN,SUPERMARKET ELEC/MECHROOM VENTILATION,
+ Controller:MechanicalVentilation,CONTROLLER MECHANICAL VENTILATION 8,ALWAYS ON DISCRETE,No,ZoneSum,1.00,1,MEETING ROOM ZN,SUPERMARKET MEETING VENTILATION,
+ Controller:MechanicalVentilation,CONTROLLER MECHANICAL VENTILATION 4,ALWAYS ON DISCRETE,No,ZoneSum,1.00,1,PRODUCE ZN,SUPERMARKET PRODUCE VENTILATION,
+ Controller:MechanicalVentilation,CONTROLLER MECHANICAL VENTILATION 10,ALWAYS ON DISCRETE,No,ZoneSum,1.00,1,RESTROOM ZN,SUPERMARKET RESTROOM VENTILATION,
+ Controller:MechanicalVentilation,CONTROLLER MECHANICAL VENTILATION 13,ALWAYS ON DISCRETE,No,ZoneSum,1.00,1,VESTIBULE ZN,SUPERMARKET VESTIBULE VENTILATION,
+ Controller:MechanicalVentilation,CONTROLLER MECHANICAL VENTILATION 2,ALWAYS ON DISCRETE,No,ZoneSum,1.00,1,WEST PERIMETER SALES ZN,SUPERMARKET SALES VENTILATION,
+ Component Sizing Information, Controller:OutdoorAir, ACTIVE STORAGE ZN PSZ_14 OA SYSTEM CONTROLLER, Maximum Outdoor Air Flow Rate [m3/s], 1.15040
+ Component Sizing Information, Controller:OutdoorAir, ACTIVE STORAGE ZN PSZ_14 OA SYSTEM CONTROLLER, Minimum Outdoor Air Flow Rate [m3/s], 0.32169
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, ACTIVE STORAGE ZN PSZ_14 UNITARY AC, Design Size Supply Air Flow Rate [m3/s], 1.15040
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, ACTIVE STORAGE ZN PSZ_14 UNITARY AC, Design Size Heating Supply Air Flow Rate [m3/s], 1.15040
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, ACTIVE STORAGE ZN PSZ_14 UNITARY AC, Design Size Cooling Supply Air Flow Rate [m3/s], 1.15040
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, ACTIVE STORAGE ZN PSZ_14 UNITARY AC, User-Specified No Load Supply Air Flow Rate [m3/s], 0.00000
+ Component Sizing Information, Coil:Cooling:DX:TwoSpeed, ACTIVE STORAGE ZN PSZ_14 2SPD DX AC CLG COIL 112KBTU/HR 10.1EER, Design Size High Speed Rated Air Flow Rate [m3/s], 1.15040
+ Component Sizing Information, Coil:Cooling:DX:TwoSpeed, ACTIVE STORAGE ZN PSZ_14 2SPD DX AC CLG COIL 112KBTU/HR 10.1EER, Design Size High Speed Gross Rated Total Cooling Capacity [W], 28567.06189
+ Component Sizing Information, Coil:Cooling:DX:TwoSpeed, ACTIVE STORAGE ZN PSZ_14 2SPD DX AC CLG COIL 112KBTU/HR 10.1EER, Design Size High Speed Rated Sensible Heat Ratio, 0.70108
+ Component Sizing Information, Coil:Cooling:DX:TwoSpeed, ACTIVE STORAGE ZN PSZ_14 2SPD DX AC CLG COIL 112KBTU/HR 10.1EER, Design Size Low Speed Rated Air Flow Rate [m3/s], 0.38343
+ Component Sizing Information, Coil:Cooling:DX:TwoSpeed, ACTIVE STORAGE ZN PSZ_14 2SPD DX AC CLG COIL 112KBTU/HR 10.1EER, Design Size Low Speed Gross Rated Total Cooling Capacity [W], 9521.40173
+ Component Sizing Information, Coil:Cooling:DX:TwoSpeed, ACTIVE STORAGE ZN PSZ_14 2SPD DX AC CLG COIL 112KBTU/HR 10.1EER, User-Specified Low Speed Gross Rated Sensible Heat Ratio, 0.69000
+! <DX Cooling Coil AHRI 2023 Standard Rating Information>, Component Type, Component Name, Standard Rating (Net) Cooling Capacity {W}, Standard Rating Net COP2 {W/W}, EER2 {Btu/W-h}, SEER2 User {Btu/W-h}, SEER2 Standard {Btu/W-h}, IEER 2022 {Btu/W-h}
+ DX Cooling Coil AHRI 2023 Standard Rating Information, Coil:Cooling:DX:TwoSpeed, ACTIVE STORAGE ZN PSZ_14 2SPD DX AC CLG COIL 112KBTU/HR 10.1EER, 27446.6, 3.08, 10.50, 11.63, 11.58, 11.5
+ Component Sizing Information, Fan:OnOff, ACTIVE STORAGE ZN PSZ_14 FAN, Design Size Maximum Flow Rate [m3/s], 1.15040
+ Component Sizing Information, Fan:OnOff, ACTIVE STORAGE ZN PSZ_14 FAN, Design Electric Power Consumption [W], 1312.04570
+! <VAV DX Cooling Coil Standard Rating Information>, DX Coil Type, DX Coil Name, Fan Type, Fan Name, Standard Net Cooling Capacity {W}, Standard Net Cooling Capacity {Btu/h}, IEER {Btu/W-h}, COP 100% Capacity {W/W}, COP 75% Capacity {W/W}, COP 50% Capacity {W/W}, COP 25% Capacity {W/W}, EER 100% Capacity {Btu/W-h}, EER 75% Capacity {Btu/W-h}, EER 50% Capacity {Btu/W-h}, EER 25% Capacity {Btu/W-h}, Supply Air Flow 100% {kg/s}, Supply Air Flow 75% {kg/s},Supply Air Flow 50% {kg/s},Supply Air Flow 25% {kg/s}
+ VAV DX Cooling Coil Standard Rating Information, Coil:Cooling:DX:TwoSpeed,ACTIVE STORAGE ZN PSZ_14 2SPD DX AC CLG COIL 112KBTU/HR 10.1EER,Fan:VariableVolume,ACTIVE STORAGE ZN PSZ_14 FAN,28488.29,97206.07,13.53,3.50,3.94,4.09,3.91,11.93,13.45,13.97,13.36,1.3261,1.0439,0.7247,0.3267,
+! <DX Cooling Coil Standard Rating Information>, Component Type, Component Name, Standard Rating (Net) Cooling Capacity {W}, Standard Rating Net COP {W/W}, EER {Btu/W-h}, SEER User {Btu/W-h}, SEER Standard {Btu/W-h}, IEER {Btu/W-h}
+ DX Cooling Coil Standard Rating Information, Coil:Cooling:DX:TwoSpeed, ACTIVE STORAGE ZN PSZ_14 2SPD DX AC CLG COIL 112KBTU/HR 10.1EER, 28488.3, 3.497040246318838, 11.932396616741082, N/A, N/A, 13.529186215825545
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, ACTIVE STORAGE ZN PSZ_14 UNITARY AC, Design Size Nominal Cooling Capacity [W], 28567.06189
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, ACTIVE STORAGE ZN PSZ_14 UNITARY AC, Design Size Nominal Heating Capacity [W], 49438.82397
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, ACTIVE STORAGE ZN PSZ_14 UNITARY AC, Design Size Maximum Supply Air Temperature [C], 50.00000
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, ACTIVE STORAGE ZN PSZ_14 UNITARY AC, User-Specified Maximum Supply Air Temperature [C], 80.00000
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, ACTIVE STORAGE ZN PSZ_14 UNITARY AC, User-Specified Supplemental Heating Coil Nominal Capacity [W], 49438.82397
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, ACTIVE STORAGE ZN PSZ_14 UNITARY AC, Fraction of Supply Air Flow That Goes Through the Controlling Zone, 1.00000
+ Component Sizing Information, Coil:Heating:Fuel, ACTIVE STORAGE ZN PSZ_14 GAS HTG COIL, Design Size Nominal Capacity [W], 49438.82397
+ Component Sizing Information, Coil:Heating:Electric, ACTIVE STORAGE ZN PSZ_14 ELECTRIC BACKUP HTG COIL, Design Size Nominal Capacity [W], 49438.82397
+ Component Sizing Information, Controller:OutdoorAir, BAKERY ZN PSZ_6 OA SYSTEM CONTROLLER, Maximum Outdoor Air Flow Rate [m3/s], 0.99325
+ Component Sizing Information, Controller:OutdoorAir, BAKERY ZN PSZ_6 OA SYSTEM CONTROLLER, Minimum Outdoor Air Flow Rate [m3/s], 0.31355
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, BAKERY ZN PSZ_6 UNITARY AC, Design Size Supply Air Flow Rate [m3/s], 0.99325
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, BAKERY ZN PSZ_6 UNITARY AC, Design Size Heating Supply Air Flow Rate [m3/s], 0.99325
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, BAKERY ZN PSZ_6 UNITARY AC, Design Size Cooling Supply Air Flow Rate [m3/s], 0.99325
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, BAKERY ZN PSZ_6 UNITARY AC, User-Specified No Load Supply Air Flow Rate [m3/s], 0.00000
+ Component Sizing Information, Coil:Cooling:DX:TwoSpeed, BAKERY ZN PSZ_6 2SPD DX AC CLG COIL 54KBTU/HR 9.7SEER, Design Size High Speed Rated Air Flow Rate [m3/s], 0.99325
+ Component Sizing Information, Coil:Cooling:DX:TwoSpeed, BAKERY ZN PSZ_6 2SPD DX AC CLG COIL 54KBTU/HR 9.7SEER, Design Size High Speed Gross Rated Total Cooling Capacity [W], 24664.86207
+ Component Sizing Information, Coil:Cooling:DX:TwoSpeed, BAKERY ZN PSZ_6 2SPD DX AC CLG COIL 54KBTU/HR 9.7SEER, Design Size High Speed Rated Sensible Heat Ratio, 0.70108
+ Component Sizing Information, Coil:Cooling:DX:TwoSpeed, BAKERY ZN PSZ_6 2SPD DX AC CLG COIL 54KBTU/HR 9.7SEER, Design Size Low Speed Rated Air Flow Rate [m3/s], 0.33105
+ Component Sizing Information, Coil:Cooling:DX:TwoSpeed, BAKERY ZN PSZ_6 2SPD DX AC CLG COIL 54KBTU/HR 9.7SEER, Design Size Low Speed Gross Rated Total Cooling Capacity [W], 8220.79853
+ Component Sizing Information, Coil:Cooling:DX:TwoSpeed, BAKERY ZN PSZ_6 2SPD DX AC CLG COIL 54KBTU/HR 9.7SEER, User-Specified Low Speed Gross Rated Sensible Heat Ratio, 0.69000
+ DX Cooling Coil AHRI 2023 Standard Rating Information, Coil:Cooling:DX:TwoSpeed, BAKERY ZN PSZ_6 2SPD DX AC CLG COIL 54KBTU/HR 9.7SEER, 23697.4, 2.80, 9.56, 10.60, 10.55, 10.5
+ Component Sizing Information, Fan:OnOff, BAKERY ZN PSZ_6 FAN, Design Size Maximum Flow Rate [m3/s], 0.99325
+ Component Sizing Information, Fan:OnOff, BAKERY ZN PSZ_6 FAN, Design Electric Power Consumption [W], 1153.41984
+ VAV DX Cooling Coil Standard Rating Information, Coil:Cooling:DX:TwoSpeed,BAKERY ZN PSZ_6 2SPD DX AC CLG COIL 54KBTU/HR 9.7SEER,Fan:VariableVolume,BAKERY ZN PSZ_6 FAN,24596.85,83927.93,12.17,3.15,3.54,3.68,3.52,10.73,12.09,12.56,12.01,1.1450,0.9013,0.6257,0.2821,
+ DX Cooling Coil Standard Rating Information, Coil:Cooling:DX:TwoSpeed, BAKERY ZN PSZ_6 2SPD DX AC CLG COIL 54KBTU/HR 9.7SEER, 24596.8, 3.145299135416175, 10.732206128192434, N/A, N/A, 12.168386609880836
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, BAKERY ZN PSZ_6 UNITARY AC, Design Size Nominal Cooling Capacity [W], 24664.86207
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, BAKERY ZN PSZ_6 UNITARY AC, Design Size Nominal Heating Capacity [W], 43614.58685
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, BAKERY ZN PSZ_6 UNITARY AC, Design Size Maximum Supply Air Temperature [C], 50.00000
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, BAKERY ZN PSZ_6 UNITARY AC, User-Specified Maximum Supply Air Temperature [C], 80.00000
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, BAKERY ZN PSZ_6 UNITARY AC, User-Specified Supplemental Heating Coil Nominal Capacity [W], 43614.58685
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, BAKERY ZN PSZ_6 UNITARY AC, Fraction of Supply Air Flow That Goes Through the Controlling Zone, 1.00000
+ Component Sizing Information, Coil:Heating:Fuel, BAKERY ZN PSZ_6 GAS HTG COIL, Design Size Nominal Capacity [W], 43614.58685
+ Component Sizing Information, Coil:Heating:Electric, BAKERY ZN PSZ_6 ELECTRIC BACKUP HTG COIL, Design Size Nominal Capacity [W], 43614.58685
+ Component Sizing Information, Controller:OutdoorAir, CORRIDOR ZN PSZ_12 OA SYSTEM CONTROLLER, Maximum Outdoor Air Flow Rate [m3/s], 0.34912
+ Component Sizing Information, Controller:OutdoorAir, CORRIDOR ZN PSZ_12 OA SYSTEM CONTROLLER, Minimum Outdoor Air Flow Rate [m3/s], 1.25508E-002
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, CORRIDOR ZN PSZ_12 UNITARY AC, Design Size Supply Air Flow Rate [m3/s], 0.34912
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, CORRIDOR ZN PSZ_12 UNITARY AC, Design Size Heating Supply Air Flow Rate [m3/s], 0.34912
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, CORRIDOR ZN PSZ_12 UNITARY AC, Design Size Cooling Supply Air Flow Rate [m3/s], 0.34912
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, CORRIDOR ZN PSZ_12 UNITARY AC, User-Specified No Load Supply Air Flow Rate [m3/s], 0.00000
+ Component Sizing Information, Coil:Cooling:DX:TwoSpeed, CORRIDOR ZN PSZ_12 2SPD DX AC CLG COIL 20KBTU/HR 9.7SEER, Design Size High Speed Rated Air Flow Rate [m3/s], 0.34912
+ Component Sizing Information, Coil:Cooling:DX:TwoSpeed, CORRIDOR ZN PSZ_12 2SPD DX AC CLG COIL 20KBTU/HR 9.7SEER, Design Size High Speed Gross Rated Total Cooling Capacity [W], 6005.75056
+ Component Sizing Information, Coil:Cooling:DX:TwoSpeed, CORRIDOR ZN PSZ_12 2SPD DX AC CLG COIL 20KBTU/HR 9.7SEER, Design Size High Speed Rated Sensible Heat Ratio, 0.80078
+ Component Sizing Information, Coil:Cooling:DX:TwoSpeed, CORRIDOR ZN PSZ_12 2SPD DX AC CLG COIL 20KBTU/HR 9.7SEER, Design Size Low Speed Rated Air Flow Rate [m3/s], 0.11636
+ Component Sizing Information, Coil:Cooling:DX:TwoSpeed, CORRIDOR ZN PSZ_12 2SPD DX AC CLG COIL 20KBTU/HR 9.7SEER, Design Size Low Speed Gross Rated Total Cooling Capacity [W], 2001.71666
+ Component Sizing Information, Coil:Cooling:DX:TwoSpeed, CORRIDOR ZN PSZ_12 2SPD DX AC CLG COIL 20KBTU/HR 9.7SEER, Design Size Low Speed Gross Rated Sensible Heat Ratio, 0.80078
+ Component Sizing Information, Coil:Cooling:DX:TwoSpeed, CORRIDOR ZN PSZ_12 2SPD DX AC CLG COIL 20KBTU/HR 9.7SEER, User-Specified Low Speed Gross Rated Sensible Heat Ratio, 0.69000
+ DX Cooling Coil AHRI 2023 Standard Rating Information, Coil:Cooling:DX:TwoSpeed, CORRIDOR ZN PSZ_12 2SPD DX AC CLG COIL 20KBTU/HR 9.7SEER, 5670.0, 2.66, 9.09, 10.05, 10.01, 9.7
+ Component Sizing Information, Fan:OnOff, CORRIDOR ZN PSZ_12 FAN, Design Size Maximum Flow Rate [m3/s], 0.34912
+ Component Sizing Information, Fan:OnOff, CORRIDOR ZN PSZ_12 FAN, Design Electric Power Consumption [W], 405.41272
+ VAV DX Cooling Coil Standard Rating Information, Coil:Cooling:DX:TwoSpeed,CORRIDOR ZN PSZ_12 2SPD DX AC CLG COIL 20KBTU/HR 9.7SEER,Fan:VariableVolume,CORRIDOR ZN PSZ_12 FAN,5989.19,20435.96,12.08,3.15,3.52,3.65,3.51,10.73,12.01,12.44,11.97,0.4025,0.2961,0.1935,8.8317E-002,
+ DX Cooling Coil Standard Rating Information, Coil:Cooling:DX:TwoSpeed, CORRIDOR ZN PSZ_12 2SPD DX AC CLG COIL 20KBTU/HR 9.7SEER, 5989.2, 3.145299135416175, 10.732206128192434, N/A, N/A, 12.081144020951788
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, CORRIDOR ZN PSZ_12 UNITARY AC, Design Size Nominal Cooling Capacity [W], 6005.75056
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, CORRIDOR ZN PSZ_12 UNITARY AC, Design Size Nominal Heating Capacity [W], 12689.73956
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, CORRIDOR ZN PSZ_12 UNITARY AC, Design Size Maximum Supply Air Temperature [C], 50.00000
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, CORRIDOR ZN PSZ_12 UNITARY AC, User-Specified Maximum Supply Air Temperature [C], 80.00000
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, CORRIDOR ZN PSZ_12 UNITARY AC, User-Specified Supplemental Heating Coil Nominal Capacity [W], 12689.73956
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, CORRIDOR ZN PSZ_12 UNITARY AC, Fraction of Supply Air Flow That Goes Through the Controlling Zone, 1.00000
+ Component Sizing Information, Coil:Heating:Fuel, CORRIDOR ZN PSZ_12 GAS HTG COIL, Design Size Nominal Capacity [W], 12689.73956
+ Component Sizing Information, Coil:Heating:Electric, CORRIDOR ZN PSZ_12 ELECTRIC BACKUP HTG COIL, Design Size Nominal Capacity [W], 12689.73956
+ Component Sizing Information, Controller:OutdoorAir, DELI ZN PSZ_5 OA SYSTEM CONTROLLER, Maximum Outdoor Air Flow Rate [m3/s], 1.34087
+ Component Sizing Information, Controller:OutdoorAir, DELI ZN PSZ_5 OA SYSTEM CONTROLLER, Minimum Outdoor Air Flow Rate [m3/s], 0.33705
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, DELI ZN PSZ_5 UNITARY AC, Design Size Supply Air Flow Rate [m3/s], 1.34087
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, DELI ZN PSZ_5 UNITARY AC, Design Size Heating Supply Air Flow Rate [m3/s], 1.34087
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, DELI ZN PSZ_5 UNITARY AC, Design Size Cooling Supply Air Flow Rate [m3/s], 1.34087
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, DELI ZN PSZ_5 UNITARY AC, User-Specified No Load Supply Air Flow Rate [m3/s], 0.00000
+ Component Sizing Information, Coil:Cooling:DX:TwoSpeed, DELI ZN PSZ_5 2SPD DX AC CLG COIL 85KBTU/HR 10.1EER, Design Size High Speed Rated Air Flow Rate [m3/s], 1.34087
+ Component Sizing Information, Coil:Cooling:DX:TwoSpeed, DELI ZN PSZ_5 2SPD DX AC CLG COIL 85KBTU/HR 10.1EER, Design Size High Speed Gross Rated Total Cooling Capacity [W], 33296.98758
+ Component Sizing Information, Coil:Cooling:DX:TwoSpeed, DELI ZN PSZ_5 2SPD DX AC CLG COIL 85KBTU/HR 10.1EER, Design Size High Speed Rated Sensible Heat Ratio, 0.70108
+ Component Sizing Information, Coil:Cooling:DX:TwoSpeed, DELI ZN PSZ_5 2SPD DX AC CLG COIL 85KBTU/HR 10.1EER, Design Size Low Speed Rated Air Flow Rate [m3/s], 0.44691
+ Component Sizing Information, Coil:Cooling:DX:TwoSpeed, DELI ZN PSZ_5 2SPD DX AC CLG COIL 85KBTU/HR 10.1EER, Design Size Low Speed Gross Rated Total Cooling Capacity [W], 11097.88596
+ Component Sizing Information, Coil:Cooling:DX:TwoSpeed, DELI ZN PSZ_5 2SPD DX AC CLG COIL 85KBTU/HR 10.1EER, User-Specified Low Speed Gross Rated Sensible Heat Ratio, 0.69000
+ DX Cooling Coil AHRI 2023 Standard Rating Information, Coil:Cooling:DX:TwoSpeed, DELI ZN PSZ_5 2SPD DX AC CLG COIL 85KBTU/HR 10.1EER, 31991.0, 3.08, 10.50, 11.63, 11.58, 11.5
+ Component Sizing Information, Fan:OnOff, DELI ZN PSZ_5 FAN, Design Size Maximum Flow Rate [m3/s], 1.34087
+ Component Sizing Information, Fan:OnOff, DELI ZN PSZ_5 FAN, Design Electric Power Consumption [W], 1529.28466
+ VAV DX Cooling Coil Standard Rating Information, Coil:Cooling:DX:TwoSpeed,DELI ZN PSZ_5 2SPD DX AC CLG COIL 85KBTU/HR 10.1EER,Fan:VariableVolume,DELI ZN PSZ_5 FAN,33205.17,113300.74,13.53,3.50,3.94,4.09,3.91,11.93,13.45,13.97,13.36,1.5457,1.2167,0.8447,0.3808,
+ DX Cooling Coil Standard Rating Information, Coil:Cooling:DX:TwoSpeed, DELI ZN PSZ_5 2SPD DX AC CLG COIL 85KBTU/HR 10.1EER, 33205.2, 3.497040246318838, 11.932396616741082, N/A, N/A, 13.529186215825545
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, DELI ZN PSZ_5 UNITARY AC, Design Size Nominal Cooling Capacity [W], 33296.98758
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, DELI ZN PSZ_5 UNITARY AC, Design Size Nominal Heating Capacity [W], 56645.19078
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, DELI ZN PSZ_5 UNITARY AC, Design Size Maximum Supply Air Temperature [C], 50.00000
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, DELI ZN PSZ_5 UNITARY AC, User-Specified Maximum Supply Air Temperature [C], 80.00000
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, DELI ZN PSZ_5 UNITARY AC, User-Specified Supplemental Heating Coil Nominal Capacity [W], 56645.19078
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, DELI ZN PSZ_5 UNITARY AC, Fraction of Supply Air Flow That Goes Through the Controlling Zone, 1.00000
+ Component Sizing Information, Coil:Heating:Fuel, DELI ZN PSZ_5 GAS HTG COIL, Design Size Nominal Capacity [W], 56645.19078
+ Component Sizing Information, Coil:Heating:Electric, DELI ZN PSZ_5 ELECTRIC BACKUP HTG COIL, Design Size Nominal Capacity [W], 56645.19078
+ Component Sizing Information, Controller:OutdoorAir, DINING ROOM ZN PSZ_9 OA SYSTEM CONTROLLER, Maximum Outdoor Air Flow Rate [m3/s], 0.54267
+ Component Sizing Information, Controller:OutdoorAir, DINING ROOM ZN PSZ_9 OA SYSTEM CONTROLLER, Minimum Outdoor Air Flow Rate [m3/s], 0.33041
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, DINING ROOM ZN PSZ_9 UNITARY AC, Design Size Supply Air Flow Rate [m3/s], 0.54267
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, DINING ROOM ZN PSZ_9 UNITARY AC, Design Size Heating Supply Air Flow Rate [m3/s], 0.54267
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, DINING ROOM ZN PSZ_9 UNITARY AC, Design Size Cooling Supply Air Flow Rate [m3/s], 0.54267
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, DINING ROOM ZN PSZ_9 UNITARY AC, User-Specified No Load Supply Air Flow Rate [m3/s], 0.00000
+ Component Sizing Information, Coil:Cooling:DX:TwoSpeed, DINING ROOM ZN PSZ_9 2SPD DX AC CLG COIL 45KBTU/HR 9.7SEER, Design Size High Speed Rated Air Flow Rate [m3/s], 0.54267
+ Component Sizing Information, Coil:Cooling:DX:TwoSpeed, DINING ROOM ZN PSZ_9 2SPD DX AC CLG COIL 45KBTU/HR 9.7SEER, Design Size High Speed Gross Rated Total Cooling Capacity [W], 13475.87555
+ Component Sizing Information, Coil:Cooling:DX:TwoSpeed, DINING ROOM ZN PSZ_9 2SPD DX AC CLG COIL 45KBTU/HR 9.7SEER, Design Size High Speed Rated Sensible Heat Ratio, 0.70108
+ Component Sizing Information, Coil:Cooling:DX:TwoSpeed, DINING ROOM ZN PSZ_9 2SPD DX AC CLG COIL 45KBTU/HR 9.7SEER, Design Size Low Speed Rated Air Flow Rate [m3/s], 0.18087
+ Component Sizing Information, Coil:Cooling:DX:TwoSpeed, DINING ROOM ZN PSZ_9 2SPD DX AC CLG COIL 45KBTU/HR 9.7SEER, Design Size Low Speed Gross Rated Total Cooling Capacity [W], 4491.50932
+ Component Sizing Information, Coil:Cooling:DX:TwoSpeed, DINING ROOM ZN PSZ_9 2SPD DX AC CLG COIL 45KBTU/HR 9.7SEER, User-Specified Low Speed Gross Rated Sensible Heat Ratio, 0.69000
+ DX Cooling Coil AHRI 2023 Standard Rating Information, Coil:Cooling:DX:TwoSpeed, DINING ROOM ZN PSZ_9 2SPD DX AC CLG COIL 45KBTU/HR 9.7SEER, 12947.3, 2.80, 9.56, 10.60, 10.55, 10.5
+ Component Sizing Information, Fan:OnOff, DINING ROOM ZN PSZ_9 FAN, Design Size Maximum Flow Rate [m3/s], 0.54267
+ Component Sizing Information, Fan:OnOff, DINING ROOM ZN PSZ_9 FAN, Design Electric Power Consumption [W], 630.18160
+ VAV DX Cooling Coil Standard Rating Information, Coil:Cooling:DX:TwoSpeed,DINING ROOM ZN PSZ_9 2SPD DX AC CLG COIL 45KBTU/HR 9.7SEER,Fan:VariableVolume,DINING ROOM ZN PSZ_9 FAN,13438.72,45854.80,12.17,3.15,3.54,3.68,3.52,10.73,12.09,12.56,12.01,0.6256,0.4924,0.3418,0.1541,
+ DX Cooling Coil Standard Rating Information, Coil:Cooling:DX:TwoSpeed, DINING ROOM ZN PSZ_9 2SPD DX AC CLG COIL 45KBTU/HR 9.7SEER, 13438.7, 3.145299135416175, 10.732206128192434, N/A, N/A, 12.168386609880836
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, DINING ROOM ZN PSZ_9 UNITARY AC, Design Size Nominal Cooling Capacity [W], 13475.87555
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, DINING ROOM ZN PSZ_9 UNITARY AC, Design Size Nominal Heating Capacity [W], 27985.29410
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, DINING ROOM ZN PSZ_9 UNITARY AC, Design Size Maximum Supply Air Temperature [C], 50.00000
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, DINING ROOM ZN PSZ_9 UNITARY AC, User-Specified Maximum Supply Air Temperature [C], 80.00000
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, DINING ROOM ZN PSZ_9 UNITARY AC, User-Specified Supplemental Heating Coil Nominal Capacity [W], 27985.29410
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, DINING ROOM ZN PSZ_9 UNITARY AC, Fraction of Supply Air Flow That Goes Through the Controlling Zone, 1.00000
+ Component Sizing Information, Coil:Heating:Fuel, DINING ROOM ZN PSZ_9 GAS HTG COIL, Design Size Nominal Capacity [W], 27985.29410
+ Component Sizing Information, Coil:Heating:Electric, DINING ROOM ZN PSZ_9 ELECTRIC BACKUP HTG COIL, Design Size Nominal Capacity [W], 27985.29410
+ Component Sizing Information, Controller:OutdoorAir, EAST PERIMETER SALES ZN PSZ_3 OA SYSTEM CONTROLLER, Maximum Outdoor Air Flow Rate [m3/s], 0.83436
+ Component Sizing Information, Controller:OutdoorAir, EAST PERIMETER SALES ZN PSZ_3 OA SYSTEM CONTROLLER, Minimum Outdoor Air Flow Rate [m3/s], 0.16361
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, EAST PERIMETER SALES ZN PSZ_3 UNITARY AC, Design Size Supply Air Flow Rate [m3/s], 0.83436
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, EAST PERIMETER SALES ZN PSZ_3 UNITARY AC, Design Size Heating Supply Air Flow Rate [m3/s], 0.83436
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, EAST PERIMETER SALES ZN PSZ_3 UNITARY AC, Design Size Cooling Supply Air Flow Rate [m3/s], 0.83436
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, EAST PERIMETER SALES ZN PSZ_3 UNITARY AC, User-Specified No Load Supply Air Flow Rate [m3/s], 0.00000
+ Component Sizing Information, Coil:Cooling:DX:TwoSpeed, EAST PERIMETER SALES ZN PSZ_3 2SPD DX AC CLG COIL 68KBTU/HR 10.1EER, Design Size High Speed Rated Air Flow Rate [m3/s], 0.83436
+ Component Sizing Information, Coil:Cooling:DX:TwoSpeed, EAST PERIMETER SALES ZN PSZ_3 2SPD DX AC CLG COIL 68KBTU/HR 10.1EER, Design Size High Speed Gross Rated Total Cooling Capacity [W], 19495.33435
+ Component Sizing Information, Coil:Cooling:DX:TwoSpeed, EAST PERIMETER SALES ZN PSZ_3 2SPD DX AC CLG COIL 68KBTU/HR 10.1EER, Design Size High Speed Rated Sensible Heat Ratio, 0.72047
+ Component Sizing Information, Coil:Cooling:DX:TwoSpeed, EAST PERIMETER SALES ZN PSZ_3 2SPD DX AC CLG COIL 68KBTU/HR 10.1EER, Design Size Low Speed Rated Air Flow Rate [m3/s], 0.27809
+ Component Sizing Information, Coil:Cooling:DX:TwoSpeed, EAST PERIMETER SALES ZN PSZ_3 2SPD DX AC CLG COIL 68KBTU/HR 10.1EER, Design Size Low Speed Gross Rated Total Cooling Capacity [W], 6497.79494
+ Component Sizing Information, Coil:Cooling:DX:TwoSpeed, EAST PERIMETER SALES ZN PSZ_3 2SPD DX AC CLG COIL 68KBTU/HR 10.1EER, User-Specified Low Speed Gross Rated Sensible Heat Ratio, 0.69000
+ DX Cooling Coil AHRI 2023 Standard Rating Information, Coil:Cooling:DX:TwoSpeed, EAST PERIMETER SALES ZN PSZ_3 2SPD DX AC CLG COIL 68KBTU/HR 10.1EER, 18684.6, 3.05, 10.42, 11.54, 11.49, 11.3
+ Component Sizing Information, Fan:OnOff, EAST PERIMETER SALES ZN PSZ_3 FAN, Design Size Maximum Flow Rate [m3/s], 0.83436
+ Component Sizing Information, Fan:OnOff, EAST PERIMETER SALES ZN PSZ_3 FAN, Design Electric Power Consumption [W], 951.60302
+ VAV DX Cooling Coil Standard Rating Information, Coil:Cooling:DX:TwoSpeed,EAST PERIMETER SALES ZN PSZ_3 2SPD DX AC CLG COIL 68KBTU/HR 10.1EER,Fan:VariableVolume,EAST PERIMETER SALES ZN PSZ_3 FAN,19441.57,66337.41,13.51,3.50,3.93,4.08,3.91,11.93,13.43,13.93,13.35,0.9618,0.7457,0.5096,0.2313,
+ DX Cooling Coil Standard Rating Information, Coil:Cooling:DX:TwoSpeed, EAST PERIMETER SALES ZN PSZ_3 2SPD DX AC CLG COIL 68KBTU/HR 10.1EER, 19441.6, 3.497040246318838, 11.932396616741082, N/A, N/A, 13.506193215406004
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, EAST PERIMETER SALES ZN PSZ_3 UNITARY AC, Design Size Nominal Cooling Capacity [W], 19495.33435
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, EAST PERIMETER SALES ZN PSZ_3 UNITARY AC, Design Size Nominal Heating Capacity [W], 33993.45695
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, EAST PERIMETER SALES ZN PSZ_3 UNITARY AC, Design Size Maximum Supply Air Temperature [C], 50.00000
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, EAST PERIMETER SALES ZN PSZ_3 UNITARY AC, User-Specified Maximum Supply Air Temperature [C], 80.00000
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, EAST PERIMETER SALES ZN PSZ_3 UNITARY AC, User-Specified Supplemental Heating Coil Nominal Capacity [W], 33993.45695
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, EAST PERIMETER SALES ZN PSZ_3 UNITARY AC, Fraction of Supply Air Flow That Goes Through the Controlling Zone, 1.00000
+ Component Sizing Information, Coil:Heating:Fuel, EAST PERIMETER SALES ZN PSZ_3 GAS HTG COIL, Design Size Nominal Capacity [W], 33993.45695
+ Component Sizing Information, Coil:Heating:Electric, EAST PERIMETER SALES ZN PSZ_3 ELECTRIC BACKUP HTG COIL, Design Size Nominal Capacity [W], 33993.45695
+ Component Sizing Information, Controller:OutdoorAir, ENCLOSED OFFICE ZN PSZ_7 OA SYSTEM CONTROLLER, Maximum Outdoor Air Flow Rate [m3/s], 0.14627
+ Component Sizing Information, Controller:OutdoorAir, ENCLOSED OFFICE ZN PSZ_7 OA SYSTEM CONTROLLER, Minimum Outdoor Air Flow Rate [m3/s], 1.41407E-002
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, ENCLOSED OFFICE ZN PSZ_7 UNITARY AC, Design Size Supply Air Flow Rate [m3/s], 0.14627
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, ENCLOSED OFFICE ZN PSZ_7 UNITARY AC, Design Size Heating Supply Air Flow Rate [m3/s], 0.14627
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, ENCLOSED OFFICE ZN PSZ_7 UNITARY AC, Design Size Cooling Supply Air Flow Rate [m3/s], 0.14627
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, ENCLOSED OFFICE ZN PSZ_7 UNITARY AC, User-Specified No Load Supply Air Flow Rate [m3/s], 0.00000
+ Component Sizing Information, Coil:Cooling:DX:TwoSpeed, ENCLOSED OFFICE ZN PSZ_7 2SPD DX AC CLG COIL 10KBTU/HR 9.7SEER, Design Size High Speed Rated Air Flow Rate [m3/s], 0.14627
+ Component Sizing Information, Coil:Cooling:DX:TwoSpeed, ENCLOSED OFFICE ZN PSZ_7 2SPD DX AC CLG COIL 10KBTU/HR 9.7SEER, Design Size High Speed Gross Rated Total Cooling Capacity [W], 2793.23764
+ Component Sizing Information, Coil:Cooling:DX:TwoSpeed, ENCLOSED OFFICE ZN PSZ_7 2SPD DX AC CLG COIL 10KBTU/HR 9.7SEER, Design Size High Speed Rated Sensible Heat Ratio, 0.79471
+ Component Sizing Information, Coil:Cooling:DX:TwoSpeed, ENCLOSED OFFICE ZN PSZ_7 2SPD DX AC CLG COIL 10KBTU/HR 9.7SEER, Design Size Low Speed Rated Air Flow Rate [m3/s], 4.87533E-002
+ Component Sizing Information, Coil:Cooling:DX:TwoSpeed, ENCLOSED OFFICE ZN PSZ_7 2SPD DX AC CLG COIL 10KBTU/HR 9.7SEER, Design Size Low Speed Gross Rated Total Cooling Capacity [W], 930.98610
+ Component Sizing Information, Coil:Cooling:DX:TwoSpeed, ENCLOSED OFFICE ZN PSZ_7 2SPD DX AC CLG COIL 10KBTU/HR 9.7SEER, Design Size Low Speed Gross Rated Sensible Heat Ratio, 0.79471
+ Component Sizing Information, Coil:Cooling:DX:TwoSpeed, ENCLOSED OFFICE ZN PSZ_7 2SPD DX AC CLG COIL 10KBTU/HR 9.7SEER, User-Specified Low Speed Gross Rated Sensible Heat Ratio, 0.69000
+ DX Cooling Coil AHRI 2023 Standard Rating Information, Coil:Cooling:DX:TwoSpeed, ENCLOSED OFFICE ZN PSZ_7 2SPD DX AC CLG COIL 10KBTU/HR 9.7SEER, 2652.1, 2.71, 9.24, 10.22, 10.18, 9.9
+ Component Sizing Information, Fan:OnOff, ENCLOSED OFFICE ZN PSZ_7 FAN, Design Size Maximum Flow Rate [m3/s], 0.14627
+ Component Sizing Information, Fan:OnOff, ENCLOSED OFFICE ZN PSZ_7 FAN, Design Electric Power Consumption [W], 169.86197
+ VAV DX Cooling Coil Standard Rating Information, Coil:Cooling:DX:TwoSpeed,ENCLOSED OFFICE ZN PSZ_7 2SPD DX AC CLG COIL 10KBTU/HR 9.7SEER,Fan:VariableVolume,ENCLOSED OFFICE ZN PSZ_7 FAN,2785.54,9504.64,12.08,3.15,3.52,3.65,3.51,10.73,12.01,12.45,11.96,0.1686,0.1243,8.1405E-002,3.6924E-002,
+ DX Cooling Coil Standard Rating Information, Coil:Cooling:DX:TwoSpeed, ENCLOSED OFFICE ZN PSZ_7 2SPD DX AC CLG COIL 10KBTU/HR 9.7SEER, 2785.5, 3.1452991354161743, 10.732206128192434, N/A, N/A, 12.083566604440248
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, ENCLOSED OFFICE ZN PSZ_7 UNITARY AC, Design Size Nominal Cooling Capacity [W], 2793.23764
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, ENCLOSED OFFICE ZN PSZ_7 UNITARY AC, Design Size Nominal Heating Capacity [W], 5569.82237
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, ENCLOSED OFFICE ZN PSZ_7 UNITARY AC, Design Size Maximum Supply Air Temperature [C], 50.00000
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, ENCLOSED OFFICE ZN PSZ_7 UNITARY AC, User-Specified Maximum Supply Air Temperature [C], 80.00000
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, ENCLOSED OFFICE ZN PSZ_7 UNITARY AC, User-Specified Supplemental Heating Coil Nominal Capacity [W], 5569.82237
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, ENCLOSED OFFICE ZN PSZ_7 UNITARY AC, Fraction of Supply Air Flow That Goes Through the Controlling Zone, 1.00000
+ Component Sizing Information, Coil:Heating:Fuel, ENCLOSED OFFICE ZN PSZ_7 GAS HTG COIL, Design Size Nominal Capacity [W], 5569.82237
+ Component Sizing Information, Coil:Heating:Electric, ENCLOSED OFFICE ZN PSZ_7 ELECTRIC BACKUP HTG COIL, Design Size Nominal Capacity [W], 5569.82237
+ Component Sizing Information, Controller:OutdoorAir, MAIN SALES ZN PSZ_1 OA SYSTEM CONTROLLER, Maximum Outdoor Air Flow Rate [m3/s], 11.31877
+ Component Sizing Information, Controller:OutdoorAir, MAIN SALES ZN PSZ_1 OA SYSTEM CONTROLLER, Minimum Outdoor Air Flow Rate [m3/s], 3.17356
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, MAIN SALES ZN PSZ_1 UNITARY AC, Design Size Supply Air Flow Rate [m3/s], 11.31877
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, MAIN SALES ZN PSZ_1 UNITARY AC, Design Size Heating Supply Air Flow Rate [m3/s], 11.31877
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, MAIN SALES ZN PSZ_1 UNITARY AC, Design Size Cooling Supply Air Flow Rate [m3/s], 11.31877
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, MAIN SALES ZN PSZ_1 UNITARY AC, User-Specified No Load Supply Air Flow Rate [m3/s], 0.00000
+ Component Sizing Information, Coil:Cooling:DX:TwoSpeed, MAIN SALES ZN PSZ_1 2SPD DX AC CLG COIL 642KBTU/HR 9.3EER, Design Size High Speed Rated Air Flow Rate [m3/s], 11.31877
+ Component Sizing Information, Coil:Cooling:DX:TwoSpeed, MAIN SALES ZN PSZ_1 2SPD DX AC CLG COIL 642KBTU/HR 9.3EER, Design Size High Speed Gross Rated Total Cooling Capacity [W], 247878.52323
+ Component Sizing Information, Coil:Cooling:DX:TwoSpeed, MAIN SALES ZN PSZ_1 2SPD DX AC CLG COIL 642KBTU/HR 9.3EER, Design Size High Speed Rated Sensible Heat Ratio, 0.74190
+ Component Sizing Information, Coil:Cooling:DX:TwoSpeed, MAIN SALES ZN PSZ_1 2SPD DX AC CLG COIL 642KBTU/HR 9.3EER, Design Size Low Speed Rated Air Flow Rate [m3/s], 3.77255
+ Component Sizing Information, Coil:Cooling:DX:TwoSpeed, MAIN SALES ZN PSZ_1 2SPD DX AC CLG COIL 642KBTU/HR 9.3EER, Design Size Low Speed Gross Rated Total Cooling Capacity [W], 82617.91179
+ Component Sizing Information, Coil:Cooling:DX:TwoSpeed, MAIN SALES ZN PSZ_1 2SPD DX AC CLG COIL 642KBTU/HR 9.3EER, User-Specified Low Speed Gross Rated Sensible Heat Ratio, 0.69000
+ DX Cooling Coil AHRI 2023 Standard Rating Information, Coil:Cooling:DX:TwoSpeed, MAIN SALES ZN PSZ_1 2SPD DX AC CLG COIL 642KBTU/HR 9.3EER, 236907.0, 2.82, 9.64, 10.67, 10.63, 10.5
+ Component Sizing Information, Fan:OnOff, MAIN SALES ZN PSZ_1 FAN, Design Size Maximum Flow Rate [m3/s], 11.31877
+ Component Sizing Information, Fan:OnOff, MAIN SALES ZN PSZ_1 FAN, Design Electric Power Consumption [W], 19494.95489
+ VAV DX Cooling Coil Standard Rating Information, Coil:Cooling:DX:TwoSpeed,MAIN SALES ZN PSZ_1 2SPD DX AC CLG COIL 642KBTU/HR 9.3EER,Fan:VariableVolume,MAIN SALES ZN PSZ_1 FAN,247194.98,843464.29,12.46,3.23,3.63,3.76,3.61,11.02,12.38,12.84,12.32,13.0480,9.9479,6.7139,3.0540,
+ DX Cooling Coil Standard Rating Information, Coil:Cooling:DX:TwoSpeed, MAIN SALES ZN PSZ_1 2SPD DX AC CLG COIL 642KBTU/HR 9.3EER, 247195.0, 3.2308414523583844, 11.02408862921423, N/A, N/A, 12.456234011800191
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, MAIN SALES ZN PSZ_1 UNITARY AC, Design Size Nominal Cooling Capacity [W], 247878.52323
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, MAIN SALES ZN PSZ_1 UNITARY AC, Design Size Nominal Heating Capacity [W], 482372.06606
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, MAIN SALES ZN PSZ_1 UNITARY AC, Design Size Maximum Supply Air Temperature [C], 50.00000
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, MAIN SALES ZN PSZ_1 UNITARY AC, User-Specified Maximum Supply Air Temperature [C], 80.00000
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, MAIN SALES ZN PSZ_1 UNITARY AC, User-Specified Supplemental Heating Coil Nominal Capacity [W], 482372.06606
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, MAIN SALES ZN PSZ_1 UNITARY AC, Fraction of Supply Air Flow That Goes Through the Controlling Zone, 1.00000
+ Component Sizing Information, Coil:Heating:Fuel, MAIN SALES ZN PSZ_1 GAS HTG COIL, Design Size Nominal Capacity [W], 482372.06606
+ Component Sizing Information, Coil:Heating:Electric, MAIN SALES ZN PSZ_1 ELECTRIC BACKUP HTG COIL, Design Size Nominal Capacity [W], 482372.06606
+ Component Sizing Information, Controller:OutdoorAir, MECHANICAL ROOM ZN PSZ_11 OA SYSTEM CONTROLLER, Maximum Outdoor Air Flow Rate [m3/s], 0.20200
+ Component Sizing Information, Controller:OutdoorAir, MECHANICAL ROOM ZN PSZ_11 OA SYSTEM CONTROLLER, Minimum Outdoor Air Flow Rate [m3/s], 0.00000
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, MECHANICAL ROOM ZN PSZ_11 UNITARY AC, Design Size Supply Air Flow Rate [m3/s], 0.20200
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, MECHANICAL ROOM ZN PSZ_11 UNITARY AC, Design Size Heating Supply Air Flow Rate [m3/s], 0.20200
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, MECHANICAL ROOM ZN PSZ_11 UNITARY AC, Design Size Cooling Supply Air Flow Rate [m3/s], 0.20200
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, MECHANICAL ROOM ZN PSZ_11 UNITARY AC, User-Specified No Load Supply Air Flow Rate [m3/s], 0.00000
+ Component Sizing Information, Coil:Cooling:DX:TwoSpeed, MECHANICAL ROOM ZN PSZ_11 2SPD DX AC CLG COIL 10KBTU/HR 9.7SEER, Design Size High Speed Rated Air Flow Rate [m3/s], 0.20200
+ Component Sizing Information, Coil:Cooling:DX:TwoSpeed, MECHANICAL ROOM ZN PSZ_11 2SPD DX AC CLG COIL 10KBTU/HR 9.7SEER, Design Size High Speed Gross Rated Total Cooling Capacity [W], 3358.86567
+ Component Sizing Information, Coil:Cooling:DX:TwoSpeed, MECHANICAL ROOM ZN PSZ_11 2SPD DX AC CLG COIL 10KBTU/HR 9.7SEER, Design Size High Speed Rated Sensible Heat Ratio, 0.80100
+ Component Sizing Information, Coil:Cooling:DX:TwoSpeed, MECHANICAL ROOM ZN PSZ_11 2SPD DX AC CLG COIL 10KBTU/HR 9.7SEER, Design Size Low Speed Rated Air Flow Rate [m3/s], 6.73250E-002
+ Component Sizing Information, Coil:Cooling:DX:TwoSpeed, MECHANICAL ROOM ZN PSZ_11 2SPD DX AC CLG COIL 10KBTU/HR 9.7SEER, Design Size Low Speed Gross Rated Total Cooling Capacity [W], 1119.50993
+ Component Sizing Information, Coil:Cooling:DX:TwoSpeed, MECHANICAL ROOM ZN PSZ_11 2SPD DX AC CLG COIL 10KBTU/HR 9.7SEER, Design Size Low Speed Gross Rated Sensible Heat Ratio, 0.80100
+ Component Sizing Information, Coil:Cooling:DX:TwoSpeed, MECHANICAL ROOM ZN PSZ_11 2SPD DX AC CLG COIL 10KBTU/HR 9.7SEER, User-Specified Low Speed Gross Rated Sensible Heat Ratio, 0.69000
+ DX Cooling Coil AHRI 2023 Standard Rating Information, Coil:Cooling:DX:TwoSpeed, MECHANICAL ROOM ZN PSZ_11 2SPD DX AC CLG COIL 10KBTU/HR 9.7SEER, 3164.8, 2.65, 9.04, 9.99, 9.95, 9.6
+ Component Sizing Information, Fan:OnOff, MECHANICAL ROOM ZN PSZ_11 FAN, Design Size Maximum Flow Rate [m3/s], 0.20200
+ Component Sizing Information, Fan:OnOff, MECHANICAL ROOM ZN PSZ_11 FAN, Design Electric Power Consumption [W], 234.56777
+ VAV DX Cooling Coil Standard Rating Information, Coil:Cooling:DX:TwoSpeed,MECHANICAL ROOM ZN PSZ_11 2SPD DX AC CLG COIL 10KBTU/HR 9.7SEER,Fan:VariableVolume,MECHANICAL ROOM ZN PSZ_11 FAN,3349.60,11429.32,12.08,3.15,3.52,3.65,3.51,10.73,12.01,12.44,11.97,0.2329,0.1711,0.1120,5.1274E-002,
+ DX Cooling Coil Standard Rating Information, Coil:Cooling:DX:TwoSpeed, MECHANICAL ROOM ZN PSZ_11 2SPD DX AC CLG COIL 10KBTU/HR 9.7SEER, 3349.6, 3.1452991354161743, 10.732206128192434, N/A, N/A, 12.080513536099977
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, MECHANICAL ROOM ZN PSZ_11 UNITARY AC, Design Size Nominal Cooling Capacity [W], 3358.86567
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, MECHANICAL ROOM ZN PSZ_11 UNITARY AC, Design Size Nominal Heating Capacity [W], 7163.85440
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, MECHANICAL ROOM ZN PSZ_11 UNITARY AC, Design Size Maximum Supply Air Temperature [C], 50.00000
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, MECHANICAL ROOM ZN PSZ_11 UNITARY AC, User-Specified Maximum Supply Air Temperature [C], 80.00000
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, MECHANICAL ROOM ZN PSZ_11 UNITARY AC, User-Specified Supplemental Heating Coil Nominal Capacity [W], 7163.85440
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, MECHANICAL ROOM ZN PSZ_11 UNITARY AC, Fraction of Supply Air Flow That Goes Through the Controlling Zone, 1.00000
+ Component Sizing Information, Coil:Heating:Fuel, MECHANICAL ROOM ZN PSZ_11 GAS HTG COIL, Design Size Nominal Capacity [W], 7163.85440
+ Component Sizing Information, Coil:Heating:Electric, MECHANICAL ROOM ZN PSZ_11 ELECTRIC BACKUP HTG COIL, Design Size Nominal Capacity [W], 7163.85440
+ Component Sizing Information, Controller:OutdoorAir, MEETING ROOM ZN PSZ_8 OA SYSTEM CONTROLLER, Maximum Outdoor Air Flow Rate [m3/s], 0.36515
+ Component Sizing Information, Controller:OutdoorAir, MEETING ROOM ZN PSZ_8 OA SYSTEM CONTROLLER, Minimum Outdoor Air Flow Rate [m3/s], 0.23601
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, MEETING ROOM ZN PSZ_8 UNITARY AC, Design Size Supply Air Flow Rate [m3/s], 0.36515
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, MEETING ROOM ZN PSZ_8 UNITARY AC, Design Size Heating Supply Air Flow Rate [m3/s], 0.36515
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, MEETING ROOM ZN PSZ_8 UNITARY AC, Design Size Cooling Supply Air Flow Rate [m3/s], 0.36515
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, MEETING ROOM ZN PSZ_8 UNITARY AC, User-Specified No Load Supply Air Flow Rate [m3/s], 0.00000
+ Component Sizing Information, Coil:Cooling:DX:TwoSpeed, MEETING ROOM ZN PSZ_8 2SPD DX AC CLG COIL 30KBTU/HR 9.7SEER, Design Size High Speed Rated Air Flow Rate [m3/s], 0.36515
+ Component Sizing Information, Coil:Cooling:DX:TwoSpeed, MEETING ROOM ZN PSZ_8 2SPD DX AC CLG COIL 30KBTU/HR 9.7SEER, Design Size High Speed Gross Rated Total Cooling Capacity [W], 9067.60940
+ Component Sizing Information, Coil:Cooling:DX:TwoSpeed, MEETING ROOM ZN PSZ_8 2SPD DX AC CLG COIL 30KBTU/HR 9.7SEER, Design Size High Speed Rated Sensible Heat Ratio, 0.70108
+ Component Sizing Information, Coil:Cooling:DX:TwoSpeed, MEETING ROOM ZN PSZ_8 2SPD DX AC CLG COIL 30KBTU/HR 9.7SEER, Design Size Low Speed Rated Air Flow Rate [m3/s], 0.12171
+ Component Sizing Information, Coil:Cooling:DX:TwoSpeed, MEETING ROOM ZN PSZ_8 2SPD DX AC CLG COIL 30KBTU/HR 9.7SEER, Design Size Low Speed Gross Rated Total Cooling Capacity [W], 3022.23421
+ Component Sizing Information, Coil:Cooling:DX:TwoSpeed, MEETING ROOM ZN PSZ_8 2SPD DX AC CLG COIL 30KBTU/HR 9.7SEER, User-Specified Low Speed Gross Rated Sensible Heat Ratio, 0.69000
+ DX Cooling Coil AHRI 2023 Standard Rating Information, Coil:Cooling:DX:TwoSpeed, MEETING ROOM ZN PSZ_8 2SPD DX AC CLG COIL 30KBTU/HR 9.7SEER, 8712.0, 2.80, 9.56, 10.60, 10.55, 10.5
+ Component Sizing Information, Fan:OnOff, MEETING ROOM ZN PSZ_8 FAN, Design Size Maximum Flow Rate [m3/s], 0.36515
+ Component Sizing Information, Fan:OnOff, MEETING ROOM ZN PSZ_8 FAN, Design Electric Power Consumption [W], 424.03483
+ VAV DX Cooling Coil Standard Rating Information, Coil:Cooling:DX:TwoSpeed,MEETING ROOM ZN PSZ_8 2SPD DX AC CLG COIL 30KBTU/HR 9.7SEER,Fan:VariableVolume,MEETING ROOM ZN PSZ_8 FAN,9042.60,30854.65,12.17,3.15,3.54,3.68,3.52,10.73,12.09,12.56,12.01,0.4209,0.3313,0.2300,0.1037,
+ DX Cooling Coil Standard Rating Information, Coil:Cooling:DX:TwoSpeed, MEETING ROOM ZN PSZ_8 2SPD DX AC CLG COIL 30KBTU/HR 9.7SEER, 9042.6, 3.145299135416175, 10.732206128192434, N/A, N/A, 12.168386609880832
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, MEETING ROOM ZN PSZ_8 UNITARY AC, Design Size Nominal Cooling Capacity [W], 9067.60940
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, MEETING ROOM ZN PSZ_8 UNITARY AC, Design Size Nominal Heating Capacity [W], 19203.53770
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, MEETING ROOM ZN PSZ_8 UNITARY AC, Design Size Maximum Supply Air Temperature [C], 50.00000
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, MEETING ROOM ZN PSZ_8 UNITARY AC, User-Specified Maximum Supply Air Temperature [C], 80.00000
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, MEETING ROOM ZN PSZ_8 UNITARY AC, User-Specified Supplemental Heating Coil Nominal Capacity [W], 19203.53770
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, MEETING ROOM ZN PSZ_8 UNITARY AC, Fraction of Supply Air Flow That Goes Through the Controlling Zone, 1.00000
+ Component Sizing Information, Coil:Heating:Fuel, MEETING ROOM ZN PSZ_8 GAS HTG COIL, Design Size Nominal Capacity [W], 19203.53770
+ Component Sizing Information, Coil:Heating:Electric, MEETING ROOM ZN PSZ_8 ELECTRIC BACKUP HTG COIL, Design Size Nominal Capacity [W], 19203.53770
+ Component Sizing Information, Controller:OutdoorAir, PRODUCE ZN PSZ_4 OA SYSTEM CONTROLLER, Maximum Outdoor Air Flow Rate [m3/s], 3.49897
+ Component Sizing Information, Controller:OutdoorAir, PRODUCE ZN PSZ_4 OA SYSTEM CONTROLLER, Minimum Outdoor Air Flow Rate [m3/s], 1.08412
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, PRODUCE ZN PSZ_4 UNITARY AC, Design Size Supply Air Flow Rate [m3/s], 3.49897
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, PRODUCE ZN PSZ_4 UNITARY AC, Design Size Heating Supply Air Flow Rate [m3/s], 3.49897
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, PRODUCE ZN PSZ_4 UNITARY AC, Design Size Cooling Supply Air Flow Rate [m3/s], 3.49897
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, PRODUCE ZN PSZ_4 UNITARY AC, User-Specified No Load Supply Air Flow Rate [m3/s], 0.00000
+ Component Sizing Information, Coil:Cooling:DX:TwoSpeed, PRODUCE ZN PSZ_4 2SPD DX AC CLG COIL 278KBTU/HR 9.3EER, Design Size High Speed Rated Air Flow Rate [m3/s], 3.49897
+ Component Sizing Information, Coil:Cooling:DX:TwoSpeed, PRODUCE ZN PSZ_4 2SPD DX AC CLG COIL 278KBTU/HR 9.3EER, Design Size High Speed Gross Rated Total Cooling Capacity [W], 86887.74377
+ Component Sizing Information, Coil:Cooling:DX:TwoSpeed, PRODUCE ZN PSZ_4 2SPD DX AC CLG COIL 278KBTU/HR 9.3EER, Design Size High Speed Rated Sensible Heat Ratio, 0.70108
+ Component Sizing Information, Coil:Cooling:DX:TwoSpeed, PRODUCE ZN PSZ_4 2SPD DX AC CLG COIL 278KBTU/HR 9.3EER, Design Size Low Speed Rated Air Flow Rate [m3/s], 1.16621
+ Component Sizing Information, Coil:Cooling:DX:TwoSpeed, PRODUCE ZN PSZ_4 2SPD DX AC CLG COIL 278KBTU/HR 9.3EER, Design Size Low Speed Gross Rated Total Cooling Capacity [W], 28959.68500
+ Component Sizing Information, Coil:Cooling:DX:TwoSpeed, PRODUCE ZN PSZ_4 2SPD DX AC CLG COIL 278KBTU/HR 9.3EER, User-Specified Low Speed Gross Rated Sensible Heat Ratio, 0.69000
+ DX Cooling Coil AHRI 2023 Standard Rating Information, Coil:Cooling:DX:TwoSpeed, PRODUCE ZN PSZ_4 2SPD DX AC CLG COIL 278KBTU/HR 9.3EER, 83479.8, 2.87, 9.79, 10.85, 10.80, 10.7
+ Component Sizing Information, Fan:OnOff, PRODUCE ZN PSZ_4 FAN, Design Size Maximum Flow Rate [m3/s], 3.49897
+ Component Sizing Information, Fan:OnOff, PRODUCE ZN PSZ_4 FAN, Design Electric Power Consumption [W], 3831.00872
+ VAV DX Cooling Coil Standard Rating Information, Coil:Cooling:DX:TwoSpeed,PRODUCE ZN PSZ_4 2SPD DX AC CLG COIL 278KBTU/HR 9.3EER,Fan:VariableVolume,PRODUCE ZN PSZ_4 FAN,86648.15,295655.75,12.50,3.23,3.64,3.78,3.62,11.02,12.42,12.90,12.34,4.0335,3.1750,2.2041,0.9938,
+ DX Cooling Coil Standard Rating Information, Coil:Cooling:DX:TwoSpeed, PRODUCE ZN PSZ_4 2SPD DX AC CLG COIL 278KBTU/HR 9.3EER, 86648.1, 3.2308414523583844, 11.02408862921423, N/A, N/A, 12.499328736286895
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, PRODUCE ZN PSZ_4 UNITARY AC, Design Size Nominal Cooling Capacity [W], 86887.74377
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, PRODUCE ZN PSZ_4 UNITARY AC, Design Size Nominal Heating Capacity [W], 151923.13653
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, PRODUCE ZN PSZ_4 UNITARY AC, Design Size Maximum Supply Air Temperature [C], 50.00000
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, PRODUCE ZN PSZ_4 UNITARY AC, User-Specified Maximum Supply Air Temperature [C], 80.00000
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, PRODUCE ZN PSZ_4 UNITARY AC, User-Specified Supplemental Heating Coil Nominal Capacity [W], 151923.13653
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, PRODUCE ZN PSZ_4 UNITARY AC, Fraction of Supply Air Flow That Goes Through the Controlling Zone, 1.00000
+ Component Sizing Information, Coil:Heating:Fuel, PRODUCE ZN PSZ_4 GAS HTG COIL, Design Size Nominal Capacity [W], 151923.13653
+ Component Sizing Information, Coil:Heating:Electric, PRODUCE ZN PSZ_4 ELECTRIC BACKUP HTG COIL, Design Size Nominal Capacity [W], 151923.13653
+ Component Sizing Information, Controller:OutdoorAir, RESTROOM ZN PSZ_10 OA SYSTEM CONTROLLER, Maximum Outdoor Air Flow Rate [m3/s], 0.33130
+ Component Sizing Information, Controller:OutdoorAir, RESTROOM ZN PSZ_10 OA SYSTEM CONTROLLER, Minimum Outdoor Air Flow Rate [m3/s], 0.33130
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, RESTROOM ZN PSZ_10 UNITARY AC, Design Size Supply Air Flow Rate [m3/s], 0.33130
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, RESTROOM ZN PSZ_10 UNITARY AC, Design Size Heating Supply Air Flow Rate [m3/s], 0.33130
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, RESTROOM ZN PSZ_10 UNITARY AC, Design Size Cooling Supply Air Flow Rate [m3/s], 0.33130
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, RESTROOM ZN PSZ_10 UNITARY AC, User-Specified No Load Supply Air Flow Rate [m3/s], 0.00000
+ Component Sizing Information, Coil:Cooling:DX:TwoSpeed, RESTROOM ZN PSZ_10 2SPD DX AC CLG COIL 28KBTU/HR 9.7SEER, Design Size High Speed Rated Air Flow Rate [m3/s], 0.33130
+ Component Sizing Information, Coil:Cooling:DX:TwoSpeed, RESTROOM ZN PSZ_10 2SPD DX AC CLG COIL 28KBTU/HR 9.7SEER, Design Size High Speed Gross Rated Total Cooling Capacity [W], 8226.88942
+ Component Sizing Information, Coil:Cooling:DX:TwoSpeed, RESTROOM ZN PSZ_10 2SPD DX AC CLG COIL 28KBTU/HR 9.7SEER, Design Size High Speed Rated Sensible Heat Ratio, 0.70108
+ Component Sizing Information, Coil:Cooling:DX:TwoSpeed, RESTROOM ZN PSZ_10 2SPD DX AC CLG COIL 28KBTU/HR 9.7SEER, Design Size Low Speed Rated Air Flow Rate [m3/s], 0.11042
+ Component Sizing Information, Coil:Cooling:DX:TwoSpeed, RESTROOM ZN PSZ_10 2SPD DX AC CLG COIL 28KBTU/HR 9.7SEER, Design Size Low Speed Gross Rated Total Cooling Capacity [W], 2742.02224
+ Component Sizing Information, Coil:Cooling:DX:TwoSpeed, RESTROOM ZN PSZ_10 2SPD DX AC CLG COIL 28KBTU/HR 9.7SEER, User-Specified Low Speed Gross Rated Sensible Heat Ratio, 0.69000
+ DX Cooling Coil AHRI 2023 Standard Rating Information, Coil:Cooling:DX:TwoSpeed, RESTROOM ZN PSZ_10 2SPD DX AC CLG COIL 28KBTU/HR 9.7SEER, 7904.2, 2.80, 9.56, 10.60, 10.55, 10.5
+ Component Sizing Information, Fan:OnOff, RESTROOM ZN PSZ_10 FAN, Design Size Maximum Flow Rate [m3/s], 0.33130
+ Component Sizing Information, Fan:OnOff, RESTROOM ZN PSZ_10 FAN, Design Electric Power Consumption [W], 384.71966
+ VAV DX Cooling Coil Standard Rating Information, Coil:Cooling:DX:TwoSpeed,RESTROOM ZN PSZ_10 2SPD DX AC CLG COIL 28KBTU/HR 9.7SEER,Fan:VariableVolume,RESTROOM ZN PSZ_10 FAN,8204.20,27993.90,12.17,3.15,3.54,3.68,3.52,10.73,12.09,12.56,12.01,0.3819,0.3006,0.2087,9.4093E-002,
+ DX Cooling Coil Standard Rating Information, Coil:Cooling:DX:TwoSpeed, RESTROOM ZN PSZ_10 2SPD DX AC CLG COIL 28KBTU/HR 9.7SEER, 8204.2, 3.145299135416175, 10.732206128192434, N/A, N/A, 12.168386609880834
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, RESTROOM ZN PSZ_10 UNITARY AC, Design Size Nominal Cooling Capacity [W], 8226.88942
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, RESTROOM ZN PSZ_10 UNITARY AC, Design Size Nominal Heating Capacity [W], 20616.55348
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, RESTROOM ZN PSZ_10 UNITARY AC, Design Size Maximum Supply Air Temperature [C], 50.00000
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, RESTROOM ZN PSZ_10 UNITARY AC, User-Specified Maximum Supply Air Temperature [C], 80.00000
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, RESTROOM ZN PSZ_10 UNITARY AC, User-Specified Supplemental Heating Coil Nominal Capacity [W], 20616.55348
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, RESTROOM ZN PSZ_10 UNITARY AC, Fraction of Supply Air Flow That Goes Through the Controlling Zone, 1.00000
+ Component Sizing Information, Coil:Heating:Fuel, RESTROOM ZN PSZ_10 GAS HTG COIL, Design Size Nominal Capacity [W], 20616.55348
+ Component Sizing Information, Coil:Heating:Electric, RESTROOM ZN PSZ_10 ELECTRIC BACKUP HTG COIL, Design Size Nominal Capacity [W], 20616.55348
+ Component Sizing Information, Controller:OutdoorAir, VESTIBULE ZN PSZ_13 OA SYSTEM CONTROLLER, Maximum Outdoor Air Flow Rate [m3/s], 7.07921E-003
+ Component Sizing Information, Controller:OutdoorAir, VESTIBULE ZN PSZ_13 OA SYSTEM CONTROLLER, Minimum Outdoor Air Flow Rate [m3/s], 7.07921E-003
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, VESTIBULE ZN PSZ_13 UNITARY AC, Design Size Supply Air Flow Rate [m3/s], 7.07921E-003
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, VESTIBULE ZN PSZ_13 UNITARY AC, Design Size Heating Supply Air Flow Rate [m3/s], 7.07921E-003
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, VESTIBULE ZN PSZ_13 UNITARY AC, Design Size Cooling Supply Air Flow Rate [m3/s], 7.07921E-003
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, VESTIBULE ZN PSZ_13 UNITARY AC, User-Specified No Load Supply Air Flow Rate [m3/s], 0.00000
+ Component Sizing Information, Coil:Cooling:DX:TwoSpeed, VESTIBULE ZN PSZ_13 2SPD DX AC CLG COIL 1KBTU/HR 9.7SEER, Design Size High Speed Rated Air Flow Rate [m3/s], 7.07921E-003
+ Component Sizing Information, Coil:Cooling:DX:TwoSpeed, VESTIBULE ZN PSZ_13 2SPD DX AC CLG COIL 1KBTU/HR 9.7SEER, Design Size High Speed Gross Rated Total Cooling Capacity [W], 175.79368
+ Component Sizing Information, Coil:Cooling:DX:TwoSpeed, VESTIBULE ZN PSZ_13 2SPD DX AC CLG COIL 1KBTU/HR 9.7SEER, Design Size High Speed Rated Sensible Heat Ratio, 0.70108
+ Component Sizing Information, Coil:Cooling:DX:TwoSpeed, VESTIBULE ZN PSZ_13 2SPD DX AC CLG COIL 1KBTU/HR 9.7SEER, Design Size Low Speed Rated Air Flow Rate [m3/s], 2.35950E-003
+ Component Sizing Information, Coil:Cooling:DX:TwoSpeed, VESTIBULE ZN PSZ_13 2SPD DX AC CLG COIL 1KBTU/HR 9.7SEER, Design Size Low Speed Gross Rated Total Cooling Capacity [W], 58.59203
+ Component Sizing Information, Coil:Cooling:DX:TwoSpeed, VESTIBULE ZN PSZ_13 2SPD DX AC CLG COIL 1KBTU/HR 9.7SEER, User-Specified Low Speed Gross Rated Sensible Heat Ratio, 0.69000
+ DX Cooling Coil AHRI 2023 Standard Rating Information, Coil:Cooling:DX:TwoSpeed, VESTIBULE ZN PSZ_13 2SPD DX AC CLG COIL 1KBTU/HR 9.7SEER, 168.9, 2.80, 9.56, 10.60, 10.55, 10.5
+ Component Sizing Information, Fan:OnOff, VESTIBULE ZN PSZ_13 FAN, Design Size Maximum Flow Rate [m3/s], 7.07921E-003
+ Component Sizing Information, Fan:OnOff, VESTIBULE ZN PSZ_13 FAN, Design Electric Power Consumption [W], 8.22076
+ VAV DX Cooling Coil Standard Rating Information, Coil:Cooling:DX:TwoSpeed,VESTIBULE ZN PSZ_13 2SPD DX AC CLG COIL 1KBTU/HR 9.7SEER,Fan:VariableVolume,VESTIBULE ZN PSZ_13 FAN,175.31,598.18,12.17,3.15,3.54,3.68,3.52,10.73,12.09,12.56,12.01,8.1607E-003,6.4237E-003,4.4594E-003,2.0106E-003,
+ DX Cooling Coil Standard Rating Information, Coil:Cooling:DX:TwoSpeed, VESTIBULE ZN PSZ_13 2SPD DX AC CLG COIL 1KBTU/HR 9.7SEER, 175.3, 3.145299135416175, 10.732206128192434, N/A, N/A, 12.168386609880836
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, VESTIBULE ZN PSZ_13 UNITARY AC, Design Size Nominal Cooling Capacity [W], 175.79368
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, VESTIBULE ZN PSZ_13 UNITARY AC, Design Size Nominal Heating Capacity [W], 440.53830
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, VESTIBULE ZN PSZ_13 UNITARY AC, Design Size Maximum Supply Air Temperature [C], 50.00000
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, VESTIBULE ZN PSZ_13 UNITARY AC, User-Specified Maximum Supply Air Temperature [C], 80.00000
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, VESTIBULE ZN PSZ_13 UNITARY AC, User-Specified Supplemental Heating Coil Nominal Capacity [W], 440.53830
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, VESTIBULE ZN PSZ_13 UNITARY AC, Fraction of Supply Air Flow That Goes Through the Controlling Zone, 1.00000
+ Component Sizing Information, Coil:Heating:Fuel, VESTIBULE ZN PSZ_13 GAS HTG COIL, Design Size Nominal Capacity [W], 440.53830
+ Component Sizing Information, Coil:Heating:Electric, VESTIBULE ZN PSZ_13 ELECTRIC BACKUP HTG COIL, Design Size Nominal Capacity [W], 440.53830
+ Component Sizing Information, Controller:OutdoorAir, WEST PERIMETER SALES ZN PSZ_2 OA SYSTEM CONTROLLER, Maximum Outdoor Air Flow Rate [m3/s], 0.83289
+ Component Sizing Information, Controller:OutdoorAir, WEST PERIMETER SALES ZN PSZ_2 OA SYSTEM CONTROLLER, Minimum Outdoor Air Flow Rate [m3/s], 0.16361
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, WEST PERIMETER SALES ZN PSZ_2 UNITARY AC, Design Size Supply Air Flow Rate [m3/s], 0.83289
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, WEST PERIMETER SALES ZN PSZ_2 UNITARY AC, Design Size Heating Supply Air Flow Rate [m3/s], 0.83289
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, WEST PERIMETER SALES ZN PSZ_2 UNITARY AC, Design Size Cooling Supply Air Flow Rate [m3/s], 0.83289
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, WEST PERIMETER SALES ZN PSZ_2 UNITARY AC, User-Specified No Load Supply Air Flow Rate [m3/s], 0.00000
+ Component Sizing Information, Coil:Cooling:DX:TwoSpeed, WEST PERIMETER SALES ZN PSZ_2 2SPD DX AC CLG COIL 68KBTU/HR 10.1EER, Design Size High Speed Rated Air Flow Rate [m3/s], 0.83289
+ Component Sizing Information, Coil:Cooling:DX:TwoSpeed, WEST PERIMETER SALES ZN PSZ_2 2SPD DX AC CLG COIL 68KBTU/HR 10.1EER, Design Size High Speed Gross Rated Total Cooling Capacity [W], 19469.35979
+ Component Sizing Information, Coil:Cooling:DX:TwoSpeed, WEST PERIMETER SALES ZN PSZ_2 2SPD DX AC CLG COIL 68KBTU/HR 10.1EER, Design Size High Speed Rated Sensible Heat Ratio, 0.72036
+ Component Sizing Information, Coil:Cooling:DX:TwoSpeed, WEST PERIMETER SALES ZN PSZ_2 2SPD DX AC CLG COIL 68KBTU/HR 10.1EER, Design Size Low Speed Rated Air Flow Rate [m3/s], 0.27760
+ Component Sizing Information, Coil:Cooling:DX:TwoSpeed, WEST PERIMETER SALES ZN PSZ_2 2SPD DX AC CLG COIL 68KBTU/HR 10.1EER, Design Size Low Speed Gross Rated Total Cooling Capacity [W], 6489.13762
+ Component Sizing Information, Coil:Cooling:DX:TwoSpeed, WEST PERIMETER SALES ZN PSZ_2 2SPD DX AC CLG COIL 68KBTU/HR 10.1EER, User-Specified Low Speed Gross Rated Sensible Heat Ratio, 0.69000
+ DX Cooling Coil AHRI 2023 Standard Rating Information, Coil:Cooling:DX:TwoSpeed, WEST PERIMETER SALES ZN PSZ_2 2SPD DX AC CLG COIL 68KBTU/HR 10.1EER, 18660.1, 3.05, 10.42, 11.54, 11.49, 11.3
+ Component Sizing Information, Fan:OnOff, WEST PERIMETER SALES ZN PSZ_2 FAN, Design Size Maximum Flow Rate [m3/s], 0.83289
+ Component Sizing Information, Fan:OnOff, WEST PERIMETER SALES ZN PSZ_2 FAN, Design Electric Power Consumption [W], 949.92467
+ VAV DX Cooling Coil Standard Rating Information, Coil:Cooling:DX:TwoSpeed,WEST PERIMETER SALES ZN PSZ_2 2SPD DX AC CLG COIL 68KBTU/HR 10.1EER,Fan:VariableVolume,WEST PERIMETER SALES ZN PSZ_2 FAN,19415.67,66249.02,13.51,3.50,3.93,4.08,3.91,11.93,13.43,13.93,13.35,0.9601,0.7446,0.5090,0.2309,
+ DX Cooling Coil Standard Rating Information, Coil:Cooling:DX:TwoSpeed, WEST PERIMETER SALES ZN PSZ_2 2SPD DX AC CLG COIL 68KBTU/HR 10.1EER, 19415.7, 3.497040246318838, 11.932396616741082, N/A, N/A, 13.506614801424968
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, WEST PERIMETER SALES ZN PSZ_2 UNITARY AC, Design Size Nominal Cooling Capacity [W], 19469.35979
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, WEST PERIMETER SALES ZN PSZ_2 UNITARY AC, Design Size Nominal Heating Capacity [W], 33941.09148
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, WEST PERIMETER SALES ZN PSZ_2 UNITARY AC, Design Size Maximum Supply Air Temperature [C], 50.00000
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, WEST PERIMETER SALES ZN PSZ_2 UNITARY AC, User-Specified Maximum Supply Air Temperature [C], 80.00000
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, WEST PERIMETER SALES ZN PSZ_2 UNITARY AC, User-Specified Supplemental Heating Coil Nominal Capacity [W], 33941.09148
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, WEST PERIMETER SALES ZN PSZ_2 UNITARY AC, Fraction of Supply Air Flow That Goes Through the Controlling Zone, 1.00000
+ Component Sizing Information, Coil:Heating:Fuel, WEST PERIMETER SALES ZN PSZ_2 GAS HTG COIL, Design Size Nominal Capacity [W], 33941.09148
+ Component Sizing Information, Coil:Heating:Electric, WEST PERIMETER SALES ZN PSZ_2 ELECTRIC BACKUP HTG COIL, Design Size Nominal Capacity [W], 33941.09148
+Water Heater Information,WaterHeater:Mixed,105GAL NATURAL GAS WATER HEATER - 2883KBTU/HR 0.801 THERM EFF,0.3974,844999.8,1.725,0.7976
+ Component Sizing Information, PlantLoop, MAIN SERVICE WATER LOOP, Maximum Loop Flow Rate [m3/s], 1.04982E-005
+ Component Sizing Information, PlantLoop, MAIN SERVICE WATER LOOP, Plant Loop Volume [m3], 1.25979E-003
+ Component Sizing Information, PlantLoop, MAIN SERVICE WATER LOOP, Design Supply Temperature [C], 60.00000
+ Component Sizing Information, PlantLoop, MAIN SERVICE WATER LOOP, Design Return Temperature [C], 55.00000
+ Component Sizing Information, PlantLoop, MAIN SERVICE WATER LOOP, Sizing option (Coincident/NonCoincident), 1.00000
+ Component Sizing Information, PlantLoop, MAIN SERVICE WATER LOOP, Minimum Loop Flow Rate [m3/s], 0.00000
+ Component Sizing Information, PlantLoop, MAIN SERVICE WATER LOOP, Design Capacity [W], 220.33125
+ Component Sizing Information, Pump:VariableSpeed, MAIN SERVICE WATER LOOP WATER MAINS PRESSURE DRIVEN, Design Flow Rate [m3/s], 1.04982E-005
+ Component Sizing Information, Pump:VariableSpeed, MAIN SERVICE WATER LOOP WATER MAINS PRESSURE DRIVEN, Design Power Consumption [W], 1.63142E-008
+ Component Sizing Information, WaterHeater:Mixed, 105GAL NATURAL GAS WATER HEATER - 2883KBTU/HR 0.801 THERM EFF, Use Side Design Flow Rate [m3/s], 1.04982E-005
+! <Environment>,Environment Name,Environment Type, Start Date, End Date, Start DayOfWeek, Duration {#days}, Source:Start DayOfWeek,  Use Daylight Saving, Use Holidays, Apply Weekend Holiday Rule,  Use Rain Values, Use Snow Values, Sky Temperature Model
+! <Environment:Special Days>, Special Day Name, Special Day Type, Source, Start Date, Duration {#days}
+! <Environment:Daylight Saving>, Daylight Saving Indicator, Source, Start Date, End Date
+! <Environment:WarmupDays>, NumberofWarmupDays
+Environment,RUN PERIOD 1,WeatherFileRunPeriod,01/01/2006,12/31/2006,Sunday,365,Use RunPeriod Specified Day,No,No,No,Yes,Yes,Clark and Allen
+Environment:Daylight Saving,Yes,InputFile,03/12,11/05
+Environment:WarmupDays, 11
+! <Tabular Report>,Style,Unit Conversion
+Tabular Report,HTML,None
+! <Warmup Convergence Information>,Zone Name,Environment Type/Name,Average Warmup Temperature Difference {deltaC},Std Dev Warmup Temperature Difference {deltaC},Max Temperature Pass/Fail Convergence,Min Temperature Pass/Fail Convergence,Average Warmup Load Difference {W},Std Dev Warmup Load Difference {W},Heating Load Pass/Fail Convergence,Cooling Load Pass/Fail Convergence
+ Warmup Convergence Information,ACTIVE STORAGE ZN,RunPeriod: RUN PERIOD 1,2.0450828560E-002,0.1562040021,Pass,Pass,9.1715683892E-003,8.4982490070E-002,Pass,Pass
+ Warmup Convergence Information,BAKERY ZN,RunPeriod: RUN PERIOD 1,9.3502948411E-003,2.8280129851E-002,Pass,Pass,0.1144391596,0.4744401574,Pass,Pass
+ Warmup Convergence Information,CORRIDOR ZN,RunPeriod: RUN PERIOD 1,2.1448019179E-002,4.6410042575E-002,Pass,Pass,1.8927272674E-002,8.1916148790E-002,Pass,Pass
+ Warmup Convergence Information,DELI ZN,RunPeriod: RUN PERIOD 1,2.6759941356E-002,3.6510971206E-002,Pass,Pass,7.2725406249E-003,8.6867656425E-002,Pass,Pass
+ Warmup Convergence Information,DINING ROOM ZN,RunPeriod: RUN PERIOD 1,8.0299194301E-002,0.1328530658,Pass,Pass,4.3594542081E-002,0.2008472701,Pass,Pass
+ Warmup Convergence Information,EAST PERIMETER SALES ZN,RunPeriod: RUN PERIOD 1,3.4962527810E-002,0.1212738430,Pass,Pass,6.1898814280E-002,0.3044052785,Pass,Pass
+ Warmup Convergence Information,ENCLOSED OFFICE ZN,RunPeriod: RUN PERIOD 1,2.1620028909E-002,0.1176039225,Pass,Pass,6.9968604006E-002,0.6214323767,Pass,Pass
+ Warmup Convergence Information,MAIN SALES ZN,RunPeriod: RUN PERIOD 1,1.5378112611E-002,2.8814345002E-002,Pass,Pass,0.1479957029,0.8763075627,Pass,Pass
+ Warmup Convergence Information,MECHANICAL ROOM ZN,RunPeriod: RUN PERIOD 1,2.5328378913E-002,0.1169995037,Pass,Pass,1.7048949712E-002,0.1065043349,Pass,Pass
+ Warmup Convergence Information,MEETING ROOM ZN,RunPeriod: RUN PERIOD 1,1.2978033736E-002,6.1090438675E-002,Pass,Pass,0.4292291809,4.7828636013,Pass,Pass
+ Warmup Convergence Information,PRODUCE ZN,RunPeriod: RUN PERIOD 1,1.5021927122E-002,6.0156972099E-002,Pass,Pass,8.6195202644E-002,0.2988127705,Pass,Pass
+ Warmup Convergence Information,RESTROOM ZN,RunPeriod: RUN PERIOD 1,9.0564357176E-003,6.5491044759E-002,Pass,Pass,0.9974626384,11.6285754584,Pass,Pass
+ Warmup Convergence Information,VESTIBULE ZN,RunPeriod: RUN PERIOD 1,8.8063250071E-002,8.3422153070E-002,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,WEST PERIMETER SALES ZN,RunPeriod: RUN PERIOD 1,3.5013877451E-002,0.1256386914,Pass,Pass,6.4316327472E-002,0.3165778526,Pass,Pass
+! <Program Control Information:Threads/Parallel Sims>, Threading Supported,Maximum Number of Threads, Env Set Threads (OMP_NUM_THREADS), EP Env Set Threads (EP_OMP_NUM_THREADS), IDF Set Threads, Number of Threads Used (Interior Radiant Exchange), Number Nominal Surfaces, Number Parallel Sims
+Program Control:Threads/Parallel Sims, No,1, N/A, N/A, N/A, N/A, N/A, N/A
+End of Data
