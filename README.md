@@ -35,3 +35,6 @@ To be filled out later.
 * Merge down to master
 * Release via github
 * run `rake release` from master
+
+# License
+This is a work in progress and will be distributed under the terms of the BSD-3-Clause license
