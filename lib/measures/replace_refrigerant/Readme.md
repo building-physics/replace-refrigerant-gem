@@ -3,7 +3,7 @@
 
 ## Overview
 This repository provides an OpenStudio/EnergyPlus Measure developed at **Oak Ridge National Laboratory (ORNL)** to support the use of alternative refrigerants in building energy models.  
-The measure enables users to **add or replace refrigerants** in EnergyPlus models with updated property data.  
+The measure enables users to **replace refrigerants** in EnergyPlus models with updated property data.  
 Currently, it supports **R448A** and **R449A**, both of which are non-flammable A1 safety-class refrigerants intended as replacements for R404A in commercial refrigeration systems.
 
 ## Background
@@ -23,7 +23,7 @@ Although OpenStudio Measures grant access to the entire OpenStudio model, they d
 See [resources/README.md](replace_refrigerant/resources/README.md) for dataset details and generation notes.
 
 ## Measure Description
-The **relpace_refrigerant** measure is implemented as an `EnergyPlusMeasure` in Python. It operates on the EnergyPlus workspace after the OSM model is translated, ensuring direct access to refrigerant-related objects.  
+The **relace_Refrigerant** measure is implemented as an `EnergyPlusMeasure` in Python. It operates on the EnergyPlus workspace after the OSM model is translated, ensuring direct access to refrigerant-related objects.  
 
 ### Key Arguments
 - **Refrigerant** – Choice of new refrigerant to add (`R448A`, `R449A`).  
@@ -38,11 +38,11 @@ The **relpace_refrigerant** measure is implemented as an `EnergyPlusMeasure` in 
 This ensures consistent refrigerant replacement across a model while preserving EnergyPlus compatibility.
 
 ## Example
-Refrigerants were replaced for two openstudio files one at climate zone 2A and another at climate zone 5A. The results from the simulation are shown in image below.Refrigerants were replaced for two openstudio files one at climate zone 2A and another at climate zone 5A. The results from the simulation is shown in image below. The results from measure implementation showed that at climate zone 2A the use of both R448A and R449A reduces refrigeration energy consumption by approximately 19% of the base case, and at climate zone 5A use of both R448A and R449A reduces refrigeration energy consumption by approximately 11.5% of the base case.
+Refrigerants were replaced in two OpenStudio SuperMarket models, one located in climate zone 2A and the other in climate zone 5A. The simulation results are shown in the image below.
 
-<img src="example_result.png" width="500" alt="Results for SuperMarket Refrigeration Energy Consumption">
+<img src="example_result.png" width="500">
 
-> #### SuperMarket Refrigeration Energy Consumption
+> #### Results for SuperMarket Refrigeration Energy Consumption
 
 ## License
 This is a work in progress and will be distributed under the terms of the BSD-3-Clause license
