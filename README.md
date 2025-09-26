@@ -1,6 +1,6 @@
 # Replace Refrigerant Gem
 
-This gem is used to replace refrigerant in Openstudio model with alternative refrigerant. The details of the Openstudio measure is available at [Documentation](lib/measures/Openstudio_replace_refrigerant/Readme.md)
+This gem is used to replace refrigerant in Openstudio model with alternative refrigerant. The details of the Openstudio measure is available at [Documentation](lib/measures/OpenStudio_replace_refrigerant/Readme.md)
 
 ## Installation
 
