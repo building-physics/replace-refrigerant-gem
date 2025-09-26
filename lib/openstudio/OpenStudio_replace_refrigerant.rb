@@ -3,12 +3,12 @@
 # See also https://openstudio.net/license
 # *******************************************************************************
 
-require 'openstudio/replace_refrigerant/version'
+require 'openstudio/OpenStudio_replace_refrigerant/version'
 require 'openstudio/extension'
 
 module OpenStudio
-  module ReplaceRefrigerant
-    class ReplaceRefrigerant < OpenStudio::Extension::Extension
+  module OpenstudioReplaceRefrigerant
+    class OpenstudioReplaceRefrigerant < OpenStudio::Extension::Extension
       # Override parent class
       def initialize
         super

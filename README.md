@@ -1,13 +1,13 @@
 # Replace Refrigerant Gem
 
-TODO: Add a description of this gem
+This gem is used to replace refrigerant in Openstudio model with alternative refrigerant. The details of the Openstudio measure is available at [Documentation](lib/measures/OpenStudio_replace_refrigerant/Readme.md)
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'replace-refrigerant'
+gem 'OpenStudio-replace-refrigerant'
 ```
 
 And then execute:
@@ -16,11 +16,11 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install 'replace-refrigerant'
+    $ gem install 'OpenStudio-replace-refrigerant'
 
 ## Usage
 
-To be filled out later. 
+This gem is used for adding/replacing the refrigerants in OpenStudio model with alternative refrigerant R448A and R449A  
 
 ## TODO
 
@@ -31,7 +31,7 @@ To be filled out later.
 # Releasing
 
 * Update change log
-* Update version in `/lib/openstudio/replace-refrigerant/version.rb`
+* Update version in `/lib/openstudio/OpenStudio-replace-refrigerant/version.rb`
 * Merge down to master
 * Release via github
 * run `rake release` from master

@@ -1,13 +1,13 @@
 
 lib = File.expand_path('lib', __dir__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'openstudio/replace_refrigerant/version'
+require 'openstudio/OpenStudio_replace_refrigerant/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = 'replace-refrigerant'
-  spec.version       = OpenStudio::ReplaceRefrigerant::VERSION
-  spec.authors       = ['']
-  spec.email         = ['']
+  spec.name          = 'OpenStudio-replace-refrigerant'
+  spec.version       = OpenStudio::OpenstudioReplaceRefrigerant::VERSION
+  spec.authors       = ['Niraj Kunwar','Yeonjin Bae','Yeobeom Yoon','Jason Degraw']
+  spec.email         = ['kunwarn1@ornl.gov','baey@ornl.gov','yoony@ornl.gov','degrawjw@ornl.gov']
 
   spec.summary       = 'library and measures for OpenStudio'
   spec.description   = 'library and measures for OpenStudio'

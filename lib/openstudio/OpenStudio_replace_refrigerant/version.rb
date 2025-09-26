@@ -4,7 +4,7 @@
 # *******************************************************************************
 
 module OpenStudio
-  module ReplaceRefrigerant
+  module OpenstudioReplaceRefrigerant
     VERSION = '0.0.1'.freeze
   end
 end

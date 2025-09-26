@@ -4,7 +4,7 @@
 # *******************************************************************************
 
 require 'bundler/setup'
-require 'openstudio/replace_refrigerant'
+require 'openstudio/OpenStudio_replace_refrigerant'
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure

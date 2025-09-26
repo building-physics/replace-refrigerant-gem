@@ -5,13 +5,13 @@
 
 require_relative '../spec_helper'
 
-RSpec.describe OpenStudio::ReplaceRefrigerant do
+RSpec.describe OpenStudio::OpenstudioReplaceRefrigerant do
   it 'has a version number' do
-    expect(OpenStudio::ReplaceRefrigerant::VERSION).not_to be nil
+    expect(OpenStudio::OpenstudioReplaceRefrigerant::VERSION).not_to be nil
   end
 
   it 'has a measures directory' do
-    instance = OpenStudio::ReplaceRefrigerant::ReplaceRefrigerant.new
+    instance = OpenStudio::OpenstudioReplaceRefrigerant::OpenstudioReplaceRefrigerant.new
     expect(File.exist?(instance.measures_dir)).to be true
   end
 end
