@@ -20,7 +20,7 @@ Although OpenStudio Measures grant access to the entire OpenStudio model, they d
 - **resources/FluidPropertiesRefData_R448a.idf** – Refrigerant property dataset for R448A and Compressor performance curves for R448A (medium- and low-temperature applications).  
 - **resources/FluidPropertiesRefData_R449a.idf** – Refrigerant property dataset for R449A and Compressor performance curves for R449A (medium- and low-temperature applications).  
 
-See [resources/README.md](replace_refrigerant/resources/README.md) for dataset details and generation notes.
+See [resources/README.md](resources/README.md) for dataset details and generation notes.
 
 ## Measure Description
 The **relpace_refrigerant** measure is implemented as an `EnergyPlusMeasure` in Python. It operates on the EnergyPlus workspace after the OSM model is translated, ensuring direct access to refrigerant-related objects.  
